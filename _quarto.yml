@@ -16,7 +16,7 @@ project:
 website:
   title: "Takwimu Bridge"
   description: "A socio-economic data portal connecting Tanzanian university students to curated research datasets — no fieldwork required."
-  site-url: "https://example.org" # TODO: replace with production URL once deployed
+  site-url: "https://research-std.github.io/SITE-1/"
   favicon: images/logo.svg
   page-navigation: true
   bread-crumbs: false

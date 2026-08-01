@@ -1,0 +1,210 @@
+---
+pagetitle: "Takwimu Bridge — Socio-Economic Data for Tanzanian Student Researchers"
+page-layout: full
+title-block-banner: false
+listing:
+  id: featured-datasets
+  contents:
+    - datasets/household-budget-survey-consumption.qmd
+    - datasets/tdhs-child-nutrition.qmd
+    - datasets/basic-education-statistics.qmd
+  type: grid
+  grid-columns: 3
+  image-height: "160px"
+  fields: [image, title, category, region, year, description]
+  field-display-names:
+    category: "Category"
+    region: "Region"
+    year: "Year"
+  sort: false
+  page-size: 3
+---
+
+<!-- ============================= HERO ============================= -->
+<section class="hero-section">
+<div class="container">
+<div class="grid align-items-center">
+<div class="g-col-12 g-col-lg-7">
+<span class="badge rounded-pill bg-white text-primary bg-opacity-10 mb-3" style="background:rgba(255,255,255,.15)!important;color:#fff!important;">
+<i class="bi bi-mortarboard-fill me-1"></i> Proof of concept — for Tanzanian universities
+</span>
+<h1>Socio-economic data for your research — without months of fieldwork.</h1>
+<p class="lead">
+Takwimu Bridge <em>(placeholder name)</em> is a curated catalog of Tanzanian
+socio-economic datasets. Browse a topic, request access, and download —
+so students spend less time collecting data and more time analyzing it.
+</p>
+<div class="d-flex flex-wrap gap-3 mt-4">
+<a href="catalog.html" class="btn btn-accent btn-lg px-4">
+<i class="bi bi-search me-1"></i> Browse Data
+</a>
+<a href="about.html" class="btn btn-outline-light btn-lg px-4">
+Learn More
+</a>
+</div>
+<div class="grid hero-stats mt-5">
+<div class="g-col-4">
+<div class="stat-value">9</div>
+<div class="stat-label">Sample Datasets</div>
+</div>
+<div class="g-col-4">
+<div class="stat-value">9</div>
+<div class="stat-label">Topic Categories</div>
+</div>
+<div class="g-col-4">
+<div class="stat-value">5</div>
+<div class="stat-label">Partner Universities*</div>
+</div>
+</div>
+<p class="small mt-2" style="color:rgba(255,255,255,.6);">
+*Placeholder partners shown for demonstration — see <a href="partners.html" class="link-light">For Universities</a>.
+</p>
+</div>
+<div class="g-col-12 g-col-lg-5 d-none d-lg-block text-center">
+<i class="bi bi-bar-chart-line-fill" style="font-size:14rem;color:rgba(255,255,255,.12);"></i>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ======================= THE PROBLEM ======================= -->
+<section class="section">
+<div class="container">
+<div class="grid align-items-center gap-5">
+<div class="g-col-12 g-col-lg-6">
+<span class="eyebrow">The Problem</span>
+<h2>Fieldwork is slow, costly, and often out of reach.</h2>
+<p class="text-muted fs-5">
+Many undergraduate and postgraduate research projects stall at the data
+collection stage. Household surveys and enumeration take weeks, travel and
+logistics strain student budgets, and small self-collected samples limit
+how far a dissertation's analysis can go.
+</p>
+<p class="text-muted fs-5">
+Meanwhile, high-quality socio-economic survey data already exists —
+collected by national statistics agencies, research institutes, and
+development partners — but it is scattered, hard to discover, and rarely
+packaged for classroom or thesis use.
+</p>
+</div>
+<div class="g-col-12 g-col-lg-6">
+<div class="grid gap-3">
+<div class="g-col-6">
+<div class="step-card text-center">
+<i class="bi bi-hourglass-split step-icon"></i>
+<div class="fw-semibold">Weeks lost</div>
+<div class="text-muted small">to travel &amp; enumeration</div>
+</div>
+</div>
+<div class="g-col-6">
+<div class="step-card text-center">
+<i class="bi bi-cash-coin step-icon"></i>
+<div class="fw-semibold">High cost</div>
+<div class="text-muted small">of independent fieldwork</div>
+</div>
+</div>
+<div class="g-col-6">
+<div class="step-card text-center">
+<i class="bi bi-graph-down step-icon"></i>
+<div class="fw-semibold">Small samples</div>
+<div class="text-muted small">limit statistical power</div>
+</div>
+</div>
+<div class="g-col-6">
+<div class="step-card text-center">
+<i class="bi bi-signpost-split step-icon"></i>
+<div class="fw-semibold">Hard to discover</div>
+<div class="text-muted small">existing quality datasets</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ======================= HOW IT WORKS ======================= -->
+<section class="section section-alt">
+<div class="container">
+<div class="text-center mb-5">
+<span class="eyebrow">How It Works</span>
+<h2>From browsing to your dataset, in four steps</h2>
+<p class="text-muted fs-5 mx-auto" style="max-width:40rem;">
+A simple, transparent workflow designed around how student research actually happens.
+</p>
+</div>
+<div class="grid gap-4">
+<div class="g-col-12 g-col-md-6 g-col-lg-3">
+<div class="step-card">
+<div class="step-number">1</div>
+<h5><i class="bi bi-search me-1 text-accent"></i> Browse</h5>
+<p class="text-muted mb-0">Search and filter the catalog by topic, region, and year to find the dataset your research needs.</p>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6 g-col-lg-3">
+<div class="step-card">
+<div class="step-number">2</div>
+<h5><i class="bi bi-send-fill me-1 text-accent"></i> Request</h5>
+<p class="text-muted mb-0">Submit a short access request describing your research purpose and supervisor details.</p>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6 g-col-lg-3">
+<div class="step-card">
+<div class="step-number">3</div>
+<h5><i class="bi bi-check-circle-fill me-1 text-accent"></i> Get Approved</h5>
+<p class="text-muted mb-0">An administrator reviews the request and approves access under the dataset's usage terms.</p>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6 g-col-lg-3">
+<div class="step-card">
+<div class="step-number">4</div>
+<h5><i class="bi bi-download me-1 text-accent"></i> Download</h5>
+<p class="text-muted mb-0">Download the dataset and citation details, ready to bring into your analysis.</p>
+</div>
+</div>
+</div>
+<p class="text-center text-muted small mt-4">
+<i class="bi bi-info-circle me-1"></i>
+In this proof of concept, steps 3–4 are demonstrated as mock states — see the
+<a href="guidelines.html">Guidelines &amp; FAQ</a> page for what's real vs. simulated.
+</p>
+</div>
+</section>
+
+<!-- ======================= FEATURED DATASETS ======================= -->
+<section class="section">
+<div class="container">
+<div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+<div>
+<span class="eyebrow">Featured</span>
+<h2 class="mb-0">A sample of the catalog</h2>
+</div>
+<a href="catalog.html" class="btn btn-outline-primary">
+View Full Catalog <i class="bi bi-arrow-right ms-1"></i>
+</a>
+</div>
+
+::: {#featured-datasets}
+:::
+
+</div>
+</section>
+
+<!-- ======================= PARTNER STRIP ======================= -->
+<section class="section-tight section-alt">
+<div class="container text-center">
+<span class="eyebrow">Recognized By</span>
+<h4 class="mb-4 text-muted fw-normal">Partner universities <em>(placeholder logos for this demo)</em></h4>
+<div class="d-flex flex-wrap justify-content-center align-items-center gap-4 partner-logo-strip">
+<img src="images/partners/udsm.svg" alt="University of Dar es Salaam (UDSM) — placeholder logo">
+<img src="images/partners/sua.svg" alt="Sokoine University of Agriculture (SUA) — placeholder logo">
+<img src="images/partners/mzumbe.svg" alt="Mzumbe University — placeholder logo">
+<img src="images/partners/udom.svg" alt="University of Dodoma (UDOM) — placeholder logo">
+<img src="images/partners/nm-aist.svg" alt="Nelson Mandela African Institution of Science and Technology (NM-AIST) — placeholder logo">
+</div>
+<p class="small text-muted mt-4 mb-0">
+Interested in official recognition for your institution? See
+<a href="partners.html">For Universities &amp; Partners</a>.
+</p>
+</div>
+</section>

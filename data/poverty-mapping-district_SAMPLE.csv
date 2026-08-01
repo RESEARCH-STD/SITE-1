@@ -1,0 +1,11 @@
+district,region,poverty_headcount_rate_pct,extreme_poverty_rate_pct,gini_coefficient,population_estimate,rural_urban_classification
+Kilosa,Morogoro,31.4,10.2,0.38,438000,Mixed
+Bukoba,Kagera,24.7,8.1,0.35,410000,Mixed
+Kinondoni,Dar es Salaam,9.8,2.4,0.42,1850000,Urban
+Kondoa,Dodoma,38.2,14.5,0.33,300000,Predominantly Rural
+Njombe,Njombe,27.6,9.0,0.34,220000,Mixed
+Temeke,Dar es Salaam,14.2,4.1,0.40,1450000,Urban
+Sengerema,Mwanza,33.9,12.8,0.31,650000,Predominantly Rural
+Mpanda,Katavi,29.5,11.1,0.32,290000,Mixed
+Moshi,Kilimanjaro,16.4,5.2,0.36,270000,Urban
+Nachingwea,Lindi,35.7,13.9,0.30,215000,Predominantly Rural

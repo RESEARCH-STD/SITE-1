@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Migration &amp; Urbanization placeholder thumbnail">
+  <defs>
+    <linearGradient id="g-migration-urbanization" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1F6F78"/>
+      <stop offset="100%" stop-color="#123C69"/>
+    </linearGradient>
+    <pattern id="dots-migration-urbanization" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#ffffff" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#g-migration-urbanization)"/>
+  <rect width="800" height="450" fill="url(#dots-migration-urbanization)"/>
+  <g transform="translate(400,205)" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M-65,-10 L20,-10"/><path d="M0,-25 L20,-10 L0,5"/><path d="M65,20 L-20,20"/><path d="M-40,5 L-20,20 L-40,35"/>
+  </g>
+  <text x="40" y="405" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" opacity="0.9">Migration &amp; Urbanization</text>
+  <text x="40" y="46" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff" opacity="0.65" letter-spacing="1">SAMPLE THUMBNAIL — PLACEHOLDER</text>
+</svg>

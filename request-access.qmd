@@ -1,0 +1,141 @@
+---
+title: "Request Access"
+subtitle: "Tell us about your research and we'll review your request."
+pagetitle: "Request Access — Takwimu Bridge"
+title-block-banner: false
+---
+
+::: {.callout-important icon=false}
+## <i class="bi bi-cone-striped"></i>&nbsp; Proof-of-concept form
+This is a **static demo form**. Submissions go to a form service placeholder
+(Formspree) and are **not** connected to a real approval workflow, database, or
+authentication system yet. <!-- TODO: backend --> See the
+[Phase 2 note in the README](https://example.org) for what a production version
+would add.
+:::
+
+<div class="grid gap-4">
+<div class="g-col-12 g-col-lg-8">
+<div class="form-card">
+<!--
+TODO (form endpoint): replace YOUR_FORM_ID below with a real Formspree
+endpoint (https://formspree.io/f/YOUR_FORM_ID), or swap this entire
+<form> for an embedded Google Form iframe. See README.md → "Where to
+plug in the form endpoint".
+-->
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="request-access-form">
+<div class="mb-3">
+<label for="student_name" class="form-label">Student Full Name <span class="required-flag">*</span></label>
+<input type="text" class="form-control" id="student_name" name="student_name" required>
+</div>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-6 mb-3">
+<label for="university" class="form-label">University <span class="required-flag">*</span></label>
+<select class="form-select" id="university" name="university" required>
+<option value="" selected disabled>Select your university…</option>
+<option value="University of Dar es Salaam (UDSM)">University of Dar es Salaam (UDSM)</option>
+<option value="Sokoine University of Agriculture (SUA)">Sokoine University of Agriculture (SUA)</option>
+<option value="Mzumbe University">Mzumbe University</option>
+<option value="University of Dodoma (UDOM)">University of Dodoma (UDOM)</option>
+<option value="Nelson Mandela African Institution of Science and Technology (NM-AIST)">Nelson Mandela African Institution of Science and Technology (NM-AIST)</option>
+<option value="Other">Other (please specify in Research Purpose)</option>
+</select>
+<div class="form-text">Placeholder list — see <a href="partners.html">For Universities</a> for how official partners are added.</div>
+</div>
+<div class="g-col-12 g-col-md-6 mb-3">
+<label for="student_id" class="form-label">Student / Registration ID <span class="required-flag">*</span></label>
+<input type="text" class="form-control" id="student_id" name="student_id" required>
+</div>
+</div>
+<div class="mb-3">
+<label for="email" class="form-label">Email Address <span class="required-flag">*</span></label>
+<input type="email" class="form-control" id="email" name="email" required>
+</div>
+<div class="mb-3">
+<label for="datasets_requested" class="form-label">Dataset(s) Requested <span class="required-flag">*</span></label>
+<select class="form-select" id="datasets_requested" name="datasets_requested[]" multiple size="6" required>
+<option>Tanzania Population and Housing Census Extract (Mainland Regions)</option>
+<option>Household Budget Survey (HBS) — Consumption Aggregates Sample</option>
+<option>Tanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample</option>
+<option>Basic Education Statistics — School Enrollment and Completion Sample</option>
+<option>Integrated Labour Force Survey (ILFS) — Youth Employment Sample</option>
+<option>National Panel Survey (NPS) — Smallholder Agriculture Sample (Wave 5)</option>
+<option>Poverty Mapping Dataset — District-Level Poverty Estimates Sample</option>
+<option>Gender-Based Violence Prevalence Indicators Sample</option>
+<option>Internal Migration and Urbanization Patterns Sample</option>
+</select>
+<div class="form-text">Hold Ctrl (Windows) / Cmd (Mac) to select more than one. Arriving from a dataset page pre-selects it automatically.</div>
+</div>
+<div class="mb-3">
+<label for="research_purpose" class="form-label">Research Purpose <span class="required-flag">*</span></label>
+<textarea class="form-control" id="research_purpose" name="research_purpose" rows="4" placeholder="Briefly describe your research topic, objectives, and how this dataset will be used." required></textarea>
+</div>
+<div class="grid gap-3">
+<div class="g-col-12 g-col-md-6 mb-3">
+<label for="supervisor_name" class="form-label">Supervisor Name</label>
+<input type="text" class="form-control" id="supervisor_name" name="supervisor_name">
+</div>
+<div class="g-col-12 g-col-md-6 mb-3">
+<label for="supervisor_email" class="form-label">Supervisor Email</label>
+<input type="email" class="form-control" id="supervisor_email" name="supervisor_email">
+</div>
+</div>
+<div class="form-check mb-4">
+<input class="form-check-input" type="checkbox" id="agree_terms" name="agree_terms" required>
+<label class="form-check-label" for="agree_terms">
+I agree to the <a href="guidelines.html">Data Use Guidelines &amp; Terms</a>, including citation
+requirements and the restriction on redistributing raw data. <span class="required-flag">*</span>
+</label>
+</div>
+<button type="submit" class="btn btn-accent btn-lg">
+<i class="bi bi-send-fill me-1"></i> Submit Request
+</button>
+<p class="text-muted small mt-3 mb-0">
+<i class="bi bi-info-circle me-1"></i>
+Demo only — submitting this form will attempt to POST to the Formspree
+placeholder endpoint above and will not succeed until a real endpoint is configured.
+</p>
+</form>
+</div>
+</div>
+
+<div class="g-col-12 g-col-lg-4">
+<div class="card border-0 shadow-soft rounded-4 p-3 mb-3">
+<div class="card-body">
+<h5><i class="bi bi-signpost-2 text-accent me-1"></i> What happens next?</h5>
+<ol class="text-muted mb-0 ps-3">
+<li class="mb-2">You submit this request form.</li>
+<li class="mb-2">An administrator reviews it against the dataset's usage terms (mocked in this demo).</li>
+<li class="mb-2">You're notified by email once approved or if more information is needed.</li>
+<li>The Download button unlocks on the dataset's page.</li>
+</ol>
+</div>
+</div>
+<div class="card border-0 shadow-soft rounded-4 p-3">
+<div class="card-body">
+<h5><i class="bi bi-clock-history text-accent me-1"></i> Expected turnaround</h5>
+<p class="text-muted mb-0">
+Typically <strong>3–5 business days</strong> in the intended production
+workflow (placeholder SLA). See <a href="guidelines.html">Guidelines &amp; FAQ</a> for details.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+// Pre-fill the "Dataset(s) Requested" select using a ?dataset=... query
+// parameter, e.g. linked from a dataset detail page's "Request Access" button.
+document.addEventListener("DOMContentLoaded", function () {
+  var params = new URLSearchParams(window.location.search);
+  var requested = params.get("dataset");
+  if (!requested) return;
+  var select = document.getElementById("datasets_requested");
+  if (!select) return;
+  Array.prototype.forEach.call(select.options, function (opt) {
+    if (opt.value.trim() === requested.trim()) {
+      opt.selected = true;
+    }
+  });
+});
+</script>

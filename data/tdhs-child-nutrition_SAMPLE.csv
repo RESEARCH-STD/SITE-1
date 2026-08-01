@@ -1,0 +1,11 @@
+child_id,region,age_months,sex,stunting_flag,wasting_flag,underweight_flag,breastfeeding_status,mothers_education_level
+C-0001,Njombe,18,Female,No,No,No,Mixed,Secondary
+C-0002,Shinyanga,34,Male,Yes,No,Yes,None,Primary
+C-0003,Kagera,9,Female,No,No,No,Exclusive,None
+C-0004,Dar es Salaam,47,Male,No,No,No,None,Higher
+C-0005,Mara,22,Female,Yes,Yes,Yes,Mixed,Primary
+C-0006,Simiyu,12,Male,No,No,No,Exclusive,None
+C-0007,Rukwa,40,Female,Yes,No,No,None,Primary
+C-0008,Katavi,6,Male,No,No,No,Exclusive,None
+C-0009,Manyara,29,Female,No,No,No,Mixed,Secondary
+C-0010,Pwani,15,Male,Yes,Yes,Yes,None,None

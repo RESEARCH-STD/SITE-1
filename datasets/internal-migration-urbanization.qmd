@@ -1,0 +1,84 @@
+---
+title: "Internal Migration and Urbanization Patterns Sample"
+subtitle: "Origin-destination migration flows and post-migration employment"
+pagetitle: "Internal Migration & Urbanization Sample — Takwimu Bridge"
+categories: ["Migration & Urbanization"]
+date: "2021-10-01"
+image: ../images/datasets/migration-urbanization.svg
+description: "Origin-destination migration records with migration reason, years since move, and post-migration employment status."
+region: "National (Mainland Tanzania)"
+year: "2021"
+title-block-banner: false
+---
+
+<div class="grid gap-4 mb-4 align-items-start">
+<div class="g-col-12 g-col-lg-5">
+<img src="../images/datasets/migration-urbanization.svg" class="img-fluid dataset-hero-thumb" alt="Migration & Urbanization placeholder thumbnail">
+</div>
+<div class="g-col-12 g-col-lg-7">
+<span class="listing-category">Migration &amp; Urbanization</span>
+<p class="text-muted mt-3 fs-5">
+Individual-level internal migration records capturing region of origin
+and destination, reason for migrating, years since migration, and
+post-migration employment status — useful for urbanization and
+rural-urban migration research.
+</p>
+<div class="d-flex flex-wrap gap-2 mt-3 align-items-center">
+<a class="btn btn-accent" href="../request-access.html?dataset=Internal%20Migration%20and%20Urbanization%20Patterns%20Sample">
+<i class="bi bi-send-fill me-1"></i> Request Access
+</a>
+<button class="btn btn-outline-secondary" disabled title="Pending approval — demo state">
+<i class="bi bi-download me-1"></i> Download
+</button>
+<span class="badge-pending">Pending Approval (demo)</span>
+</div>
+</div>
+</div>
+
+<div class="download-demo-card small text-muted mb-4">
+  <i class="bi bi-info-circle me-1"></i>
+  <strong>Demo state:</strong> Download is disabled in this proof of concept.
+  Real access control (auth + admin approval) is a Phase 2 backend feature.
+  <!-- TODO: backend -->
+</div>
+
+## Dataset Details
+
+::: {.dataset-meta-table}
+|  |  |
+|---|---|
+| **Data Source / Provider** | NBS — Census Migration Module — sample/demo attribution |
+| **Year(s) Covered** | 2021 |
+| **Geographic Coverage** | National (Mainland Tanzania) |
+| **Sample Size** | 175 synthetic individual migration records (demo) |
+| **File Format** | CSV |
+| **File Size** | 22 KB |
+| **License / Terms of Use** | Academic / non-commercial research use with attribution (demo terms — see [Guidelines & FAQ](../guidelines.html)) |
+:::
+
+## Variables
+
+- `respondent_id` — Unique respondent identifier
+- `region_of_origin` — Region migrated from
+- `region_of_residence` — Current region of residence
+- `migration_reason` — Employment / Education / Family / Other
+- `years_since_migration` — Years since relocating
+- `urban_rural_destination` — Urban / Rural
+- `employment_status_after_migration` — Employed / Unemployed / Not in labour force
+
+## Sample Data Preview
+
+| respondent_id | region_of_origin | region_of_residence | migration_reason | urban_rural_destination |
+|---|---|---|---|---|
+| M-0301 | Kigoma | Dar es Salaam | Employment | Urban |
+| M-0302 | Singida | Arusha | Education | Urban |
+| M-0303 | Lindi | Mtwara | Family | Rural |
+| M-0304 | Geita | Mwanza | Employment | Urban |
+
+<p class="text-muted small"><em>Preview rows are illustrative placeholder values, not real survey figures.</em></p>
+
+## Suggested Citation
+
+> National Bureau of Statistics (NBS). (2021). *Internal Migration and Urbanization Patterns Sample* [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from `https://example.org/datasets/internal-migration-urbanization`.
+
+[← Back to Data Catalog](../catalog.html)

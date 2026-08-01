@@ -1,0 +1,68 @@
+---
+title: "For Universities & Partners"
+subtitle: "How institutions partner with and endorse Takwimu Bridge"
+pagetitle: "For Universities & Partners — Takwimu Bridge"
+title-block-banner: false
+---
+
+## Why Partner?
+
+University partnership gives your students a vetted, citation-ready data
+source for coursework and dissertations, without your department having to
+host or curate the datasets itself. Partnership is designed to be lightweight:
+
+- **Endorse the terms.** Your institution reviews and signs off on the
+  portal's data-use terms and citation standard.
+- **Nominate a liaison.** A librarian, research office staff member, or
+  department coordinator acts as your point of contact and can co-review
+  student requests from your institution.
+- **Promote to students.** Students use their university affiliation when
+  requesting datasets, so requests can be routed and reported per institution.
+
+## Current Partner Universities *(placeholder)*
+
+::: {.callout-warning icon=false}
+## <i class="bi bi-exclamation-triangle"></i>&nbsp; Placeholder list
+The universities and logos below are shown **for demonstration purposes
+only** and do not represent confirmed partnerships. Replace with your actual
+partner list once agreements are in place.
+:::
+
+<div class="grid gap-4 my-2">
+<div class="g-col-6 g-col-md-4 g-col-lg-2 text-center">
+<img src="images/partners/udsm.svg" class="img-fluid mb-2" alt="University of Dar es Salaam (UDSM) — placeholder logo">
+<div class="small fw-semibold">University of Dar es Salaam</div>
+</div>
+<div class="g-col-6 g-col-md-4 g-col-lg-2 text-center">
+<img src="images/partners/sua.svg" class="img-fluid mb-2" alt="Sokoine University of Agriculture (SUA) — placeholder logo">
+<div class="small fw-semibold">Sokoine University of Agriculture</div>
+</div>
+<div class="g-col-6 g-col-md-4 g-col-lg-2 text-center">
+<img src="images/partners/mzumbe.svg" class="img-fluid mb-2" alt="Mzumbe University — placeholder logo">
+<div class="small fw-semibold">Mzumbe University</div>
+</div>
+<div class="g-col-6 g-col-md-4 g-col-lg-2 text-center">
+<img src="images/partners/udom.svg" class="img-fluid mb-2" alt="University of Dodoma (UDOM) — placeholder logo">
+<div class="small fw-semibold">University of Dodoma</div>
+</div>
+<div class="g-col-6 g-col-md-4 g-col-lg-2 text-center">
+<img src="images/partners/nm-aist.svg" class="img-fluid mb-2" alt="NM-AIST — placeholder logo">
+<div class="small fw-semibold">NM-AIST</div>
+</div>
+</div>
+
+## What Partnership Involves
+
+| Step | Description |
+|---|---|
+| 1. Initial contact | Your research office or library reaches out (or is invited) to review the portal. |
+| 2. Terms review | Legal/academic affairs reviews the data-use terms and citation policy. |
+| 3. Liaison nomination | Your institution names a liaison to handle escalations and co-review requests. |
+| 4. Logo & listing | Your university is added to the partner list and request-form dropdown. |
+| 5. Ongoing reporting | *(Phase 2)* Partner dashboards showing request volume and turnaround per institution. |
+
+## Interested in Partnering?
+
+This is a proof of concept, so there is no live partnership process yet —
+but if you'd like to discuss what a pilot could look like, reach out via the
+[Contact](contact.html) page.

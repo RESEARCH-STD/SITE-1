@@ -1,0 +1,29 @@
+---
+title: "Data Catalog"
+subtitle: "Search, filter, and sort the full set of sample socio-economic datasets."
+pagetitle: "Data Catalog — Takwimu Bridge"
+listing:
+  contents: datasets
+  type: grid
+  grid-columns: 3
+  image-height: "160px"
+  categories: true
+  sort-ui: [title, date]
+  sort: "date desc"
+  filter-ui: true
+  page-size: 12
+  fields: [image, title, category, region, year, description]
+  field-display-names:
+    category: "Category"
+    region: "Region"
+    year: "Year"
+---
+
+::: {.callout-note icon=false}
+## <i class="bi bi-info-circle"></i>&nbsp; About this catalog
+This proof-of-concept catalog contains **9 sample datasets** spread across
+demographics, health, education, labour, agriculture, poverty, gender, and
+migration. Metadata is realistic and Tanzania-relevant, but downloadable files
+are small **placeholder CSVs** — not real or real-looking microdata. Use the
+search box, category chips, and sort control below to explore.
+:::

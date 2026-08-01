@@ -1,0 +1,86 @@
+---
+title: "Guidelines & FAQ"
+subtitle: "Data-use terms, citation requirements, and how requests are handled"
+pagetitle: "Guidelines & FAQ — Takwimu Bridge"
+title-block-banner: false
+---
+
+## Data-Use Terms (Summary)
+
+::: {.callout-note icon=false}
+## <i class="bi bi-shield-check"></i>&nbsp; Demo terms
+The terms below are placeholder/illustrative language for this proof of
+concept, modeled on common academic data-sharing agreements. They are not a
+legally reviewed policy.
+:::
+
+1. **Academic, non-commercial use only.** Datasets on this portal may be used
+   for coursework, theses, dissertations, and non-commercial research.
+2. **No redistribution.** Do not re-publish or redistribute raw data files
+   outside your research team without permission.
+3. **Attribution required.** Always cite the original data provider and
+   Takwimu Bridge using the suggested citation on each dataset's page.
+4. **Report responsibly.** When publishing findings, avoid presenting
+   sample/placeholder figures (in this demo) or small-sample statistics
+   (in production) as nationally representative without appropriate caveats.
+5. **Sensitive topics.** Datasets covering sensitive subjects (e.g. gender-based
+   violence) may require an additional ethics/IRB clearance in production.
+
+## Citation Requirements
+
+Each dataset page includes a **Suggested Citation** in the Dataset Details
+section. At minimum, a citation should include: the data provider, the year,
+the dataset title, "Takwimu Bridge" as the distributing portal, and the
+retrieval date. Example:
+
+> National Bureau of Statistics (NBS). (2022). *Tanzania Population and
+> Housing Census — Sample Extract* [Data set]. Takwimu Bridge (demo portal).
+> Retrieved 2026-07-29 from `https://example.org/datasets/tanzania-population-census`.
+
+## The Request Process
+
+1. Browse the [Data Catalog](catalog.html) and open a dataset's detail page.
+2. Click **Request Access** — this opens the [Request Access](request-access.html)
+   form with the dataset pre-selected.
+3. Fill in your university, student ID, research purpose, and supervisor
+   details, then agree to the terms above.
+4. *(Production)* An administrator reviews and approves or follows up on your
+   request; you're notified by email.
+5. *(Production)* The **Download** button unlocks on the dataset's page.
+
+## Expected Turnaround
+
+**3–5 business days** is the target turnaround in the intended production
+workflow (placeholder SLA — to be confirmed with partner universities).
+
+## Frequently Asked Questions
+
+**Is this connected to a real database or login system yet?**
+No. This is a static proof-of-concept site. The Request Access form posts to
+a form-service placeholder, and "Pending Approval" / "Download" states on
+dataset pages are simulated, not backed by real access control.
+<!-- TODO: backend -->
+
+**Can I download data right now?**
+Not real data — each dataset page includes a small, clearly-labeled
+placeholder CSV sample and preview table so you can see the data's shape,
+but the Download button itself is disabled to demonstrate the intended
+gated-access flow.
+
+**Who approves requests in production?**
+This would be a nominated administrator — likely a university library staff
+member or portal maintainer — reviewing requests against the stated research
+purpose and supervisor confirmation.
+
+**What if my university isn't listed?**
+The university dropdown on the request form is a placeholder list. Select
+"Other" and note your institution in the Research Purpose field, or reach
+out via [Contact](contact.html).
+
+**Can I request more than one dataset at once?**
+Yes — the "Dataset(s) Requested" field on the request form supports multiple
+selections.
+
+**Is there a cost to use the portal?**
+No — the portal itself is intended to be free for students at partner
+universities. Individual dataset licenses/terms are shown on each dataset page.

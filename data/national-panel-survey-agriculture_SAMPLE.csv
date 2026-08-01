@@ -1,0 +1,11 @@
+household_id,region,farm_size_acres,main_crop,crop_yield_kg,uses_improved_seed,food_insecurity_score,access_to_extension_services
+F-0201,Iringa,2.5,Maize,980,Yes,3,Yes
+F-0202,Kigoma,1.2,Cassava,640,No,6,No
+F-0203,Manyara,3.8,Rice,1450,Yes,2,Yes
+F-0204,Lindi,1.0,Maize,410,No,7,No
+F-0205,Ruvuma,2.9,Maize,1120,Yes,3,Yes
+F-0206,Tabora,2.1,Groundnuts,530,No,5,No
+F-0207,Mbeya,4.2,Rice,1780,Yes,1,Yes
+F-0208,Shinyanga,1.6,Cotton,300,No,6,No
+F-0209,Morogoro,3.0,Maize,1250,Yes,2,Yes
+F-0210,Kagera,1.4,Banana,520,No,5,No

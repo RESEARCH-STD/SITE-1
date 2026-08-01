@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Takwimu Bridge logo placeholder">
+  <defs>
+    <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B4F6C"/>
+      <stop offset="100%" stop-color="#0E8388"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="10" fill="url(#logoGrad)"/>
+  <path d="M10 30 L18 18 L24 26 L30 14 L38 30" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="10" cy="30" r="2.4" fill="#F2A93B"/>
+  <circle cx="24" cy="26" r="2.4" fill="#F2A93B"/>
+  <circle cx="38" cy="30" r="2.4" fill="#F2A93B"/>
+</svg>

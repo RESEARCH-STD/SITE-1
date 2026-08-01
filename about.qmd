@@ -1,0 +1,78 @@
+---
+title: "About Takwimu Bridge"
+subtitle: "Why we're building a shared data resource for Tanzanian student researchers"
+pagetitle: "About — Takwimu Bridge"
+title-block-banner: false
+---
+
+## Our Mission
+
+Takwimu Bridge *(placeholder name)* exists to give Tanzanian university students
+faster, more reliable access to quality socio-economic data — so that research
+time goes into analysis and insight, not into the logistics of fieldwork.
+
+We curate datasets already collected by national statistics agencies, research
+institutes, and development partners, and make them discoverable, well-documented,
+and citation-ready for coursework, dissertations, and early-career research.
+
+## The Problem We're Addressing
+
+Independent data collection is often the biggest bottleneck in student research:
+
+- **Time.** Designing instruments, training enumerators, and traveling to
+  field sites can consume months that a degree timeline doesn't have.
+- **Cost.** Transport, accommodation, and enumerator payments are significant
+  out-of-pocket costs for most students.
+- **Sample size.** Self-collected samples are often too small for robust
+  statistical analysis, limiting the strength of a thesis's conclusions.
+- **Discoverability.** High-quality datasets already exist, but they are
+  scattered across agency websites, PDFs, and restricted repositories that
+  are hard for a student to find or interpret.
+
+Takwimu Bridge addresses this by centralizing a curated, well-described catalog
+in one place, with a simple, transparent request-and-approval process.
+
+## How University Recognition Works
+
+For datasets to be trusted for academic use, participating universities
+review and endorse the portal's data-use terms, citation standards, and
+request workflow — much like a university library endorses a database
+subscription. A partner university's students then use their institutional
+affiliation when requesting datasets, and supervisors can be looped in on
+requests for oversight.
+
+Read more on the [For Universities & Partners](partners.html) page about
+what formal recognition involves.
+
+::: {.callout-note icon=false}
+## <i class="bi bi-cone-striped"></i>&nbsp; Proof-of-concept status
+This is an early proof of concept built to demonstrate the user experience of
+browsing, requesting, and (eventually) downloading datasets. No university has
+formally endorsed this specific demo site — the partner list and logos shown
+throughout are illustrative placeholders. <!-- TODO: backend -->
+:::
+
+## Governance & Team
+
+*(Placeholder — to be completed once the portal is adopted by a sponsoring
+department, library, or inter-university committee.)*
+
+| Role | Placeholder |
+|---|---|
+| Portal Lead | *TBD* |
+| Data Curation | *TBD — subject-matter reviewers per category* |
+| University Liaison(s) | *TBD — one contact per partner institution* |
+| Technical Maintainer | *TBD* |
+
+## What's Real vs. Mocked in This Demo
+
+| Area | Status in this POC |
+|---|---|
+| Data catalog, search, filters | ✅ Fully functional (static site) |
+| Dataset detail pages & metadata | ✅ Fully functional, sample content |
+| Request Access form | ⚠️ Wired to a form-service placeholder — not yet a real backend |
+| Approval workflow | 🧪 Simulated ("Pending Approval" mock state only) |
+| Gated downloads / authentication | 🧪 Simulated (Download button disabled) |
+
+See [Guidelines & FAQ](guidelines.html) for more detail, and the project
+`README.md` for the technical Phase 2 roadmap.

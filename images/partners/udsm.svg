@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 100" width="220" height="100" role="img" aria-label="UDSM placeholder logo">
+  <rect x="1" y="1" width="218" height="98" rx="10" fill="#ffffff" stroke="#0B4F6C" stroke-width="2"/>
+  <circle cx="36" cy="50" r="20" fill="#0B4F6C" opacity="0.15"/>
+  <circle cx="36" cy="50" r="12" fill="#0B4F6C"/>
+  <text x="66" y="45" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#0B4F6C">UDSM</text>
+  <text x="66" y="66" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#6c757d" letter-spacing="0.5">PLACEHOLDER LOGO</text>
+</svg>

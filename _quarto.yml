@@ -1,0 +1,85 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "datasets/*.qmd"
+
+# ---------------------------------------------------------------------------
+# NOTE ON NAMING: "Takwimu Bridge" is a PLACEHOLDER portal name (Takwimu is
+# Swahili for "statistics/data"). Replace it here, in custom.scss comments,
+# and in README.md once an official name is confirmed with university
+# partners. Same applies to the brand colors and the partner logos in
+# images/partners/ — all placeholders, clearly labeled.
+# ---------------------------------------------------------------------------
+
+website:
+  title: "Takwimu Bridge"
+  description: "A socio-economic data portal connecting Tanzanian university students to curated research datasets — no fieldwork required."
+  site-url: "https://example.org" # TODO: replace with production URL once deployed
+  favicon: images/logo.svg
+  page-navigation: true
+  bread-crumbs: false
+  open-graph: true
+  twitter-card: true
+
+  search:
+    location: navbar
+    type: overlay
+    copy-button: true
+
+  navbar:
+    background: primary
+    pinned: true
+    logo: images/logo.svg
+    logo-alt: "Takwimu Bridge logo"
+    title: "Takwimu Bridge"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Data Catalog"
+        href: catalog.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "For Universities"
+        href: partners.qmd
+      - text: "Guidelines & FAQ"
+        href: guidelines.qmd
+      - text: "Contact"
+        href: contact.qmd
+    right:
+      - text: "Request Data"
+        href: request-access.qmd
+
+  page-footer:
+    background: dark
+    left: |
+      **Takwimu Bridge** *(placeholder name)*<br>
+      A socio-economic data portal for Tanzanian university students.<br>
+      © 2026 Takwimu Bridge. Sample content for demonstration purposes only.
+    center:
+      - text: "Data Catalog"
+        href: catalog.qmd
+      - text: "Guidelines & FAQ"
+        href: guidelines.qmd
+      - text: "For Universities"
+        href: partners.qmd
+      - text: "Contact"
+        href: contact.qmd
+    right: |
+      Built with [Quarto](https://quarto.org) & Bootstrap 5.<br>
+      Proof of concept — Phase 1 (static site, no backend).
+
+format:
+  html:
+    theme:
+      light: [flatly, custom.scss]
+    include-in-header: _includes/head-extra.html
+    toc: false
+    link-external-icon: false
+    link-external-newwindow: true
+    grid:
+      body-width: 1100px
+      sidebar-width: 250px
+      margin-width: 250px
+    highlight-style: github

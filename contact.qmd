@@ -1,0 +1,65 @@
+---
+title: "Contact"
+subtitle: "Questions, feedback, or partnership inquiries"
+pagetitle: "Contact — Takwimu Bridge"
+title-block-banner: false
+---
+
+<div class="grid gap-4">
+<div class="g-col-12 g-col-lg-7">
+<h4><i class="bi bi-envelope-fill text-accent me-1"></i> General Inquiries</h4>
+<p class="text-muted">
+For questions about the portal, data requests, or this proof of concept,
+reach out using the placeholder contact details below.
+</p>
+<ul class="list-unstyled text-muted">
+<li class="mb-2"><i class="bi bi-envelope me-2"></i> <code>info@example.org</code> <span class="text-muted small">(placeholder)</span></li>
+<li class="mb-2"><i class="bi bi-telephone me-2"></i> +255 000 000 000 <span class="text-muted small">(placeholder)</span></li>
+<li class="mb-2"><i class="bi bi-geo-alt me-2"></i> Dar es Salaam, Tanzania <span class="text-muted small">(placeholder address)</span></li>
+</ul>
+<h4 class="mt-4"><i class="bi bi-mortarboard-fill text-accent me-1"></i> University Partnerships</h4>
+<p class="text-muted">
+Represent a university research office, library, or department interested
+in partnering? See <a href="partners.html">For Universities &amp; Partners</a>
+or contact us directly.
+</p>
+<h4 class="mt-4"><i class="bi bi-database-fill-add text-accent me-1"></i> Contribute a Dataset</h4>
+<p class="text-muted">
+Have a socio-economic dataset that could benefit student researchers?
+We'd like to hear from you — include the dataset's source, coverage,
+and licensing terms when you reach out.
+</p>
+</div>
+
+<div class="g-col-12 g-col-lg-5">
+<div class="card border-0 shadow-soft rounded-4">
+<div class="card-body p-4">
+<h5 class="mb-3"><i class="bi bi-chat-dots-fill text-accent me-1"></i> Send a Message</h5>
+<p class="text-muted small">
+<i class="bi bi-info-circle me-1"></i>
+Demo form only — wire this to the same form-service placeholder used
+on <a href="request-access.html">Request Access</a>, or your preferred
+contact-form provider. <!-- TODO: backend -->
+</p>
+<!-- TODO (form endpoint): replace YOUR_FORM_ID with a real Formspree endpoint -->
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<div class="mb-3">
+<label for="contact_name" class="form-label">Name</label>
+<input type="text" class="form-control" id="contact_name" name="name" required>
+</div>
+<div class="mb-3">
+<label for="contact_email" class="form-label">Email</label>
+<input type="email" class="form-control" id="contact_email" name="email" required>
+</div>
+<div class="mb-3">
+<label for="contact_message" class="form-label">Message</label>
+<textarea class="form-control" id="contact_message" name="message" rows="4" required></textarea>
+</div>
+<button type="submit" class="btn btn-accent">
+<i class="bi bi-send-fill me-1"></i> Send
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>

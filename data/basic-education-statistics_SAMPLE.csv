@@ -1,0 +1,11 @@
+school_id,region,district,school_type,enrollment_total,enrollment_female_pct,completion_rate_pct,pupil_teacher_ratio,dropout_rate_pct
+SCH-0011,Morogoro,Kilosa,Government,812,49.2,78.4,46,3.2
+SCH-0012,Kilimanjaro,Moshi Rural,Government,640,51.0,85.1,38,1.8
+SCH-0013,Singida,Manyoni,Government,505,47.6,70.2,52,4.6
+SCH-0014,Pwani,Kibaha,Private,390,50.5,93.4,22,0.9
+SCH-0015,Mara,Musoma Rural,Government,715,46.8,74.0,48,3.9
+SCH-0016,Tabora,Uyui,Government,588,45.9,68.7,55,5.1
+SCH-0017,Kagera,Bukoba Rural,Government,460,50.1,79.9,41,2.7
+SCH-0018,Ruvuma,Songea Rural,Government,530,48.3,76.5,44,3.4
+SCH-0019,Arusha,Meru,Private,300,52.2,95.0,19,0.5
+SCH-0020,Dodoma,Bahi,Government,410,44.7,65.3,58,6.0

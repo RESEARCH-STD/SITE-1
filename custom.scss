@@ -67,49 +67,11 @@ body {
   overflow-x: hidden;
 }
 
-// Quarto's bundled Bootstrap ships .grid/.g-col-* as a CSS Grid system.
-// CSS Grid items default to min-width:auto, so a track can be forced wider
-// than intended by long unbreakable content, overflowing the viewport on
-// narrow screens (in practice this showed up as clipped hero/card text on
-// mobile). Redefine .grid/.g-col-* as a classic flexbox grid instead —
-// same class names this site's pages already use, but with the
-// min-width:0 safety flexbox grids are known to need.
-.grid {
-  display: flex !important;
-  flex-wrap: wrap;
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-  max-width: 100%;
-}
+// CSS Grid items default to min-width:auto, letting long unbreakable text
+// widen a track and overflow the viewport. Fix by resetting min-width on
+// direct children of .grid.
 .grid > * {
-  box-sizing: border-box;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
   min-width: 0;
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-@for $i from 1 through 12 {
-  .g-col-#{$i} {
-    flex: 0 0 percentage($i / 12);
-    max-width: percentage($i / 12);
-  }
-}
-@media (min-width: 768px) {
-  @for $i from 1 through 12 {
-    .g-col-md-#{$i} {
-      flex: 0 0 percentage($i / 12);
-      max-width: percentage($i / 12);
-    }
-  }
-}
-@media (min-width: 992px) {
-  @for $i from 1 through 12 {
-    .g-col-lg-#{$i} {
-      flex: 0 0 percentage($i / 12);
-      max-width: percentage($i / 12);
-    }
-  }
 }
 
 // Bootstrap's .badge sets white-space:nowrap, which is fine for short

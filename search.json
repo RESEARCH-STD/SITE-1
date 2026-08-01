@@ -1,0 +1,464 @@
+[
+  {
+    "objectID": "request-access.html",
+    "href": "request-access.html",
+    "title": "Request Access",
+    "section": "",
+    "text": "Important  Proof-of-concept form\n\n\n\nThis is a static demo form. Submissions go to a form service placeholder (Formspree) and are not connected to a real approval workflow, database, or authentication system yet.  See the Phase 2 note in the README for what a production version would add.\n\n\n\n\n\n\n\n\nStudent Full Name * \n\n\n\nUniversity *  Select your university… University of Dar es Salaam (UDSM) Sokoine University of Agriculture (SUA) Mzumbe University University of Dodoma (UDOM) Nelson Mandela African Institution of Science and Technology (NM-AIST) Other (please specify in Research Purpose) \n\nPlaceholder list — see For Universities for how official partners are added.\n\n\n\nStudent / Registration ID * \n\n\n\nEmail Address * \n\n\nDataset(s) Requested *  Tanzania Population and Housing Census Extract (Mainland Regions) Household Budget Survey (HBS) — Consumption Aggregates Sample Tanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample Basic Education Statistics — School Enrollment and Completion Sample Integrated Labour Force Survey (ILFS) — Youth Employment Sample National Panel Survey (NPS) — Smallholder Agriculture Sample (Wave 5) Poverty Mapping Dataset — District-Level Poverty Estimates Sample Gender-Based Violence Prevalence Indicators Sample Internal Migration and Urbanization Patterns Sample \n\nHold Ctrl (Windows) / Cmd (Mac) to select more than one. Arriving from a dataset page pre-selects it automatically.\n\n\n\nResearch Purpose *\n\n\n\n\nSupervisor Name \n\n\nSupervisor Email \n\n\n\n  I agree to the Data Use Guidelines & Terms, including citation requirements and the restriction on redistributing raw data. * \n\n\n Submit Request\n\n\n Demo only — submitting this form will attempt to POST to the Formspree placeholder endpoint above and will not succeed until a real endpoint is configured.\n\n\n\n\n\n\n\n\n What happens next?\n\n\n\nYou submit this request form.\n\n\nAn administrator reviews it against the dataset’s usage terms (mocked in this demo).\n\n\nYou’re notified by email once approved or if more information is needed.\n\n\nThe Download button unlocks on the dataset’s page.\n\n\n\n\n\n\n\n Expected turnaround\n\n\nTypically 3–5 business days in the intended production workflow (placeholder SLA). See Guidelines & FAQ for details."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\nSocio-economic data for your research — without months of fieldwork.\n",
+    "section": "",
+    "text": "Proof of concept — for Tanzanian universities \n\nSocio-economic data for your research — without months of fieldwork.\n\n\nTakwimu Bridge (placeholder name) is a curated catalog of Tanzanian socio-economic datasets. Browse a topic, request access, and download — so students spend less time collecting data and more time analyzing it.\n\n\n  Browse Data   Learn More \n\n\n\n\n9\n\n\nSample Datasets\n\n\n\n\n9\n\n\nTopic Categories\n\n\n\n\n5\n\n\nPartner Universities*\n\n\n\n\n*Placeholder partners shown for demonstration — see For Universities.\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Problem\n\nFieldwork is slow, costly, and often out of reach.\n\n\nMany undergraduate and postgraduate research projects stall at the data collection stage. Household surveys and enumeration take weeks, travel and logistics strain student budgets, and small self-collected samples limit how far a dissertation’s analysis can go.\n\n\nMeanwhile, high-quality socio-economic survey data already exists — collected by national statistics agencies, research institutes, and development partners — but it is scattered, hard to discover, and rarely packaged for classroom or thesis use.\n\n\n\n\n\n\n\n\nWeeks lost\n\n\nto travel & enumeration\n\n\n\n\n\n\n\nHigh cost\n\n\nof independent fieldwork\n\n\n\n\n\n\n\nSmall samples\n\n\nlimit statistical power\n\n\n\n\n\n\n\nHard to discover\n\n\nexisting quality datasets\n\n\n\n\n\n\n\n\n\n\n\n\nHow It Works\n\nFrom browsing to your dataset, in four steps\n\n\nA simple, transparent workflow designed around how student research actually happens.\n\n\n\n\n\n\n1\n\n\n Browse\n\n\nSearch and filter the catalog by topic, region, and year to find the dataset your research needs.\n\n\n\n\n\n\n2\n\n\n Request\n\n\nSubmit a short access request describing your research purpose and supervisor details.\n\n\n\n\n\n\n3\n\n\n Get Approved\n\n\nAn administrator reviews the request and approves access under the dataset’s usage terms.\n\n\n\n\n\n\n4\n\n\n Download\n\n\nDownload the dataset and citation details, ready to bring into your analysis.\n\n\n\n\n\n In this proof of concept, steps 3–4 are demonstrated as mock states — see the Guidelines & FAQ page for what’s real vs. simulated.\n\n\n\n\n\n\n\n\nFeatured\n\nA sample of the catalog\n\n\n View Full Catalog  \n\n\n\n\n\n\n\n\n\n\n\nHousehold Budget Survey (HBS) — Consumption Aggregates Sample\n\n\nHousehold-level food and non-food consumption expenditure aggregates with poverty-line comparisons.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nNational (Mainland Tanzania, urban & rural)\n\n\n\n\n\nYear\n\n\n2017/18\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample\n\n\nChild-level nutrition status indicators (stunting, wasting, underweight) with maternal education context.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nNational (Mainland & Zanzibar)\n\n\n\n\n\nYear\n\n\n2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBasic Education Statistics — School Enrollment and Completion Sample\n\n\nSchool-level enrollment, gender parity, pupil-teacher ratio, and completion/dropout indicators.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nMainland Tanzania (regional)\n\n\n\n\n\nYear\n\n\n2023\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\n\nRecognized By\n\nPartner universities (placeholder logos for this demo)\n\n\n    \n\n\nInterested in official recognition for your institution? See For Universities & Partners."
+  },
+  {
+    "objectID": "datasets/tdhs-child-nutrition.html",
+    "href": "datasets/tdhs-child-nutrition.html",
+    "title": "Tanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample",
+    "section": "",
+    "text": "Health & Nutrition\n\nChild-level nutritional status indicators — stunting, wasting, and underweight — alongside breastfeeding status and maternal education. Commonly used for public health and nutrition policy research.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/tdhs-child-nutrition.html#dataset-details",
+    "href": "datasets/tdhs-child-nutrition.html#dataset-details",
+    "title": "Tanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nMinistry of Health, NBS & ICF (TDHS Program) — sample/demo attribution\n\n\nYear(s) Covered\n2022\n\n\nGeographic Coverage\nNational (Mainland Tanzania and Zanzibar)\n\n\nSample Size\n220 synthetic child records, under-5 (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n33 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/tdhs-child-nutrition.html#variables",
+    "href": "datasets/tdhs-child-nutrition.html#variables",
+    "title": "Tanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample",
+    "section": "Variables",
+    "text": "Variables\n\nchild_id — Unique child identifier\nregion — Administrative region name\nage_months — Child’s age in months\nsex — Male / Female\nstunting_flag — Height-for-age below -2 SD (Yes/No)\nwasting_flag — Weight-for-height below -2 SD (Yes/No)\nunderweight_flag — Weight-for-age below -2 SD (Yes/No)\nbreastfeeding_status — Exclusive / Mixed / None\nmothers_education_level — None / Primary / Secondary / Higher"
+  },
+  {
+    "objectID": "datasets/tdhs-child-nutrition.html#sample-data-preview",
+    "href": "datasets/tdhs-child-nutrition.html#sample-data-preview",
+    "title": "Tanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\n\nchild_id\nregion\nage_months\nsex\nstunting_flag\nmothers_education_level\n\n\n\n\nC-0001\nNjombe\n18\nFemale\nNo\nSecondary\n\n\nC-0002\nShinyanga\n34\nMale\nYes\nPrimary\n\n\nC-0003\nKagera\n9\nFemale\nNo\nNone\n\n\nC-0004\nDar es Salaam\n47\nMale\nNo\nHigher\n\n\n\n\nPreview rows are illustrative placeholder values, not real survey figures."
+  },
+  {
+    "objectID": "datasets/tdhs-child-nutrition.html#suggested-citation",
+    "href": "datasets/tdhs-child-nutrition.html#suggested-citation",
+    "title": "Tanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nMinistry of Health, National Bureau of Statistics (NBS) & ICF. (2022). Tanzania Demographic and Health Survey — Child Nutrition Indicators Sample [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/tdhs-child-nutrition.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "datasets/poverty-mapping-district.html",
+    "href": "datasets/poverty-mapping-district.html",
+    "title": "Poverty Mapping Dataset — District-Level Poverty Estimates Sample",
+    "section": "",
+    "text": "Poverty & Living Standards\n\nSmall-area estimates of poverty headcount rate, extreme poverty rate, and the Gini coefficient at the district level — produced using small-area estimation techniques combining survey and census data.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/poverty-mapping-district.html#dataset-details",
+    "href": "datasets/poverty-mapping-district.html#dataset-details",
+    "title": "Poverty Mapping Dataset — District-Level Poverty Estimates Sample",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nNBS / World Bank Small Area Estimation Program — sample/demo attribution\n\n\nYear(s) Covered\n2021\n\n\nGeographic Coverage\nDistrict-level, Mainland Tanzania\n\n\nSample Size\n139 synthetic district-level records (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n19 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/poverty-mapping-district.html#variables",
+    "href": "datasets/poverty-mapping-district.html#variables",
+    "title": "Poverty Mapping Dataset — District-Level Poverty Estimates Sample",
+    "section": "Variables",
+    "text": "Variables\n\ndistrict — District name\nregion — Parent administrative region\npoverty_headcount_rate_pct — Share of population below the poverty line (%)\nextreme_poverty_rate_pct — Share of population below the food poverty line (%)\ngini_coefficient — Inequality index (0 = perfect equality, 1 = max inequality)\npopulation_estimate — Estimated district population\nrural_urban_classification — Predominantly Rural / Urban / Mixed"
+  },
+  {
+    "objectID": "datasets/poverty-mapping-district.html#sample-data-preview",
+    "href": "datasets/poverty-mapping-district.html#sample-data-preview",
+    "title": "Poverty Mapping Dataset — District-Level Poverty Estimates Sample",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\ndistrict\nregion\npoverty_headcount_rate_pct\ngini_coefficient\nrural_urban_classification\n\n\n\n\nKilosa\nMorogoro\n31.4\n0.38\nMixed\n\n\nBukoba\nKagera\n24.7\n0.35\nMixed\n\n\nKinondoni\nDar es Salaam\n9.8\n0.42\nUrban\n\n\nKondoa\nDodoma\n38.2\n0.33\nPredominantly Rural\n\n\n\n\nPreview rows are illustrative placeholder values, not real estimates."
+  },
+  {
+    "objectID": "datasets/poverty-mapping-district.html#suggested-citation",
+    "href": "datasets/poverty-mapping-district.html#suggested-citation",
+    "title": "Poverty Mapping Dataset — District-Level Poverty Estimates Sample",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nNational Bureau of Statistics (NBS) & World Bank. (2021). Poverty Mapping Dataset — District-Level Poverty Estimates Sample [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/poverty-mapping-district.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "datasets/labour-force-youth-employment.html",
+    "href": "datasets/labour-force-youth-employment.html",
+    "title": "Integrated Labour Force Survey (ILFS) — Youth Employment Sample",
+    "section": "",
+    "text": "Labour & Employment\n\nIndividual-level employment status, sector of work, informal employment flag, and monthly income — with a focus on youth (ages 15–35). Useful for labour market and youth transition research.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/labour-force-youth-employment.html#dataset-details",
+    "href": "datasets/labour-force-youth-employment.html#dataset-details",
+    "title": "Integrated Labour Force Survey (ILFS) — Youth Employment Sample",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nNational Bureau of Statistics (NBS) — sample/demo attribution\n\n\nYear(s) Covered\n2020/21\n\n\nGeographic Coverage\nNational (Mainland Tanzania), urban and rural\n\n\nSample Size\n260 synthetic individual records, ages 15–35 (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n39 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/labour-force-youth-employment.html#variables",
+    "href": "datasets/labour-force-youth-employment.html#variables",
+    "title": "Integrated Labour Force Survey (ILFS) — Youth Employment Sample",
+    "section": "Variables",
+    "text": "Variables\n\nrespondent_id — Unique respondent identifier\nregion — Administrative region name\nurban_rural — Classification: Urban / Rural\nage — Respondent’s age (years)\nsex — Male / Female\nemployment_status — Employed / Unemployed / Not in labour force\nsector — Agriculture / Industry / Services\ninformal_employment_flag — Works in the informal sector (Yes/No)\nmonthly_income_tzs — Estimated monthly income (TZS)"
+  },
+  {
+    "objectID": "datasets/labour-force-youth-employment.html#sample-data-preview",
+    "href": "datasets/labour-force-youth-employment.html#sample-data-preview",
+    "title": "Integrated Labour Force Survey (ILFS) — Youth Employment Sample",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\n\nrespondent_id\nregion\nage\nemployment_status\nsector\ninformal_employment_flag\n\n\n\n\nR-0101\nMbeya\n24\nEmployed\nAgriculture\nYes\n\n\nR-0102\nDar es Salaam\n29\nEmployed\nServices\nNo\n\n\nR-0103\nTabora\n19\nUnemployed\n—\n—\n\n\nR-0104\nRuvuma\n33\nEmployed\nIndustry\nYes\n\n\n\n\nPreview rows are illustrative placeholder values, not real survey figures."
+  },
+  {
+    "objectID": "datasets/labour-force-youth-employment.html#suggested-citation",
+    "href": "datasets/labour-force-youth-employment.html#suggested-citation",
+    "title": "Integrated Labour Force Survey (ILFS) — Youth Employment Sample",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nNational Bureau of Statistics (NBS). (2021). Integrated Labour Force Survey — Youth Employment Sample [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/labour-force-youth-employment.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "datasets/household-budget-survey-consumption.html",
+    "href": "datasets/household-budget-survey-consumption.html",
+    "title": "Household Budget Survey (HBS) — Consumption Aggregates Sample",
+    "section": "",
+    "text": "Household Budget / Income & Consumption\n\nHousehold-level consumption expenditure aggregates — food and non-food — benchmarked against the national poverty line. A core input for poverty analysis, welfare comparisons, and household economics coursework.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/household-budget-survey-consumption.html#dataset-details",
+    "href": "datasets/household-budget-survey-consumption.html#dataset-details",
+    "title": "Household Budget Survey (HBS) — Consumption Aggregates Sample",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nNational Bureau of Statistics (NBS) — sample/demo attribution\n\n\nYear(s) Covered\n2017/18\n\n\nGeographic Coverage\nNational (Mainland Tanzania), urban and rural strata\n\n\nSample Size\n300 synthetic household records (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n58 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/household-budget-survey-consumption.html#variables",
+    "href": "datasets/household-budget-survey-consumption.html#variables",
+    "title": "Household Budget Survey (HBS) — Consumption Aggregates Sample",
+    "section": "Variables",
+    "text": "Variables\n\nhousehold_id — Unique household identifier\nregion — Administrative region name\nurban_rural — Classification: Urban / Rural\nhousehold_size — Number of household members\nmonthly_food_expenditure_tzs — Monthly food expenditure (TZS)\nmonthly_nonfood_expenditure_tzs — Monthly non-food expenditure (TZS)\ntotal_consumption_tzs — Total monthly consumption expenditure (TZS)\npoverty_line_tzs — Applicable national poverty line (TZS)\nbelow_poverty_line — Flag: household below poverty line (Yes/No)"
+  },
+  {
+    "objectID": "datasets/household-budget-survey-consumption.html#sample-data-preview",
+    "href": "datasets/household-budget-survey-consumption.html#sample-data-preview",
+    "title": "Household Budget Survey (HBS) — Consumption Aggregates Sample",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\n\nhousehold_id\nregion\nurban_rural\ntotal_consumption_tzs\npoverty_line_tzs\nbelow_poverty_line\n\n\n\n\nHH-0001\nMwanza\nUrban\n412,000\n49,320\nNo\n\n\nHH-0002\nIringa\nRural\n138,500\n33,748\nNo\n\n\nHH-0003\nKigoma\nRural\n27,900\n33,748\nYes\n\n\nHH-0004\nTanga\nUrban\n296,200\n49,320\nNo\n\n\n\n\nPreview rows are illustrative placeholder values, not real survey figures."
+  },
+  {
+    "objectID": "datasets/household-budget-survey-consumption.html#suggested-citation",
+    "href": "datasets/household-budget-survey-consumption.html#suggested-citation",
+    "title": "Household Budget Survey (HBS) — Consumption Aggregates Sample",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nNational Bureau of Statistics (NBS). (2018). Household Budget Survey — Consumption Aggregates Sample [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/household-budget-survey-consumption.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "datasets/basic-education-statistics.html",
+    "href": "datasets/basic-education-statistics.html",
+    "title": "Basic Education Statistics — School Enrollment and Completion Sample",
+    "section": "",
+    "text": "Education\n\nSchool-level enrollment and completion indicators, including gender parity, pupil-teacher ratio, and dropout rates — useful for education access and quality research at the primary and secondary levels.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/basic-education-statistics.html#dataset-details",
+    "href": "datasets/basic-education-statistics.html#dataset-details",
+    "title": "Basic Education Statistics — School Enrollment and Completion Sample",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nPresident’s Office – Regional Administration and Local Government (PO-RALG) — sample/demo attribution\n\n\nYear(s) Covered\n2023\n\n\nGeographic Coverage\nMainland Tanzania, regional/school-level\n\n\nSample Size\n180 synthetic school-level records (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n27 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/basic-education-statistics.html#variables",
+    "href": "datasets/basic-education-statistics.html#variables",
+    "title": "Basic Education Statistics — School Enrollment and Completion Sample",
+    "section": "Variables",
+    "text": "Variables\n\nschool_id — Unique school identifier\nregion — Administrative region name\ndistrict — Administrative district name\nschool_type — Government / Private\nenrollment_total — Total pupil enrollment\nenrollment_female_pct — Share of enrollment that is female (%)\ncompletion_rate_pct — Primary/secondary completion rate (%)\npupil_teacher_ratio — Pupils per teacher\ndropout_rate_pct — Annual dropout rate (%)"
+  },
+  {
+    "objectID": "datasets/basic-education-statistics.html#sample-data-preview",
+    "href": "datasets/basic-education-statistics.html#sample-data-preview",
+    "title": "Basic Education Statistics — School Enrollment and Completion Sample",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\n\nschool_id\nregion\nschool_type\nenrollment_total\npupil_teacher_ratio\ndropout_rate_pct\n\n\n\n\nSCH-0011\nMorogoro\nGovernment\n812\n46\n3.2\n\n\nSCH-0012\nKilimanjaro\nGovernment\n640\n38\n1.8\n\n\nSCH-0013\nSingida\nGovernment\n505\n52\n4.6\n\n\nSCH-0014\nPwani\nPrivate\n390\n22\n0.9\n\n\n\n\nPreview rows are illustrative placeholder values, not real statistics."
+  },
+  {
+    "objectID": "datasets/basic-education-statistics.html#suggested-citation",
+    "href": "datasets/basic-education-statistics.html#suggested-citation",
+    "title": "Basic Education Statistics — School Enrollment and Completion Sample",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nPresident’s Office – Regional Administration and Local Government (PO-RALG). (2023). Basic Education Statistics — School Enrollment and Completion Sample [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/basic-education-statistics.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "catalog.html",
+    "href": "catalog.html",
+    "title": "Data Catalog",
+    "section": "",
+    "text": "Note  About this catalog\n\n\n\nThis proof-of-concept catalog contains 9 sample datasets spread across demographics, health, education, labour, agriculture, poverty, gender, and migration. Metadata is realistic and Tanzania-relevant, but downloadable files are small placeholder CSVs — not real or real-looking microdata. Use the search box, category chips, and sort control below to explore.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBasic Education Statistics — School Enrollment and Completion Sample\n\n\nSchool-level enrollment, gender parity, pupil-teacher ratio, and completion/dropout indicators.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nMainland Tanzania (regional)\n\n\n\n\n\nYear\n\n\n2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTanzania Demographic and Health Survey (TDHS) — Child Nutrition Indicators Sample\n\n\nChild-level nutrition status indicators (stunting, wasting, underweight) with maternal education context.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nNational (Mainland & Zanzibar)\n\n\n\n\n\nYear\n\n\n2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGender-Based Violence Prevalence Indicators Sample\n\n\nSelf-reported prevalence of physical/emotional violence and awareness of support services, by age group and region.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nNational (Mainland Tanzania)\n\n\n\n\n\nYear\n\n\n2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTanzania Population and Housing Census Extract (Mainland Regions)\n\n\nRegional household size, sex ratio, dependency ratio, and literacy indicators across Mainland Tanzania.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nMainland Tanzania — all regions\n\n\n\n\n\nYear\n\n\n2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInternal Migration and Urbanization Patterns Sample\n\n\nOrigin-destination migration records with migration reason, years since move, and post-migration employment status.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nNational (Mainland Tanzania)\n\n\n\n\n\nYear\n\n\n2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPoverty Mapping Dataset — District-Level Poverty Estimates Sample\n\n\nDistrict-level poverty headcount rate, extreme poverty rate, and Gini coefficient estimates.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nDistrict-level, Mainland Tanzania\n\n\n\n\n\nYear\n\n\n2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntegrated Labour Force Survey (ILFS) — Youth Employment Sample\n\n\nIndividual-level employment status, sector, informality, and income indicators with a youth focus.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nNational (Mainland Tanzania)\n\n\n\n\n\nYear\n\n\n2020/21\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNational Panel Survey (NPS) — Smallholder Agriculture Sample (Wave 5)\n\n\nFarm-household level crop, yield, input-use, and food security indicators for smallholder farmers.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nRural Mainland Tanzania\n\n\n\n\n\nYear\n\n\n2019/20\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHousehold Budget Survey (HBS) — Consumption Aggregates Sample\n\n\nHousehold-level food and non-food consumption expenditure aggregates with poverty-line comparisons.\n\n\n\n\n\nCategory\n\n\n \n\n\n\n\n\nRegion\n\n\nNational (Mainland Tanzania, urban & rural)\n\n\n\n\n\nYear\n\n\n2017/18\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Takwimu Bridge",
+    "section": "",
+    "text": "Takwimu Bridge (placeholder name) exists to give Tanzanian university students faster, more reliable access to quality socio-economic data — so that research time goes into analysis and insight, not into the logistics of fieldwork.\nWe curate datasets already collected by national statistics agencies, research institutes, and development partners, and make them discoverable, well-documented, and citation-ready for coursework, dissertations, and early-career research."
+  },
+  {
+    "objectID": "about.html#our-mission",
+    "href": "about.html#our-mission",
+    "title": "About Takwimu Bridge",
+    "section": "",
+    "text": "Takwimu Bridge (placeholder name) exists to give Tanzanian university students faster, more reliable access to quality socio-economic data — so that research time goes into analysis and insight, not into the logistics of fieldwork.\nWe curate datasets already collected by national statistics agencies, research institutes, and development partners, and make them discoverable, well-documented, and citation-ready for coursework, dissertations, and early-career research."
+  },
+  {
+    "objectID": "about.html#the-problem-were-addressing",
+    "href": "about.html#the-problem-were-addressing",
+    "title": "About Takwimu Bridge",
+    "section": "The Problem We’re Addressing",
+    "text": "The Problem We’re Addressing\nIndependent data collection is often the biggest bottleneck in student research:\n\nTime. Designing instruments, training enumerators, and traveling to field sites can consume months that a degree timeline doesn’t have.\nCost. Transport, accommodation, and enumerator payments are significant out-of-pocket costs for most students.\nSample size. Self-collected samples are often too small for robust statistical analysis, limiting the strength of a thesis’s conclusions.\nDiscoverability. High-quality datasets already exist, but they are scattered across agency websites, PDFs, and restricted repositories that are hard for a student to find or interpret.\n\nTakwimu Bridge addresses this by centralizing a curated, well-described catalog in one place, with a simple, transparent request-and-approval process."
+  },
+  {
+    "objectID": "about.html#how-university-recognition-works",
+    "href": "about.html#how-university-recognition-works",
+    "title": "About Takwimu Bridge",
+    "section": "How University Recognition Works",
+    "text": "How University Recognition Works\nFor datasets to be trusted for academic use, participating universities review and endorse the portal’s data-use terms, citation standards, and request workflow — much like a university library endorses a database subscription. A partner university’s students then use their institutional affiliation when requesting datasets, and supervisors can be looped in on requests for oversight.\nRead more on the For Universities & Partners page about what formal recognition involves.\n\n\n\n\n\n\nNote  Proof-of-concept status\n\n\n\nThis is an early proof of concept built to demonstrate the user experience of browsing, requesting, and (eventually) downloading datasets. No university has formally endorsed this specific demo site — the partner list and logos shown throughout are illustrative placeholders."
+  },
+  {
+    "objectID": "about.html#governance-team",
+    "href": "about.html#governance-team",
+    "title": "About Takwimu Bridge",
+    "section": "Governance & Team",
+    "text": "Governance & Team\n(Placeholder — to be completed once the portal is adopted by a sponsoring department, library, or inter-university committee.)\n\n\n\nRole\nPlaceholder\n\n\n\n\nPortal Lead\nTBD\n\n\nData Curation\nTBD — subject-matter reviewers per category\n\n\nUniversity Liaison(s)\nTBD — one contact per partner institution\n\n\nTechnical Maintainer\nTBD"
+  },
+  {
+    "objectID": "about.html#whats-real-vs.-mocked-in-this-demo",
+    "href": "about.html#whats-real-vs.-mocked-in-this-demo",
+    "title": "About Takwimu Bridge",
+    "section": "What’s Real vs. Mocked in This Demo",
+    "text": "What’s Real vs. Mocked in This Demo\n\n\n\n\n\n\n\nArea\nStatus in this POC\n\n\n\n\nData catalog, search, filters\n✅ Fully functional (static site)\n\n\nDataset detail pages & metadata\n✅ Fully functional, sample content\n\n\nRequest Access form\n⚠️ Wired to a form-service placeholder — not yet a real backend\n\n\nApproval workflow\n🧪 Simulated (“Pending Approval” mock state only)\n\n\nGated downloads / authentication\n🧪 Simulated (Download button disabled)\n\n\n\nSee Guidelines & FAQ for more detail, and the project README.md for the technical Phase 2 roadmap."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "General Inquiries\n\n\nFor questions about the portal, data requests, or this proof of concept, reach out using the placeholder contact details below.\n\n\n\n info@example.org (placeholder)\n\n\n +255 000 000 000 (placeholder)\n\n\n Dar es Salaam, Tanzania (placeholder address)\n\n\n\n University Partnerships\n\n\nRepresent a university research office, library, or department interested in partnering? See For Universities & Partners or contact us directly.\n\n\n Contribute a Dataset\n\n\nHave a socio-economic dataset that could benefit student researchers? We’d like to hear from you — include the dataset’s source, coverage, and licensing terms when you reach out.\n\n\n\n\n\n\n Send a Message\n\n\n Demo form only — wire this to the same form-service placeholder used on Request Access, or your preferred contact-form provider. \n\n\n\n\nName \n\n\nEmail \n\n\nMessage\n\n\n\n Send"
+  },
+  {
+    "objectID": "datasets/gender-based-violence-indicators.html",
+    "href": "datasets/gender-based-violence-indicators.html",
+    "title": "Gender-Based Violence Prevalence Indicators Sample",
+    "section": "",
+    "text": "Gender\n\nSelf-reported prevalence indicators for physical and emotional violence, incident reporting behavior, and awareness of support services — broken down by age group and region. Sensitive-topic sample data for gender studies coursework and research.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/gender-based-violence-indicators.html#dataset-details",
+    "href": "datasets/gender-based-violence-indicators.html#dataset-details",
+    "title": "Gender-Based Violence Prevalence Indicators Sample",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nMinistry of Health — TDHS Gender Module — sample/demo attribution\n\n\nYear(s) Covered\n2022\n\n\nGeographic Coverage\nNational (Mainland Tanzania)\n\n\nSample Size\n200 synthetic respondent records, women aged 15–49 (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n24 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution; ethics review recommended (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/gender-based-violence-indicators.html#variables",
+    "href": "datasets/gender-based-violence-indicators.html#variables",
+    "title": "Gender-Based Violence Prevalence Indicators Sample",
+    "section": "Variables",
+    "text": "Variables\n\nrespondent_id — Unique respondent identifier\nregion — Administrative region name\nage_group — 15–19 / 20–29 / 30–39 / 40–49\nexperienced_physical_violence_flag — Self-reported experience (Yes/No)\nexperienced_emotional_violence_flag — Self-reported experience (Yes/No)\nreported_incident_flag — Reported incident to authorities/services (Yes/No)\nawareness_of_support_services — Aware of local support services (Yes/No)"
+  },
+  {
+    "objectID": "datasets/gender-based-violence-indicators.html#sample-data-preview",
+    "href": "datasets/gender-based-violence-indicators.html#sample-data-preview",
+    "title": "Gender-Based Violence Prevalence Indicators Sample",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\nrespondent_id\nregion\nage_group\nexperienced_physical_violence_flag\nawareness_of_support_services\n\n\n\n\nGBV-001\nMara\n20–29\nNo\nYes\n\n\nGBV-002\nTanga\n30–39\nYes\nNo\n\n\nGBV-003\nDodoma\n15–19\nNo\nNo\n\n\nGBV-004\nKatavi\n40–49\nYes\nYes\n\n\n\n\nPreview rows are illustrative placeholder values, not real survey figures."
+  },
+  {
+    "objectID": "datasets/gender-based-violence-indicators.html#suggested-citation",
+    "href": "datasets/gender-based-violence-indicators.html#suggested-citation",
+    "title": "Gender-Based Violence Prevalence Indicators Sample",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nMinistry of Health & National Bureau of Statistics (NBS). (2022). Gender-Based Violence Prevalence Indicators Sample [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/gender-based-violence-indicators.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "datasets/internal-migration-urbanization.html",
+    "href": "datasets/internal-migration-urbanization.html",
+    "title": "Internal Migration and Urbanization Patterns Sample",
+    "section": "",
+    "text": "Migration & Urbanization\n\nIndividual-level internal migration records capturing region of origin and destination, reason for migrating, years since migration, and post-migration employment status — useful for urbanization and rural-urban migration research.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/internal-migration-urbanization.html#dataset-details",
+    "href": "datasets/internal-migration-urbanization.html#dataset-details",
+    "title": "Internal Migration and Urbanization Patterns Sample",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nNBS — Census Migration Module — sample/demo attribution\n\n\nYear(s) Covered\n2021\n\n\nGeographic Coverage\nNational (Mainland Tanzania)\n\n\nSample Size\n175 synthetic individual migration records (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n22 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/internal-migration-urbanization.html#variables",
+    "href": "datasets/internal-migration-urbanization.html#variables",
+    "title": "Internal Migration and Urbanization Patterns Sample",
+    "section": "Variables",
+    "text": "Variables\n\nrespondent_id — Unique respondent identifier\nregion_of_origin — Region migrated from\nregion_of_residence — Current region of residence\nmigration_reason — Employment / Education / Family / Other\nyears_since_migration — Years since relocating\nurban_rural_destination — Urban / Rural\nemployment_status_after_migration — Employed / Unemployed / Not in labour force"
+  },
+  {
+    "objectID": "datasets/internal-migration-urbanization.html#sample-data-preview",
+    "href": "datasets/internal-migration-urbanization.html#sample-data-preview",
+    "title": "Internal Migration and Urbanization Patterns Sample",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\nrespondent_id\nregion_of_origin\nregion_of_residence\nmigration_reason\nurban_rural_destination\n\n\n\n\nM-0301\nKigoma\nDar es Salaam\nEmployment\nUrban\n\n\nM-0302\nSingida\nArusha\nEducation\nUrban\n\n\nM-0303\nLindi\nMtwara\nFamily\nRural\n\n\nM-0304\nGeita\nMwanza\nEmployment\nUrban\n\n\n\n\nPreview rows are illustrative placeholder values, not real survey figures."
+  },
+  {
+    "objectID": "datasets/internal-migration-urbanization.html#suggested-citation",
+    "href": "datasets/internal-migration-urbanization.html#suggested-citation",
+    "title": "Internal Migration and Urbanization Patterns Sample",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nNational Bureau of Statistics (NBS). (2021). Internal Migration and Urbanization Patterns Sample [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/internal-migration-urbanization.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "datasets/national-panel-survey-agriculture.html",
+    "href": "datasets/national-panel-survey-agriculture.html",
+    "title": "National Panel Survey (NPS) — Smallholder Agriculture Sample (Wave 5)",
+    "section": "",
+    "text": "Agriculture & Food Security\n\nFarm-household level data on farm size, main crop, yield, input use (e.g. improved seed), and a household food insecurity score. A staple dataset for agricultural economics and rural livelihoods research.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/national-panel-survey-agriculture.html#dataset-details",
+    "href": "datasets/national-panel-survey-agriculture.html#dataset-details",
+    "title": "National Panel Survey (NPS) — Smallholder Agriculture Sample (Wave 5)",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nNBS / World Bank LSMS-ISA Program — sample/demo attribution\n\n\nYear(s) Covered\n2019/20 (Wave 5)\n\n\nGeographic Coverage\nRural Mainland Tanzania\n\n\nSample Size\n210 synthetic farm-household records (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n31 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/national-panel-survey-agriculture.html#variables",
+    "href": "datasets/national-panel-survey-agriculture.html#variables",
+    "title": "National Panel Survey (NPS) — Smallholder Agriculture Sample (Wave 5)",
+    "section": "Variables",
+    "text": "Variables\n\nhousehold_id — Unique farm-household identifier\nregion — Administrative region name\nfarm_size_acres — Cultivated land area (acres)\nmain_crop — Primary crop grown (e.g. maize, rice, cassava)\ncrop_yield_kg — Estimated harvest yield (kg)\nuses_improved_seed — Uses improved/certified seed (Yes/No)\nfood_insecurity_score — Household food insecurity score (0–10 scale)\naccess_to_extension_services — Received agricultural extension services (Yes/No)"
+  },
+  {
+    "objectID": "datasets/national-panel-survey-agriculture.html#sample-data-preview",
+    "href": "datasets/national-panel-survey-agriculture.html#sample-data-preview",
+    "title": "National Panel Survey (NPS) — Smallholder Agriculture Sample (Wave 5)",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\n\nhousehold_id\nregion\nmain_crop\nfarm_size_acres\ncrop_yield_kg\nfood_insecurity_score\n\n\n\n\nF-0201\nIringa\nMaize\n2.5\n980\n3\n\n\nF-0202\nKigoma\nCassava\n1.2\n640\n6\n\n\nF-0203\nManyara\nRice\n3.8\n1,450\n2\n\n\nF-0204\nLindi\nMaize\n1.0\n410\n7\n\n\n\n\nPreview rows are illustrative placeholder values, not real survey figures."
+  },
+  {
+    "objectID": "datasets/national-panel-survey-agriculture.html#suggested-citation",
+    "href": "datasets/national-panel-survey-agriculture.html#suggested-citation",
+    "title": "National Panel Survey (NPS) — Smallholder Agriculture Sample (Wave 5)",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nNational Bureau of Statistics (NBS) & World Bank LSMS-ISA. (2020). National Panel Survey — Smallholder Agriculture Sample (Wave 5) [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/national-panel-survey-agriculture.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "datasets/tanzania-population-census.html",
+    "href": "datasets/tanzania-population-census.html",
+    "title": "Tanzania Population and Housing Census Extract (Mainland Regions)",
+    "section": "",
+    "text": "Demographics & Census\n\nA regional-level extract summarizing household composition, sex ratio, dependency ratio, and literacy indicators from the national population and housing census. Useful for demographic profiling, regional comparisons, and as a baseline layer for socio-economic research.\n\n\n  Request Access    Download  Pending Approval (demo)"
+  },
+  {
+    "objectID": "datasets/tanzania-population-census.html#dataset-details",
+    "href": "datasets/tanzania-population-census.html#dataset-details",
+    "title": "Tanzania Population and Housing Census Extract (Mainland Regions)",
+    "section": "Dataset Details",
+    "text": "Dataset Details\n\n\n\n\nData Source / Provider\nNational Bureau of Statistics (NBS) — sample/demo attribution\n\n\nYear(s) Covered\n2022\n\n\nGeographic Coverage\nMainland Tanzania, all 26 regions\n\n\nSample Size\n250 synthetic regional/household records (demo)\n\n\nFile Format\nCSV\n\n\nFile Size\n42 KB\n\n\nLicense / Terms of Use\nAcademic / non-commercial research use with attribution (demo terms — see Guidelines & FAQ)"
+  },
+  {
+    "objectID": "datasets/tanzania-population-census.html#variables",
+    "href": "datasets/tanzania-population-census.html#variables",
+    "title": "Tanzania Population and Housing Census Extract (Mainland Regions)",
+    "section": "Variables",
+    "text": "Variables\n\nregion — Administrative region name\ndistrict — Administrative district name\nward — Ward name\nhousehold_size — Average persons per household\nnum_males — Estimated male population count\nnum_females — Estimated female population count\ndependency_ratio — Ratio of dependents to working-age population\nliteracy_rate_pct — Adult literacy rate (%)\nurban_rural — Classification: Urban / Rural"
+  },
+  {
+    "objectID": "datasets/tanzania-population-census.html#sample-data-preview",
+    "href": "datasets/tanzania-population-census.html#sample-data-preview",
+    "title": "Tanzania Population and Housing Census Extract (Mainland Regions)",
+    "section": "Sample Data Preview",
+    "text": "Sample Data Preview\n\n\n\n\n\n\n\n\n\n\n\nregion\ndistrict\nhousehold_size\ndependency_ratio\nliteracy_rate_pct\nurban_rural\n\n\n\n\nDar es Salaam\nKinondoni\n4.1\n0.78\n94.2\nUrban\n\n\nArusha\nArusha City\n4.4\n0.85\n89.7\nUrban\n\n\nMbeya\nRungwe\n4.8\n1.02\n82.1\nRural\n\n\nDodoma\nChamwino\n5.0\n1.08\n78.4\nRural\n\n\n\n\nPreview rows are illustrative placeholder values, not real census figures."
+  },
+  {
+    "objectID": "datasets/tanzania-population-census.html#suggested-citation",
+    "href": "datasets/tanzania-population-census.html#suggested-citation",
+    "title": "Tanzania Population and Housing Census Extract (Mainland Regions)",
+    "section": "Suggested Citation",
+    "text": "Suggested Citation\n\nNational Bureau of Statistics (NBS). (2022). Tanzania Population and Housing Census — Sample Extract [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/tanzania-population-census.\n\n← Back to Data Catalog"
+  },
+  {
+    "objectID": "guidelines.html",
+    "href": "guidelines.html",
+    "title": "Guidelines & FAQ",
+    "section": "",
+    "text": "Note  Demo terms\n\n\n\nThe terms below are placeholder/illustrative language for this proof of concept, modeled on common academic data-sharing agreements. They are not a legally reviewed policy.\n\n\n\nAcademic, non-commercial use only. Datasets on this portal may be used for coursework, theses, dissertations, and non-commercial research.\nNo redistribution. Do not re-publish or redistribute raw data files outside your research team without permission.\nAttribution required. Always cite the original data provider and Takwimu Bridge using the suggested citation on each dataset’s page.\nReport responsibly. When publishing findings, avoid presenting sample/placeholder figures (in this demo) or small-sample statistics (in production) as nationally representative without appropriate caveats.\nSensitive topics. Datasets covering sensitive subjects (e.g. gender-based violence) may require an additional ethics/IRB clearance in production."
+  },
+  {
+    "objectID": "guidelines.html#data-use-terms-summary",
+    "href": "guidelines.html#data-use-terms-summary",
+    "title": "Guidelines & FAQ",
+    "section": "",
+    "text": "Note  Demo terms\n\n\n\nThe terms below are placeholder/illustrative language for this proof of concept, modeled on common academic data-sharing agreements. They are not a legally reviewed policy.\n\n\n\nAcademic, non-commercial use only. Datasets on this portal may be used for coursework, theses, dissertations, and non-commercial research.\nNo redistribution. Do not re-publish or redistribute raw data files outside your research team without permission.\nAttribution required. Always cite the original data provider and Takwimu Bridge using the suggested citation on each dataset’s page.\nReport responsibly. When publishing findings, avoid presenting sample/placeholder figures (in this demo) or small-sample statistics (in production) as nationally representative without appropriate caveats.\nSensitive topics. Datasets covering sensitive subjects (e.g. gender-based violence) may require an additional ethics/IRB clearance in production."
+  },
+  {
+    "objectID": "guidelines.html#citation-requirements",
+    "href": "guidelines.html#citation-requirements",
+    "title": "Guidelines & FAQ",
+    "section": "Citation Requirements",
+    "text": "Citation Requirements\nEach dataset page includes a Suggested Citation in the Dataset Details section. At minimum, a citation should include: the data provider, the year, the dataset title, “Takwimu Bridge” as the distributing portal, and the retrieval date. Example:\n\nNational Bureau of Statistics (NBS). (2022). Tanzania Population and Housing Census — Sample Extract [Data set]. Takwimu Bridge (demo portal). Retrieved 2026-07-29 from https://example.org/datasets/tanzania-population-census."
+  },
+  {
+    "objectID": "guidelines.html#the-request-process",
+    "href": "guidelines.html#the-request-process",
+    "title": "Guidelines & FAQ",
+    "section": "The Request Process",
+    "text": "The Request Process\n\nBrowse the Data Catalog and open a dataset’s detail page.\nClick Request Access — this opens the Request Access form with the dataset pre-selected.\nFill in your university, student ID, research purpose, and supervisor details, then agree to the terms above.\n(Production) An administrator reviews and approves or follows up on your request; you’re notified by email.\n(Production) The Download button unlocks on the dataset’s page."
+  },
+  {
+    "objectID": "guidelines.html#expected-turnaround",
+    "href": "guidelines.html#expected-turnaround",
+    "title": "Guidelines & FAQ",
+    "section": "Expected Turnaround",
+    "text": "Expected Turnaround\n3–5 business days is the target turnaround in the intended production workflow (placeholder SLA — to be confirmed with partner universities)."
+  },
+  {
+    "objectID": "guidelines.html#frequently-asked-questions",
+    "href": "guidelines.html#frequently-asked-questions",
+    "title": "Guidelines & FAQ",
+    "section": "Frequently Asked Questions",
+    "text": "Frequently Asked Questions\nIs this connected to a real database or login system yet? No. This is a static proof-of-concept site. The Request Access form posts to a form-service placeholder, and “Pending Approval” / “Download” states on dataset pages are simulated, not backed by real access control. \nCan I download data right now? Not real data — each dataset page includes a small, clearly-labeled placeholder CSV sample and preview table so you can see the data’s shape, but the Download button itself is disabled to demonstrate the intended gated-access flow.\nWho approves requests in production? This would be a nominated administrator — likely a university library staff member or portal maintainer — reviewing requests against the stated research purpose and supervisor confirmation.\nWhat if my university isn’t listed? The university dropdown on the request form is a placeholder list. Select “Other” and note your institution in the Research Purpose field, or reach out via Contact.\nCan I request more than one dataset at once? Yes — the “Dataset(s) Requested” field on the request form supports multiple selections.\nIs there a cost to use the portal? No — the portal itself is intended to be free for students at partner universities. Individual dataset licenses/terms are shown on each dataset page."
+  },
+  {
+    "objectID": "partners.html",
+    "href": "partners.html",
+    "title": "For Universities & Partners",
+    "section": "",
+    "text": "University partnership gives your students a vetted, citation-ready data source for coursework and dissertations, without your department having to host or curate the datasets itself. Partnership is designed to be lightweight:\n\nEndorse the terms. Your institution reviews and signs off on the portal’s data-use terms and citation standard.\nNominate a liaison. A librarian, research office staff member, or department coordinator acts as your point of contact and can co-review student requests from your institution.\nPromote to students. Students use their university affiliation when requesting datasets, so requests can be routed and reported per institution."
+  },
+  {
+    "objectID": "partners.html#why-partner",
+    "href": "partners.html#why-partner",
+    "title": "For Universities & Partners",
+    "section": "",
+    "text": "University partnership gives your students a vetted, citation-ready data source for coursework and dissertations, without your department having to host or curate the datasets itself. Partnership is designed to be lightweight:\n\nEndorse the terms. Your institution reviews and signs off on the portal’s data-use terms and citation standard.\nNominate a liaison. A librarian, research office staff member, or department coordinator acts as your point of contact and can co-review student requests from your institution.\nPromote to students. Students use their university affiliation when requesting datasets, so requests can be routed and reported per institution."
+  },
+  {
+    "objectID": "partners.html#current-partner-universities-placeholder",
+    "href": "partners.html#current-partner-universities-placeholder",
+    "title": "For Universities & Partners",
+    "section": "Current Partner Universities (placeholder)",
+    "text": "Current Partner Universities (placeholder)\n\n\n\n\n\n\nWarning  Placeholder list\n\n\n\nThe universities and logos below are shown for demonstration purposes only and do not represent confirmed partnerships. Replace with your actual partner list once agreements are in place.\n\n\n\n\n\n\nUniversity of Dar es Salaam\n\n\n\n\n\nSokoine University of Agriculture\n\n\n\n\n\nMzumbe University\n\n\n\n\n\nUniversity of Dodoma\n\n\n\n\n\nNM-AIST"
+  },
+  {
+    "objectID": "partners.html#what-partnership-involves",
+    "href": "partners.html#what-partnership-involves",
+    "title": "For Universities & Partners",
+    "section": "What Partnership Involves",
+    "text": "What Partnership Involves\n\n\n\n\n\n\n\nStep\nDescription\n\n\n\n\n1. Initial contact\nYour research office or library reaches out (or is invited) to review the portal.\n\n\n2. Terms review\nLegal/academic affairs reviews the data-use terms and citation policy.\n\n\n3. Liaison nomination\nYour institution names a liaison to handle escalations and co-review requests.\n\n\n4. Logo & listing\nYour university is added to the partner list and request-form dropdown.\n\n\n5. Ongoing reporting\n(Phase 2) Partner dashboards showing request volume and turnaround per institution."
+  },
+  {
+    "objectID": "partners.html#interested-in-partnering",
+    "href": "partners.html#interested-in-partnering",
+    "title": "For Universities & Partners",
+    "section": "Interested in Partnering?",
+    "text": "Interested in Partnering?\nThis is a proof of concept, so there is no live partnership process yet — but if you’d like to discuss what a pilot could look like, reach out via the Contact page."
+  }
+]

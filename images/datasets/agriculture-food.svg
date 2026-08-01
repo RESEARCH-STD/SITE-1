@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-label="Agriculture &amp; Food Security placeholder thumbnail">
+  <defs>
+    <linearGradient id="g-agriculture-food" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4C9A2A"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+    <pattern id="dots-agriculture-food" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#ffffff" opacity="0.12"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#g-agriculture-food)"/>
+  <rect width="800" height="450" fill="url(#dots-agriculture-food)"/>
+  <g transform="translate(400,205)" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+    <path d="M-50,50 C-50,-40 40,-60 60,-60 C60,-40 40,50 -50,50 Z"/><line x1="-50" y1="50" x2="55" y2="-55"/>
+  </g>
+  <text x="40" y="405" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#ffffff" opacity="0.9">Agriculture &amp; Food Security</text>
+  <text x="40" y="46" font-family="Arial, sans-serif" font-size="15" font-weight="600" fill="#ffffff" opacity="0.65" letter-spacing="1">SAMPLE THUMBNAIL — PLACEHOLDER</text>
+</svg>

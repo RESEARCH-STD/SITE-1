@@ -1,0 +1,24 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/datasets/household-budget-survey-consumption.html",
+      "/datasets/tdhs-child-nutrition.html",
+      "/datasets/basic-education-statistics.html"
+    ]
+  },
+  {
+    "listing": "/catalog.html",
+    "items": [
+      "/datasets/basic-education-statistics.html",
+      "/datasets/tdhs-child-nutrition.html",
+      "/datasets/gender-based-violence-indicators.html",
+      "/datasets/tanzania-population-census.html",
+      "/datasets/internal-migration-urbanization.html",
+      "/datasets/poverty-mapping-district.html",
+      "/datasets/labour-force-youth-employment.html",
+      "/datasets/national-panel-survey-agriculture.html",
+      "/datasets/household-budget-survey-consumption.html"
+    ]
+  }
+]

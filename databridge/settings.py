@@ -176,6 +176,22 @@ STORAGES = {
     },
 }
 
+# Logging
+# By default Django only logs unhandled exceptions via "mail_admins", which
+# does nothing without a configured mail backend/ADMINS. Send them to
+# stderr/console unconditionally so they show up in Render's log stream too.
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {"class": "logging.StreamHandler"},
+    },
+    "loggers": {
+        "django": {"handlers": ["console"], "level": "INFO"},
+        "django.request": {"handlers": ["console"], "level": "ERROR", "propagate": False},
+    },
+}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 

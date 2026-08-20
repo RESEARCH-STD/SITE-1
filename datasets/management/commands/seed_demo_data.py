@@ -147,6 +147,8 @@ class Command(BaseCommand):
                 region=item["region"],
                 year=item["year"],
             )
+            dataset.original_filename = item["csv"]
+            dataset.file_size = csv_path.stat().st_size
             with open(csv_path, "rb") as f:
                 dataset.file.save(item["csv"], File(f), save=False)
             dataset.save()

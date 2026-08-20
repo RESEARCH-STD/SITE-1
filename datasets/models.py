@@ -60,8 +60,14 @@ class Dataset(models.Model):
                 n += 1
                 slug = f"{base_slug}-{n}"
             self.slug = slug
-        if self.file:
-            self.original_filename = self.original_filename or self.file.name
+        if self.file and not self.file._committed:
+            # Only a freshly-uploaded, not-yet-stored file is cheap/safe to
+            # inspect here (.size/.name read the local upload directly). A
+            # file that's already committed to storage (e.g. editing a
+            # dataset's metadata without changing the file, or a remote
+            # storage backend like Cloudinary) would require a network
+            # round-trip instead, so leave the previously-stored values as-is.
+            self.original_filename = self.file.name
             self.file_size = self.file.size
         super().save(*args, **kwargs)
 

@@ -162,7 +162,7 @@ CLOUDINARY_CONFIGURED = bool(os.environ.get("CLOUDINARY_URL"))
 STORAGES = {
     "default": {
         "BACKEND": (
-            "cloudinary_storage.storage.MediaCloudinaryStorage"
+            "cloudinary_storage.storage.RawMediaCloudinaryStorage"
             if CLOUDINARY_CONFIGURED
             else "django.core.files.storage.FileSystemStorage"
         ),

@@ -1,0 +1,11 @@
+respondent_id,region_of_origin,region_of_residence,migration_reason,years_since_migration,urban_rural_destination,employment_status_after_migration
+M-0301,Kigoma,Dar es Salaam,Employment,4,Urban,Employed
+M-0302,Singida,Arusha,Education,2,Urban,Not in labour force
+M-0303,Lindi,Mtwara,Family,7,Rural,Employed
+M-0304,Geita,Mwanza,Employment,3,Urban,Employed
+M-0305,Rukwa,Mbeya,Employment,5,Urban,Employed
+M-0306,Simiyu,Shinyanga,Family,1,Rural,Unemployed
+M-0307,Katavi,Tabora,Education,2,Urban,Not in labour force
+M-0308,Njombe,Iringa,Employment,6,Urban,Employed
+M-0309,Manyara,Arusha,Family,9,Urban,Employed
+M-0310,Ruvuma,Dar es Salaam,Employment,3,Urban,Employed

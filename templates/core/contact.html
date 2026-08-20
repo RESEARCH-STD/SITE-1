@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Contact | DataBridge{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+<div class="row g-4">
+<div class="col-lg-7">
+<span class="eyebrow">Contact</span>
+<h1 class="mb-4">Get in touch</h1>
+<p class="text-muted fs-5">
+Questions about the platform, feedback, or want to report a dataset? Send us a
+message and we'll get back to you.
+</p>
+<h5 class="mt-4"><i class="bi bi-cloud-upload-fill text-accent me-1"></i> Have data to share?</h5>
+<p class="text-muted">
+The best way to contribute a dataset is to <a href="{% url 'accounts:signup' %}">create an account</a>
+and upload it directly through the catalog, no need to email us first.
+</p>
+<h5 class="mt-4"><i class="bi bi-briefcase-fill text-accent me-1"></i> Advisory &amp; analysis services</h5>
+<p class="text-muted">
+See <a href="{% url 'core:services' %}">Our Services</a> for data collection advisory
+and data analysis support.
+</p>
+</div>
+
+<div class="col-lg-5">
+<div class="form-card">
+<h5 class="mb-3"><i class="bi bi-chat-dots-fill text-accent me-1"></i> Send a Message</h5>
+<form method="post" novalidate>
+{% csrf_token %}
+{% for field in form %}
+<div class="mb-3">
+<label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+{{ field }}
+{% for error in field.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+</div>
+{% endfor %}
+<button type="submit" class="btn btn-accent"><i class="bi bi-send-fill me-1"></i> Send</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

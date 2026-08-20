@@ -1,0 +1,11 @@
+respondent_id,region,urban_rural,age,sex,employment_status,sector,informal_employment_flag,monthly_income_tzs
+R-0101,Mbeya,Rural,24,Male,Employed,Agriculture,Yes,145000
+R-0102,Dar es Salaam,Urban,29,Female,Employed,Services,No,420000
+R-0103,Tabora,Rural,19,Male,Unemployed,,,
+R-0104,Ruvuma,Rural,33,Male,Employed,Industry,Yes,210000
+R-0105,Mwanza,Urban,22,Female,Employed,Services,Yes,180000
+R-0106,Kagera,Rural,27,Male,Employed,Agriculture,Yes,120000
+R-0107,Dodoma,Urban,31,Female,Not in labour force,,,
+R-0108,Arusha,Urban,26,Male,Employed,Services,No,380000
+R-0109,Lindi,Rural,20,Female,Unemployed,,,
+R-0110,Iringa,Urban,34,Male,Employed,Industry,No,350000

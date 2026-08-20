@@ -1,0 +1,11 @@
+respondent_id,region,age_group,experienced_physical_violence_flag,experienced_emotional_violence_flag,reported_incident_flag,awareness_of_support_services
+GBV-001,Mara,20-29,No,No,No,Yes
+GBV-002,Tanga,30-39,Yes,Yes,No,No
+GBV-003,Dodoma,15-19,No,No,No,No
+GBV-004,Katavi,40-49,Yes,No,Yes,Yes
+GBV-005,Mwanza,20-29,No,Yes,No,Yes
+GBV-006,Kigoma,30-39,Yes,Yes,Yes,No
+GBV-007,Iringa,15-19,No,No,No,Yes
+GBV-008,Singida,40-49,No,No,No,No
+GBV-009,Pwani,20-29,Yes,No,No,Yes
+GBV-010,Ruvuma,30-39,No,Yes,No,No

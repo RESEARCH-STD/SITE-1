@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Guidelines & FAQ | DataBridge{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+<div class="row justify-content-center">
+<div class="col-lg-9">
+<span class="eyebrow">Guidelines &amp; FAQ</span>
+<h1 class="mb-4">Data-Use Guidelines &amp; FAQ</h1>
+
+<h2 class="h4">Data-Use Terms</h2>
+<ol class="text-muted fs-5">
+<li class="mb-2"><strong>Academic, non-commercial use only.</strong> Datasets on this
+portal are for coursework, theses, dissertations, and non-commercial research.</li>
+<li class="mb-2"><strong>Only upload data you have the right to share.</strong> By
+uploading, you confirm the dataset is your own work or you have permission to share it.</li>
+<li class="mb-2"><strong>No personally identifying information.</strong> Do not upload
+data that could identify individual survey respondents without their informed consent.</li>
+<li class="mb-2"><strong>Attribution.</strong> When you use a dataset from the catalog,
+credit the uploading student and note it was obtained via DataBridge.</li>
+<li><strong>No redistribution.</strong> Don't re-publish raw files you've downloaded
+outside your own research team.</li>
+</ol>
+
+<h2 class="h4 mt-5">Frequently Asked Questions</h2>
+
+<p class="fw-semibold mb-1">Do I need an account to browse the catalog?</p>
+<p class="text-muted">No, anyone can search and view dataset details. You need a free
+account to upload a dataset or download one.</p>
+
+<p class="fw-semibold mb-1">Is my upload reviewed before it appears in the catalog?</p>
+<p class="text-muted">No, uploads are published immediately so the catalog reflects
+what students are actively sharing.</p>
+
+<p class="fw-semibold mb-1">Can I edit or remove something I uploaded?</p>
+<p class="text-muted">Yes, go to "My Uploads" from your account menu to edit the
+details or delete a dataset you no longer want shared.</p>
+
+<p class="fw-semibold mb-1">What file types can I upload?</p>
+<p class="text-muted">CSV, Excel (.xlsx/.xls), JSON, Stata (.dta), SPSS (.sav), ZIP, or
+PDF (for documentation), up to 20MB per file.</p>
+
+<p class="fw-semibold mb-1">I found a dataset that looks wrong or inappropriate. What do I do?</p>
+<p class="text-muted">Let us know via the <a href="{% url 'core:contact' %}">Contact page</a>
+so we can review it.</p>
+
+<p class="fw-semibold mb-1">Is there a cost to use DataBridge?</p>
+<p class="text-muted">No, the catalog is free to use. See <a href="{% url 'core:services' %}">Our Services</a>
+for paid advisory/analysis support offerings.</p>
+</div>
+</div>
+</div>
+{% endblock %}

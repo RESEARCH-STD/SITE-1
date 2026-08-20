@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}DataBridge | Share and Discover Student Research Data{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+<div class="container position-relative">
+<div class="row align-items-center">
+<div class="col-lg-7 fade-up-1">
+<h1>Share your research data. Discover data from other students.</h1>
+<p class="lead">
+DataBridge is a portal where students upload the socio-economic datasets they've
+collected, and search &amp; download datasets shared by others, so less time goes
+into repeating fieldwork, and more into analysis.
+</p>
+<div class="d-flex flex-wrap gap-3 mt-4">
+{% if user.is_authenticated %}
+<a href="{% url 'datasets:upload' %}" class="btn btn-accent btn-lg px-4">
+<i class="bi bi-cloud-upload-fill me-1"></i> Upload Your Data
+</a>
+<a href="{% url 'datasets:catalog' %}" class="btn btn-outline-light btn-lg px-4">
+<i class="bi bi-search me-1"></i> Browse Catalog
+</a>
+{% else %}
+<a href="{% url 'accounts:signup' %}" class="btn btn-accent btn-lg px-4">
+<i class="bi bi-person-plus-fill me-1"></i> Sign Up
+</a>
+<a href="{% url 'accounts:login' %}" class="btn btn-outline-light btn-lg px-4">
+Log In
+</a>
+{% endif %}
+</div>
+<p class="small mt-3" style="color:rgba(255,255,255,.65);">
+Signing up lets you upload your own data and download data shared by others.
+</p>
+</div>
+<div class="col-lg-5 d-none d-lg-block text-center fade-up-2">
+<i class="bi bi-arrow-left-right" style="font-size:12rem;color:rgba(255,255,255,.14);"></i>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="text-center mb-4">
+<span class="eyebrow">How It Works</span>
+<h2>Three steps, start to finish</h2>
+</div>
+<div class="row g-4">
+<div class="col-md-4 reveal">
+<div class="step-card text-center">
+<div class="step-number mx-auto">1</div>
+<h5><i class="bi bi-cloud-upload-fill me-1 text-accent"></i> Upload</h5>
+<p class="text-muted mb-0">Create an account and upload your dataset with a title, category, and description.</p>
+</div>
+</div>
+<div class="col-md-4 reveal">
+<div class="step-card text-center">
+<div class="step-number mx-auto">2</div>
+<h5><i class="bi bi-search me-1 text-accent"></i> Discover</h5>
+<p class="text-muted mb-0">Search and filter the catalog to find datasets shared by other students.</p>
+</div>
+</div>
+<div class="col-md-4 reveal">
+<div class="step-card text-center">
+<div class="step-number mx-auto">3</div>
+<h5><i class="bi bi-download me-1 text-accent"></i> Download</h5>
+<p class="text-muted mb-0">Log in and download the dataset, ready to bring into your own analysis.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-alt">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-4 reveal">
+<a href="{% url 'datasets:catalog' %}" class="text-decoration-none">
+<div class="step-card h-100">
+<i class="bi bi-collection-fill step-icon"></i>
+<h5 class="text-body">Browse the Catalog</h5>
+<p class="text-muted mb-0">Search datasets uploaded by fellow students, filter by category.</p>
+</div>
+</a>
+</div>
+<div class="col-md-4 reveal">
+<a href="{% url 'core:services' %}" class="text-decoration-none">
+<div class="step-card h-100">
+<i class="bi bi-briefcase-fill step-icon"></i>
+<h5 class="text-body">Our Services</h5>
+<p class="text-muted mb-0">Data collection and analysis support for your research project.</p>
+</div>
+</a>
+</div>
+<div class="col-md-4 reveal">
+<a href="{% url 'core:data_custodians' %}" class="text-decoration-none">
+<div class="step-card h-100">
+<i class="bi bi-bank step-icon"></i>
+<h5 class="text-body">Data Custodians</h5>
+<p class="text-muted mb-0">Links to national and international sources of official statistics.</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+{% endblock %}

@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}DataBridge{% endblock %}</title>
+<meta name="description" content="DataBridge is a student data-sharing portal for uploading, searching, and downloading socio-economic research datasets.">
+<link rel="icon" href="{% static 'images/logo.svg' %}" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+{% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--brand-primary);">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="{% url 'core:home' %}">
+<img src="{% static 'images/logo.svg' %}" alt="DataBridge logo">
+DataBridge
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+<li class="nav-item"><a class="nav-link" href="{% url 'core:home' %}">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'datasets:catalog' %}">Data Catalog</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'core:services' %}">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'core:data_custodians' %}">Data Custodians</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'core:guidelines' %}">Guidelines &amp; FAQ</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'core:about' %}">About</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'core:contact' %}">Contact</a></li>
+</ul>
+<ul class="navbar-nav">
+{% if user.is_authenticated %}
+<li class="nav-item"><a class="nav-link" href="{% url 'datasets:upload' %}"><i class="bi bi-cloud-upload-fill me-1"></i>Upload Data</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<i class="bi bi-person-circle me-1"></i>{{ user.username }}
+</a>
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+<li><a class="dropdown-item" href="{% url 'datasets:my_uploads' %}">My Uploads</a></li>
+<li><hr class="dropdown-divider"></li>
+<li>
+<form method="post" action="{% url 'accounts:logout' %}" class="px-3">
+{% csrf_token %}
+<button type="submit" class="btn btn-link dropdown-item p-0">Log Out</button>
+</form>
+</li>
+</ul>
+</li>
+{% else %}
+<li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">Log In</a></li>
+<li class="nav-item ms-lg-2">
+<a class="btn btn-accent btn-sm mt-2 mt-lg-0" href="{% url 'accounts:signup' %}">Sign Up</a>
+</li>
+{% endif %}
+</ul>
+</div>
+</div>
+</nav>
+
+{% if messages %}
+<div class="container mt-3">
+{% for message in messages %}
+<div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
+{{ message }}
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+</div>
+{% endif %}
+
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<footer class="text-light pt-5 pb-4" style="background-color: #0A2E3D;">
+<div class="container">
+<div class="row gy-4">
+<div class="col-md-5">
+<h5 class="d-flex align-items-center"><img src="{% static 'images/logo.svg' %}" alt="" style="height:28px;margin-right:0.5rem;">DataBridge</h5>
+<p class="text-light opacity-75 small mb-0">A student data-sharing portal: upload your research data, search and download data shared by others.</p>
+</div>
+<div class="col-md-4">
+<h6 class="text-uppercase small opacity-75 mb-3">Explore</h6>
+<ul class="list-unstyled small">
+<li class="mb-2"><a class="link-light text-decoration-none" href="{% url 'datasets:catalog' %}">Data Catalog</a></li>
+<li class="mb-2"><a class="link-light text-decoration-none" href="{% url 'core:services' %}">Services</a></li>
+<li class="mb-2"><a class="link-light text-decoration-none" href="{% url 'core:data_custodians' %}">Data Custodians</a></li>
+<li class="mb-2"><a class="link-light text-decoration-none" href="{% url 'core:guidelines' %}">Guidelines &amp; FAQ</a></li>
+</ul>
+</div>
+<div class="col-md-3">
+<h6 class="text-uppercase small opacity-75 mb-3">About</h6>
+<ul class="list-unstyled small">
+<li class="mb-2"><a class="link-light text-decoration-none" href="{% url 'core:about' %}">About Us</a></li>
+<li class="mb-2"><a class="link-light text-decoration-none" href="{% url 'core:contact' %}">Contact</a></li>
+</ul>
+</div>
+</div>
+<hr class="border-light opacity-25 mt-4 mb-3">
+<p class="small opacity-50 mb-0">&copy; {% now "Y" %} DataBridge. Sample datasets shown for demonstration purposes.</p>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>

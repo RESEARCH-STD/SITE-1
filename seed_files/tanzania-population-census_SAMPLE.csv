@@ -1,0 +1,11 @@
+region,district,ward,household_size,num_males,num_females,dependency_ratio,literacy_rate_pct,urban_rural
+Dar es Salaam,Kinondoni,Msasani,4.1,182500,191200,0.78,94.2,Urban
+Arusha,Arusha City,Kaloleni,4.4,88300,90100,0.85,89.7,Urban
+Mbeya,Rungwe,Tukuyu,4.8,61200,64500,1.02,82.1,Rural
+Dodoma,Chamwino,Mvumi,5.0,45600,47900,1.08,78.4,Rural
+Mwanza,Ilemela,Kirumba,4.6,73200,75800,0.91,86.5,Urban
+Kigoma,Kasulu,Heru Ushingo,5.3,39800,41200,1.21,71.9,Rural
+Tanga,Muheza,Kicheba,4.9,42100,44000,1.05,80.2,Rural
+Morogoro,Kilosa,Mikumi,5.1,50200,52400,1.11,76.8,Rural
+Iringa,Iringa Urban,Kitwiru,4.2,35400,36900,0.82,90.3,Urban
+Ruvuma,Songea Urban,Mshangano,4.5,28700,29800,0.88,87.6,Urban

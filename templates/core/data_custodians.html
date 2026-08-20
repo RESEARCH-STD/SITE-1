@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Data Custodians | DataBridge{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+<div class="row justify-content-center">
+<div class="col-lg-9">
+<span class="eyebrow">Data Custodians</span>
+<h1 class="mb-3">Other sources of official statistics</h1>
+<p class="text-muted fs-5 mb-5">
+Beyond datasets shared by students, these organizations are official custodians of
+national and international statistics that may be useful for your research.
+</p>
+
+{% if custodians %}
+<div class="row g-4">
+{% for custodian in custodians %}
+<div class="col-md-6 reveal">
+<div class="step-card h-100">
+<h5><i class="bi bi-bank text-accent me-1"></i> {{ custodian.name }}</h5>
+{% if custodian.description %}<p class="text-muted small mb-2">{{ custodian.description }}</p>{% endif %}
+<a href="{{ custodian.url }}" target="_blank" rel="noopener noreferrer">{{ custodian.url }}</a>
+</div>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<p class="text-muted">No data custodians listed yet.</p>
+{% endif %}
+</div>
+</div>
+</div>
+{% endblock %}

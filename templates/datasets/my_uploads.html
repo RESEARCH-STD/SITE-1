@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}My Uploads | DataBridge{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/datatables.net-bs5@2.1.8/css/dataTables.bootstrap5.min.css">
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+<div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+<h1 class="h2 mb-0">My Uploads</h1>
+<a href="{% url 'datasets:upload' %}" class="btn btn-accent"><i class="bi bi-cloud-upload-fill me-1"></i> Upload Dataset</a>
+</div>
+
+{% if datasets %}
+<div class="table-responsive">
+<table id="myUploadsTable" class="table align-middle">
+<thead><tr><th>Title</th><th>Category</th><th>Downloads</th><th>Uploaded</th><th></th></tr></thead>
+<tbody>
+{% for dataset in datasets %}
+<tr>
+<td><a href="{{ dataset.get_absolute_url }}">{{ dataset.title }}</a></td>
+<td>{{ dataset.category.name }}</td>
+<td>{{ dataset.download_count }}</td>
+<td data-sort="{{ dataset.created_at|date:'c' }}">{{ dataset.created_at|date:"M j, Y" }}</td>
+<td class="text-end">
+<a href="{% url 'datasets:edit' dataset.slug %}" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></a>
+<a href="{% url 'datasets:delete' dataset.slug %}" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></a>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+{% else %}
+<div class="text-center py-5">
+<i class="bi bi-inbox display-4 text-muted"></i>
+<p class="text-muted mt-3">You haven't uploaded any datasets yet.</p>
+<a href="{% url 'datasets:upload' %}" class="btn btn-accent">Upload Your First Dataset</a>
+</div>
+{% endif %}
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net@2.1.8/js/dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/datatables.net-bs5@2.1.8/js/dataTables.bootstrap5.min.js"></script>
+<script>
+$(function () {
+  $("#myUploadsTable").DataTable({
+    order: [[3, "desc"]],
+    columnDefs: [{ targets: -1, orderable: false, searchable: false }],
+  });
+});
+</script>
+{% endblock %}

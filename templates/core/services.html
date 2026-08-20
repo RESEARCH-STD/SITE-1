@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Our Services | DataBridge{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+<div class="text-center mb-5">
+<span class="eyebrow">Our Services</span>
+<h1>Beyond the catalog</h1>
+<p class="text-muted fs-5 mx-auto" style="max-width:40rem;">
+In addition to the student data-sharing catalog, our team offers the following
+support services for research projects.
+</p>
+</div>
+
+<div class="row g-4 mb-5">
+<div class="col-md-6 reveal">
+<div class="service-card">
+<i class="bi bi-clipboard-data step-icon"></i>
+<h4>Data Collection Advisory Services</h4>
+<p class="text-muted mb-0">
+Guidance on designing survey instruments, sampling strategy, enumerator training,
+and field logistics for your own primary data collection.
+</p>
+</div>
+</div>
+<div class="col-md-6 reveal">
+<div class="service-card">
+<i class="bi bi-bar-chart-line step-icon"></i>
+<h4>Data Analysis Support Services</h4>
+<p class="text-muted mb-0">
+Help with cleaning, structuring, and analyzing your dataset: statistical methods,
+software support, and interpreting results for your research questions.
+</p>
+</div>
+</div>
+</div>
+
+<div class="disclaimer-card mb-4">
+<i class="bi bi-exclamation-triangle me-1"></i>
+<strong>Disclaimer:</strong> These are advisory and support services only. Any
+academic write-up (thesis chapters, dissertations, reports, or other submissions)
+is handed over to the client in full, and remains the client's own work and sole
+responsibility. We do not write or submit academic work on a client's behalf.
+</div>
+
+<div class="text-center">
+<p class="text-muted mb-1">Interested in these services?</p>
+<p class="fs-5">
+<i class="bi bi-envelope me-1"></i>
+Office email: <span class="text-muted fst-italic">coming soon, we're still setting this up.</span>
+</p>
+<p class="text-muted small">
+In the meantime, reach us via the <a href="{% url 'core:contact' %}">Contact page</a>.
+</p>
+</div>
+</div>
+{% endblock %}

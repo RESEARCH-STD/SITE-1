@@ -1,0 +1,26 @@
+databases:
+  - name: databridge-db
+    plan: free
+    databaseName: databridge
+    user: databridge
+
+services:
+  - type: web
+    name: databridge
+    env: python
+    plan: free
+    buildCommand: "bash build.sh"
+    startCommand: "gunicorn databridge.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.10"
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "False"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: databridge-db
+          property: connectionString
+      - key: CLOUDINARY_URL
+        sync: false

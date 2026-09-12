@@ -3,11 +3,17 @@ from django.shortcuts import redirect, render
 from django.urls import reverse
 
 from .forms import ContactForm
-from .models import DataCustodian
+from .models import DataCustodian, Insight, Partner, Project, SiteStat
 
 
 def home(request):
-    return render(request, "core/home.html")
+    context = {
+        "stats": SiteStat.objects.all(),
+        "featured_projects": Project.objects.all()[:4],
+        "insights": Insight.objects.all()[:6],
+        "partners": Partner.objects.all(),
+    }
+    return render(request, "core/home.html", context)
 
 
 def about(request):
@@ -16,6 +22,34 @@ def about(request):
 
 def services(request):
     return render(request, "core/services.html")
+
+
+def products(request):
+    return render(request, "core/products.html")
+
+
+def projects(request):
+    return render(request, "core/projects.html", {"projects": Project.objects.all()})
+
+
+def insights(request):
+    category = request.GET.get("cat", "")
+    items = Insight.objects.all()
+    if category:
+        items = items.filter(category=category)
+    return render(
+        request,
+        "core/insights.html",
+        {
+            "insights": items,
+            "categories": Insight.CATEGORY_CHOICES,
+            "selected_category": category,
+        },
+    )
+
+
+def partners(request):
+    return render(request, "core/partners.html", {"partners": Partner.objects.all()})
 
 
 def guidelines(request):

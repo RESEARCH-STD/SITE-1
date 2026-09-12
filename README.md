@@ -1,10 +1,14 @@
-# DataBridge
+# Sustainable Solutions Tanzania (SST)
 
-A Django web app where students create accounts, upload their own socio-economic
-research datasets, and search/download datasets shared by other students.
+The website for Sustainable Solutions Tanzania: About, Services, Products, Projects,
+Insights & Opportunities, and Partners, built around **TakwimuBridge**, a Django app
+where students create accounts, upload their own socio-economic research datasets,
+and search/download datasets shared by other students.
 
-This replaces the earlier static Quarto proof-of-concept (archived in `../SITE-1`),
-which only supported an admin-curated, view-only catalog with no real accounts.
+TakwimuBridge itself replaces an earlier static Quarto proof-of-concept (archived in
+`../SITE-1`), which only supported an admin-curated, view-only catalog with no real
+accounts. The site was then rebranded from a standalone "DataBridge" product into
+this fuller SST organizational site, with TakwimuBridge as one product within it.
 
 ## Requirements
 
@@ -19,6 +23,7 @@ pip install -r requirements.txt
 
 python manage.py migrate
 python manage.py seed_demo_data          # creates 9 sample datasets + categories + NBS link
+python manage.py seed_sst_placeholders   # creates placeholder stats/project/insights rows
 python manage.py createsuperuser         # for /admin/ access
 python manage.py runserver
 ```
@@ -30,17 +35,17 @@ Visit http://127.0.0.1:8000/
 ```
 databridge/         Project settings, root urls
 accounts/           Custom User model (extends AbstractUser with `institution`), signup/login
-datasets/           Category & Dataset models; catalog search/filter, upload, download, "My Uploads"
-core/                Home, About, Services, Data Custodians, Guidelines & FAQ, Contact
+datasets/           Category & Dataset models; TakwimuBridge's catalog search/filter, upload, download, "My Uploads"
+core/                Home, About Us, Services, Products, Projects, Insights & Opportunities, Partners, Data Custodians, Guidelines & FAQ, Contact
 templates/           base.html + per-app templates, registration/ (login, signup)
-static/              custom.css (brand palette), images/ (logo + category icons)
+static/              custom.css (SST brand palette: navy + green), images/ (logo + category icons)
 seed_files/          Sample CSVs used by `seed_demo_data` for the 9 demo datasets
 media/               Uploaded dataset files land here (gitignored)
 ```
 
 ## Key behavior
 
-- Anyone can browse and search the catalog (`/datasets/`) without an account.
+- Anyone can browse and search the TakwimuBridge catalog (`/datasets/`) without an account.
 - Uploading (`/datasets/upload/`) and downloading a file both require login.
 - Uploads are published immediately, there is no admin approval step.
 - Users can edit/delete their own uploads via "My Uploads" in the account menu.
@@ -50,6 +55,13 @@ media/               Uploaded dataset files land here (gitignored)
 - The Data Custodians page (`core.DataCustodian` model) is seeded with only the
   National Bureau of Statistics (NBS); add more via `/admin/` once you've
   confirmed their URLs.
+- `core.SiteStat`, `core.Project`, `core.Partner`, and `core.Insight` back the new
+  Projects/Insights/Partners/stats-strip sections and are seeded with a single
+  obviously-placeholder row each via `python manage.py seed_sst_placeholders`
+  (`Partner` is seeded empty). Replace/add real ones via `/admin/`. `Project`,
+  `Partner`, and `Insight` images are static-path strings (like `Category.icon`,
+  e.g. `images/projects/example.jpg`), not uploads, so add the actual image files
+  under `static/` yourself and reference their path.
 
 ## Deployment (Render)
 
@@ -74,7 +86,8 @@ Render's local disk).
 6. Once it's live, open the service's **Shell** tab in the Render dashboard and run:
    ```bash
    python manage.py createsuperuser
-   python manage.py seed_demo_data   # optional: seeds the 9 demo datasets
+   python manage.py seed_demo_data          # optional: seeds the 9 demo datasets
+   python manage.py seed_sst_placeholders   # optional: seeds placeholder stats/project/insights
    ```
 7. **Using a custom domain?** Add it to the `DJANGO_ALLOWED_HOSTS` env var
    (comma-separated). Render's own `*.onrender.com` domain is picked up

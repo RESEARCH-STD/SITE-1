@@ -1,35 +1,58 @@
 {% extends "base.html" %}
-{% block title %}About | DataBridge{% endblock %}
+{% block title %}About Us | Sustainable Solutions Tanzania{% endblock %}
 
 {% block content %}
 <div class="container py-5">
 <div class="row justify-content-center">
 <div class="col-lg-9">
-<span class="eyebrow">About DataBridge</span>
-<h1 class="mb-4">Why we built DataBridge</h1>
+<span class="eyebrow">About SST</span>
+<h1 class="mb-4">Who We Are</h1>
 
 <p class="text-muted fs-5">
-Independent data collection is often the biggest bottleneck in student research.
-Designing instruments, traveling to field sites, and enumerating can consume months
-a degree timeline doesn't have, and small self-collected samples limit how far a
-thesis's analysis can go.
+Sustainable Solutions Tanzania (SST) is a research, technology, and innovation
+company committed to creating practical solutions for people, businesses,
+institutions, and the environment. We work with the public and private sectors,
+academia, development partners, and communities to turn knowledge and ideas into
+sustainable impact.
 </p>
+
+<div class="row g-3 my-4">
+<div class="col-6 col-md-3">
+<div class="step-card text-center h-100">
+<div class="pillar-icon research mx-auto"><i class="bi bi-search"></i></div>
+<h6 class="mb-0">Research</h6>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="step-card text-center h-100">
+<div class="pillar-icon technology mx-auto"><i class="bi bi-gear-fill"></i></div>
+<h6 class="mb-0">Technology</h6>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="step-card text-center h-100">
+<div class="pillar-icon innovation mx-auto"><i class="bi bi-lightbulb-fill"></i></div>
+<h6 class="mb-0">Innovation</h6>
+</div>
+</div>
+<div class="col-6 col-md-3">
+<div class="step-card text-center h-100">
+<div class="pillar-icon sustainability mx-auto"><i class="bi bi-flower1"></i></div>
+<h6 class="mb-0">Sustainability</h6>
+</div>
+</div>
+</div>
+
+<h2 class="h4 mt-5">TakwimuBridge: our student data-sharing tool</h2>
 <p class="text-muted fs-5">
-DataBridge takes a different approach: instead of a single team curating datasets,
-<strong>students share the data they've already collected with each other.</strong>
-Upload your dataset once, and it's discoverable and downloadable by other student
-researchers working on related topics, and vice versa.
+One way we put this into practice is <strong>TakwimuBridge</strong>, a platform where
+students create accounts, upload the research data they've already collected, and
+search &amp; download data shared by other students, so less time goes into repeating
+fieldwork and more into analysis. See <a href="{% url 'core:products' %}">our Products page</a>
+for details, or go straight to <a href="{% url 'datasets:catalog' %}">the catalog</a>.
 </p>
 
-<h2 class="h4 mt-5">How It Works</h2>
-<ol class="text-muted fs-5">
-<li class="mb-2">Create a free account.</li>
-<li class="mb-2">Upload your dataset with a title, category, description, region, and year.</li>
-<li class="mb-2">Your dataset is immediately searchable and downloadable by other logged-in students.</li>
-<li>Search the catalog to find datasets other students have shared.</li>
-</ol>
-
-<h2 class="h4 mt-5">Your Responsibility as an Uploader</h2>
+<h2 class="h4 mt-5">Your Responsibility as a TakwimuBridge Uploader</h2>
 <p class="text-muted fs-5">
 When you upload a dataset, you're confirming you have the right to share it and that
 it doesn't contain information that could identify individuals without their consent.
@@ -38,8 +61,8 @@ See <a href="{% url 'core:guidelines' %}">Guidelines &amp; FAQ</a> for the full 
 
 <div class="disclaimer-card mt-5">
 <i class="bi bi-cone-striped me-1"></i>
-<strong>Early stage:</strong> DataBridge is a new platform. Expect the catalog to grow
-as more students join and share their data.
+<strong>Early stage:</strong> This site is new. Expect the Projects, Insights, and
+Partners sections to grow as SST adds its real work here.
 </div>
 </div>
 </div>

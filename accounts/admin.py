@@ -7,6 +7,6 @@ from .models import User
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
     fieldsets = BaseUserAdmin.fieldsets + (
-        ("DataBridge profile", {"fields": ("institution",)}),
+        ("TakwimuBridge profile", {"fields": ("institution",)}),
     )
     list_display = ("username", "email", "institution", "is_staff")

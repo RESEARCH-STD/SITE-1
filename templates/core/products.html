@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Products | Sustainable Solutions Tanzania{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+<div class="text-center mb-5">
+<span class="eyebrow">Our Products &amp; Innovations</span>
+<h1>Tools built for real research</h1>
+<p class="text-muted fs-5 mx-auto" style="max-width:40rem;">
+Software and initiatives SST develops to support research, learning, and innovation.
+</p>
+</div>
+
+<div class="row justify-content-center">
+<div class="col-lg-9">
+<div class="service-card">
+<div class="row g-4 align-items-center">
+<div class="col-md-8">
+<h2><i class="bi bi-database-fill-gear text-accent me-1"></i> TakwimuBridge</h2>
+<p class="text-muted text-uppercase small fw-semibold mb-2">Student Data-Sharing Tool</p>
+<p class="text-muted fs-5">
+A platform where students create accounts, upload the research data they've
+collected, and search &amp; download datasets shared by other students, so less
+time goes into repeating fieldwork and more into analysis.
+</p>
+<ul class="list-unstyled text-muted">
+<li class="mb-2"><i class="bi bi-check-lg text-accent me-2"></i>Search and filter a growing catalog of shared datasets</li>
+<li class="mb-2"><i class="bi bi-check-lg text-accent me-2"></i>Upload your own data with a title, category, and description</li>
+<li class="mb-2"><i class="bi bi-check-lg text-accent me-2"></i>Download datasets shared by others once logged in</li>
+<li class="mb-2"><i class="bi bi-check-lg text-accent me-2"></i>Manage everything you've uploaded from one place</li>
+</ul>
+<a href="{% url 'datasets:catalog' %}" class="btn btn-primary btn-lg">Open TakwimuBridge <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+<div class="col-md-4 text-center">
+<i class="bi bi-clipboard-data-fill" style="font-size:8rem;color:var(--brand-green);opacity:0.85;"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row justify-content-center mt-4">
+<div class="col-lg-9">
+<div class="service-card text-center">
+<i class="bi bi-stars step-icon"></i>
+<h5 class="text-muted">More products coming soon</h5>
+<p class="text-muted small mb-0">This page is ready for SST's next tool or initiative.</p>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

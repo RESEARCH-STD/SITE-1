@@ -1,72 +1,92 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}DataBridge | Share and Discover Student Research Data{% endblock %}
+{% block title %}Sustainable Solutions Tanzania | Research, Technology, Innovation{% endblock %}
 
 {% block content %}
 <section class="hero-section">
 <div class="container position-relative">
 <div class="row align-items-center">
-<div class="col-lg-7 fade-up-1">
-<h1>Share your research data. Discover data from other students.</h1>
+<div class="col-lg-8 fade-up-1">
+<div class="eyebrow-plain mb-2">People &middot; Nature &middot; Knowledge &middot; Opportunities</div>
+<h1>Solutions for People, <span class="accent-green">Prosperity</span> and the Planet.</h1>
 <p class="lead">
-DataBridge is a portal where students upload the socio-economic datasets they've
-collected, and search &amp; download datasets shared by others, so less time goes
-into repeating fieldwork, and more into analysis.
+We generate knowledge, apply technology, and advance innovation for a more sustainable
+and inclusive society across Tanzania.
 </p>
 <div class="d-flex flex-wrap gap-3 mt-4">
-{% if user.is_authenticated %}
-<a href="{% url 'datasets:upload' %}" class="btn btn-accent btn-lg px-4">
-<i class="bi bi-cloud-upload-fill me-1"></i> Upload Your Data
+<a href="{% url 'core:products' %}" class="btn btn-accent btn-lg px-4">
+Explore Our Work <i class="bi bi-arrow-right ms-1"></i>
 </a>
-<a href="{% url 'datasets:catalog' %}" class="btn btn-outline-light btn-lg px-4">
-<i class="bi bi-search me-1"></i> Browse Catalog
-</a>
-{% else %}
-<a href="{% url 'accounts:signup' %}" class="btn btn-accent btn-lg px-4">
-<i class="bi bi-person-plus-fill me-1"></i> Sign Up
-</a>
-<a href="{% url 'accounts:login' %}" class="btn btn-outline-light btn-lg px-4">
-Log In
-</a>
-{% endif %}
+<a href="{% url 'core:about' %}" class="btn btn-outline-light btn-lg px-4">About SST</a>
 </div>
-<p class="small mt-3" style="color:rgba(255,255,255,.65);">
-Signing up lets you upload your own data and download data shared by others.
-</p>
 </div>
-<div class="col-lg-5 d-none d-lg-block text-center fade-up-2">
-<i class="bi bi-arrow-left-right" style="font-size:12rem;color:rgba(255,255,255,.14);"></i>
+<div class="col-lg-4 d-none d-lg-block text-end fade-up-2">
+<p class="hero-signoff fs-4 mb-0">We Dream<br>With You.<br><span class="accent-green">Sustainability.</span></p>
 </div>
+</div>
+</div>
+</section>
+
+<section class="stats-strip">
+<div class="container">
+<div class="row g-3 text-center text-md-start">
+{% for stat in stats %}
+<div class="col-6 col-md-3 d-flex align-items-center gap-2 justify-content-center justify-content-md-start">
+<div>
+<div class="stat-value">{{ stat.value }}</div>
+<div class="stat-label">{{ stat.label }}</div>
+</div>
+</div>
+{% endfor %}
 </div>
 </div>
 </section>
 
 <section class="section">
 <div class="container">
-<div class="text-center mb-4">
-<span class="eyebrow">How It Works</span>
-<h2>Three steps, start to finish</h2>
+<div class="row gy-4 align-items-start">
+<div class="col-lg-5 reveal">
+<span class="eyebrow">About SST</span>
+<h2>Who We Are</h2>
+<p class="text-muted">
+Sustainable Solutions Tanzania (SST) is a research, technology, and innovation
+company committed to creating practical solutions for people, businesses,
+institutions, and the environment. We work with the public and private sectors,
+academia, development partners, and communities to turn knowledge and ideas into
+sustainable impact.
+</p>
+<a href="{% url 'core:about' %}" class="btn btn-primary">Learn More About Us <i class="bi bi-arrow-right ms-1"></i></a>
 </div>
-<div class="row g-4">
-<div class="col-md-4 reveal">
-<div class="step-card text-center">
-<div class="step-number mx-auto">1</div>
-<h5><i class="bi bi-cloud-upload-fill me-1 text-accent"></i> Upload</h5>
-<p class="text-muted mb-0">Create an account and upload your dataset with a title, category, and description.</p>
+<div class="col-lg-7">
+<div class="row g-3">
+<div class="col-6 reveal">
+<div class="step-card text-center h-100">
+<div class="pillar-icon research mx-auto"><i class="bi bi-search"></i></div>
+<h5>Research</h5>
+<p class="text-muted small mb-0">Generating evidence for better decisions</p>
 </div>
 </div>
-<div class="col-md-4 reveal">
-<div class="step-card text-center">
-<div class="step-number mx-auto">2</div>
-<h5><i class="bi bi-search me-1 text-accent"></i> Discover</h5>
-<p class="text-muted mb-0">Search and filter the catalog to find datasets shared by other students.</p>
+<div class="col-6 reveal">
+<div class="step-card text-center h-100">
+<div class="pillar-icon technology mx-auto"><i class="bi bi-gear-fill"></i></div>
+<h5>Technology</h5>
+<p class="text-muted small mb-0">Applying digital solutions for real impact</p>
 </div>
 </div>
-<div class="col-md-4 reveal">
-<div class="step-card text-center">
-<div class="step-number mx-auto">3</div>
-<h5><i class="bi bi-download me-1 text-accent"></i> Download</h5>
-<p class="text-muted mb-0">Log in and download the dataset, ready to bring into your own analysis.</p>
+<div class="col-6 reveal">
+<div class="step-card text-center h-100">
+<div class="pillar-icon innovation mx-auto"><i class="bi bi-lightbulb-fill"></i></div>
+<h5>Innovation</h5>
+<p class="text-muted small mb-0">Supporting ideas and entrepreneurship</p>
+</div>
+</div>
+<div class="col-6 reveal">
+<div class="step-card text-center h-100">
+<div class="pillar-icon sustainability mx-auto"><i class="bi bi-flower1"></i></div>
+<h5>Sustainability</h5>
+<p class="text-muted small mb-0">For people, nature, and future generations</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -75,35 +95,147 @@ Signing up lets you upload your own data and download data shared by others.
 
 <section class="section section-alt">
 <div class="container">
+<span class="eyebrow">Our Services</span>
+<h2 class="mb-1">What We Do</h2>
+<p class="text-muted mb-4">We provide integrated services to help organizations achieve their development goals.</p>
 <div class="row g-4">
+<div class="col-md-6 reveal">
+<div class="service-card">
+<i class="bi bi-clipboard-data step-icon"></i>
+<h4>Data Collection Advisory Services</h4>
+<p class="text-muted mb-0">
+Guidance on designing survey instruments, sampling strategy, enumerator training,
+and field logistics for your own primary data collection.
+</p>
+</div>
+</div>
+<div class="col-md-6 reveal">
+<div class="service-card">
+<i class="bi bi-bar-chart-line step-icon"></i>
+<h4>Data Analysis Support Services</h4>
+<p class="text-muted mb-0">
+Help with cleaning, structuring, and analyzing your dataset: statistical methods,
+software support, and interpreting results for your research questions.
+</p>
+</div>
+</div>
+</div>
+<a href="{% url 'core:services' %}" class="btn btn-outline-primary mt-4">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<span class="eyebrow">Our Products &amp; Innovations</span>
+<h2 class="mb-1">Tools and initiatives for greater impact</h2>
+<p class="text-muted mb-4">We develop tools and initiatives that support research, learning, and innovation.</p>
+<div class="row g-4">
+<div class="col-md-6 reveal">
+<div class="service-card h-100">
+<h4><i class="bi bi-database-fill-gear text-accent me-1"></i> TakwimuBridge</h4>
+<p class="text-muted small text-uppercase fw-semibold mb-2">Student Data-Sharing Tool</p>
+<p class="text-muted">
+A platform for students to upload the research data they've collected, and
+search &amp; download data shared by others, so less time goes into repeating
+fieldwork and more into analysis.
+</p>
+<a href="{% url 'core:products' %}" class="btn btn-primary btn-sm">Learn More <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</div>
+<div class="col-md-6 reveal">
+<div class="service-card h-100 d-flex flex-column justify-content-center text-center">
+<i class="bi bi-stars step-icon"></i>
+<h5 class="text-muted">More tools coming soon</h5>
+<p class="text-muted small mb-0">This space is ready for SST's next product or initiative.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section section-alt">
+<div class="container">
+<div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+<div>
+<span class="eyebrow">Our Projects</span>
+<h2 class="mb-0">Featured Projects</h2>
+</div>
+<a href="{% url 'core:projects' %}" class="text-decoration-none">View All Projects <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+{% if featured_projects %}
+<div class="row g-4">
+{% for project in featured_projects %}
+<div class="col-sm-6 col-lg-3 reveal">
+<div class="project-card">
+{% if project.image %}
+<img src="{% static project.image %}" class="card-img-top" alt="{{ project.title }}">
+{% else %}
+<div class="card-img-top d-flex align-items-center justify-content-center"><i class="bi bi-kanban fs-1 text-muted"></i></div>
+{% endif %}
+<div class="card-body">
+<h6 class="mb-1">{{ project.title }}</h6>
+{% if project.date_range %}<p class="text-muted small mb-2">{{ project.date_range }}</p>{% endif %}
+<p class="text-muted small mb-0">{{ project.summary|truncatewords:14 }}</p>
+</div>
+</div>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<p class="text-muted">Projects will be listed here soon.</p>
+{% endif %}
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+<div>
+<span class="eyebrow">Insights &amp; Opportunities</span>
+<h2 class="mb-0">Knowledge, events, and opportunities in one place</h2>
+</div>
+<a href="{% url 'core:insights' %}" class="text-decoration-none">View All <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+{% if insights %}
+<div class="row g-4">
+{% for item in insights|slice:":3" %}
 <div class="col-md-4 reveal">
-<a href="{% url 'datasets:catalog' %}" class="text-decoration-none">
-<div class="step-card h-100">
-<i class="bi bi-collection-fill step-icon"></i>
-<h5 class="text-body">Browse the Catalog</h5>
-<p class="text-muted mb-0">Search datasets uploaded by fellow students, filter by category.</p>
+<div class="insight-card">
+{% if item.image %}
+<img src="{% static item.image %}" class="card-img-top" alt="{{ item.title }}">
+{% else %}
+<div class="card-img-top d-flex align-items-center justify-content-center"><i class="bi bi-newspaper fs-1 text-muted"></i></div>
+{% endif %}
+<div class="card-body">
+<span class="listing-category mb-2">{{ item.get_category_display }}</span>
+<h6 class="mt-2 mb-1">{{ item.title }}</h6>
+<p class="text-muted small mb-0">{{ item.published_at|date:"M j, Y" }}</p>
 </div>
+</div>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<p class="text-muted">News, publications, and opportunities will appear here soon.</p>
+{% endif %}
+</div>
+</section>
+
+<section class="section section-alt section-tight">
+<div class="container text-center">
+<span class="eyebrow">Our Partners</span>
+<h4 class="mb-4 text-muted fw-normal">Working together for a better and more sustainable future</h4>
+{% if partners %}
+<div class="partner-logo-strip">
+{% for partner in partners %}
+<a href="{{ partner.url|default:'#' }}" target="_blank" rel="noopener noreferrer">
+<img src="{% static partner.logo %}" alt="{{ partner.name }}">
 </a>
+{% endfor %}
 </div>
-<div class="col-md-4 reveal">
-<a href="{% url 'core:services' %}" class="text-decoration-none">
-<div class="step-card h-100">
-<i class="bi bi-briefcase-fill step-icon"></i>
-<h5 class="text-body">Our Services</h5>
-<p class="text-muted mb-0">Data collection and analysis support for your research project.</p>
-</div>
-</a>
-</div>
-<div class="col-md-4 reveal">
-<a href="{% url 'core:data_custodians' %}" class="text-decoration-none">
-<div class="step-card h-100">
-<i class="bi bi-bank step-icon"></i>
-<h5 class="text-body">Data Custodians</h5>
-<p class="text-muted mb-0">Links to national and international sources of official statistics.</p>
-</div>
-</a>
-</div>
-</div>
+{% else %}
+<p class="text-muted small mb-0">Partner organizations will be featured here soon.</p>
+{% endif %}
 </div>
 </section>
 {% endblock %}

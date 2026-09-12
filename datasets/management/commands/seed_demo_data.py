@@ -114,7 +114,7 @@ class Command(BaseCommand):
             username="demo_uploader",
             defaults={
                 "email": "demo@databridge.local",
-                "institution": "DataBridge (sample data)",
+                "institution": "TakwimuBridge (sample data)",
             },
         )
         if created:

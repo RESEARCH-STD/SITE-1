@@ -1,0 +1,50 @@
+{% load static %}
+{# A <div>, not <aside>: matches the original layout the stylesheet expects. #}
+<div class="tb-sidebar" id="tb-sidebar">
+  <a class="tb-brand" href="{% url 'qda:dashboard' %}">
+    <img src="{% static 'qda/img/logo.svg' %}" alt="" width="36" height="36">
+    <span class="tb-brand-text">
+      <span class="tb-brand-name">TakwimuBridge</span>
+      <span class="tb-brand-sub">Qualitative Data Analysis</span>
+    </span>
+  </a>
+
+  {# Filled by static/qda/js/ui.js: who is signed in and how syncing is going. #}
+  <div class="tb-account d-none" id="tb-account"></div>
+
+  <a class="tb-sidebar-project" href="{% url 'qda:projects' %}" title="Switch project">
+    <span class="tb-sidebar-label">Active project</span>
+    <span class="tb-sidebar-project-name" id="tb-sidebar-project-name">No project selected</span>
+    <span class="tb-sidebar-project-meta" id="tb-sidebar-project-meta">Open or create a project</span>
+    <span class="tb-sidebar-project-switch"><i class="bi bi-arrow-left-right"></i> Switch</span>
+  </a>
+
+  <nav class="tb-nav" aria-label="Main navigation">
+    <div class="tb-nav-label">Analysis</div>
+    <a class="tb-nav-link" href="{% url 'qda:dashboard' %}"><i class="bi bi-grid-1x2"></i><span>Dashboard</span></a>
+    <a class="tb-nav-link" href="{% url 'qda:projects' %}"><i class="bi bi-folder2-open"></i><span>Projects</span></a>
+    <a class="tb-nav-link" href="{% url 'qda:workspace' %}"><i class="bi bi-highlighter"></i><span>Coding Workspace</span></a>
+    <a class="tb-nav-link" href="{% url 'qda:analysis' %}"><i class="bi bi-bar-chart-line"></i><span>Theme Analysis</span></a>
+    <a class="tb-nav-link" href="{% url 'qda:clouds' %}"><i class="bi bi-cloud"></i><span>Theme &amp; Word Cloud</span></a>
+    <a class="tb-nav-link" href="{% url 'qda:export' %}"><i class="bi bi-box-arrow-down"></i><span>Export</span></a>
+
+    <div class="tb-nav-label">Account &amp; help</div>
+    <a class="tb-nav-link" href="{% url 'qda:account' %}"><i class="bi bi-person-circle"></i><span>My Account</span></a>
+    <a class="tb-nav-link" href="{% url 'qda:guide' %}"><i class="bi bi-journal-text"></i><span>User Guide</span></a>
+    <a class="tb-nav-link" href="{% url 'qda:about' %}"><i class="bi bi-info-circle"></i><span>About &amp; Scope</span></a>
+    <a class="tb-nav-link" href="{% url 'core:home' %}"><i class="bi bi-house"></i><span>SST website</span></a>
+  </nav>
+
+  <div class="tb-sidebar-footer" id="tb-sidebar-note">
+    <i class="bi bi-hdd"></i>
+    <span>Saved in this browser only. <a href="{% url 'qda:export' %}">Back up a project</a> to move it to another computer.</span>
+  </div>
+</div>
+<div class="tb-sidebar-backdrop" id="tb-sidebar-backdrop"></div>
+
+<div class="tb-mobilebar">
+  <button type="button" class="tb-mobilebar-toggle" id="tb-sidebar-toggle" aria-label="Open navigation" aria-controls="tb-sidebar" aria-expanded="false">
+    <i class="bi bi-list"></i>
+  </button>
+  <a href="{% url 'qda:dashboard' %}" class="tb-mobilebar-brand"><img src="{% static 'qda/img/logo.svg' %}" alt="" width="26" height="26"> TakwimuBridge</a>
+</div>

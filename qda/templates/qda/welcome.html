@@ -1,0 +1,89 @@
+{% extends "qda/base.html" %}
+{% load static %}
+{# The tool's opening page (qda/views.py: welcome). No sidebar: the shell, #}
+{# title block and footer blocks are emptied, and body.tb-landing styles it. #}
+{% block title %}Sign in{% endblock %}
+{% block body_class %} tb-landing{% endblock %}
+{% block shell %}{% endblock %}
+{% block title_block %}{% endblock %}
+{% block footer %}{% endblock %}
+{% block content %}
+<div class="tb-landing-wrap">
+  <section class="tb-landing-intro">
+    <a class="tb-brand" href="{% url 'core:home' %}" title="Sustainable Solutions Tanzania">
+      <img src="{% static 'qda/img/logo.svg' %}" alt="" width="40" height="40">
+      <span class="tb-brand-text">
+        <span class="tb-brand-name">TakwimuBridge</span>
+        <span class="tb-brand-sub">Qualitative Data Analysis</span>
+      </span>
+    </a>
+
+    <div class="tb-landing-pitch">
+      <span class="tb-landing-kicker"><i class="bi bi-stars"></i> By Sustainable Solutions Tanzania (SST)</span>
+      <h1>Turn interviews and focus groups into clear, evidence-backed themes.</h1>
+      <p class="tb-landing-lead">Code KIIs, FGDs, in-depth interviews and open-ended responses, and watch theme frequencies, weights and comparisons update as you work.</p>
+      <ul class="tb-landing-features">
+        <li><i class="bi bi-highlighter"></i><span><strong>Code in one reading.</strong> Run several thematic analyses on the same transcripts, with undo and redo.</span></li>
+        <li><i class="bi bi-bar-chart-line"></i><span><strong>Analyse as you go.</strong> Frequencies, weights, a respondent matrix, group comparisons and theme clouds.</span></li>
+        <li><i class="bi bi-box-arrow-down"></i><span><strong>Report.</strong> Export to Excel, Word, CSV and images.</span></li>
+        <li><i class="bi bi-shield-lock"></i><span><strong>Your own account.</strong> Your projects follow you to any computer, and nobody else can see them.</span></li>
+      </ul>
+    </div>
+
+    <div class="tb-landing-foot">© {% now "Y" %} Sustainable Solutions Tanzania (SST) · TakwimuBridge</div>
+  </section>
+
+  <section class="tb-landing-main">
+    <div class="card tb-landing-card">
+      <div class="card-body">
+        <h2 id="tb-land-title">Welcome</h2>
+        <p class="small text-muted">Sign in with your SST account — the same one you use for the TakwimuBridge data catalogue. Your projects are kept in your account and follow you to any computer.</p>
+
+        <form method="post" action="{% url 'qda:welcome' %}" novalidate id="tb-land-form">
+          {% csrf_token %}
+          {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+          {% if form.non_field_errors %}
+          <div class="alert alert-danger small py-2" id="tb-land-msg" role="alert">{% for error in form.non_field_errors %}{{ error }} {% endfor %}</div>
+          {% endif %}
+          <div class="mb-2">
+            <label class="form-label small mb-1" for="{{ form.username.id_for_label }}">Username or email</label>
+            {{ form.username }}
+            {% for error in form.username.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+          </div>
+          <div class="mb-2">
+            <label class="form-label small mb-1" for="{{ form.password.id_for_label }}">Password</label>
+            {{ form.password }}
+            {% for error in form.password.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mt-1" id="tb-land-submit">Sign in</button>
+          {% if email_ready %}
+          <div class="text-center mt-2"><a class="btn btn-link btn-sm" href="{% url 'accounts:password_reset' %}" id="tb-land-forgot">Forgot password?</a></div>
+          {% endif %}
+        </form>
+
+        <a class="btn btn-outline-primary w-100 mt-3" href="{{ signup_url }}" id="tb-land-signup">
+          <i class="bi bi-person-plus me-1"></i> Create a free account
+        </a>
+
+        {% if qda_config.allowGuests %}
+        <div class="tb-landing-or"><span>or</span></div>
+        <form method="post" action="{% url 'qda:welcome' %}">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="guest">
+          {% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
+          <button type="submit" class="btn btn-outline-secondary w-100" id="tb-land-guest">
+            Continue without an account <i class="bi bi-arrow-right ms-1"></i>
+          </button>
+        </form>
+        <p class="small text-muted text-center mt-2 mb-0">Try the demo project or work in this browser only. You can create an account later.</p>
+        {% endif %}
+      </div>
+    </div>
+    <nav class="tb-landing-links" aria-label="Help">
+      <a href="{% url 'qda:guide' %}"><i class="bi bi-journal-text me-1"></i>User Guide</a>
+      <a href="{% url 'qda:about' %}"><i class="bi bi-info-circle me-1"></i>About &amp; Scope</a>
+      <a href="{% url 'core:home' %}"><i class="bi bi-house me-1"></i>SST website</a>
+    </nav>
+  </section>
+</div>
+{% endblock %}

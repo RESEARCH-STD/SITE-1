@@ -64,6 +64,8 @@
 </a>
 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
 <li><a class="dropdown-item" href="{% url 'datasets:my_uploads' %}">My Uploads</a></li>
+<li><a class="dropdown-item" href="{% url 'qda:dashboard' %}">TakwimuBridge QDA</a></li>
+<li><a class="dropdown-item" href="{% url 'accounts:password_change' %}">Change Password</a></li>
 <li><hr class="dropdown-divider"></li>
 <li>
 <form method="post" action="{% url 'accounts:logout' %}" class="px-3">

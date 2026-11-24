@@ -1,0 +1,129 @@
+{% extends "qda/base.html" %}
+{# Ported from TAKWIMUBRIDGE-QDA/guide.qmd (rendered). #}
+{% block content %}
+<div class="tb-prose">
+<section id="what-is-takwimubridge" class="level2">
+<h2 data-anchor-id="what-is-takwimubridge">What is TakwimuBridge?</h2>
+<p>TakwimuBridge is designed to help a researcher analyse information collected through interviews, Key Informant Interviews (KIIs), Focus Group Discussions (FGDs), open-ended questions and other written qualitative information.</p>
+<p>You do not need to be an advanced data analyst to use it. You mainly need to read the information, identify important ideas, highlight them, and classify them into themes. TakwimuBridge then helps organize, count, compare and present those findings.</p>
+</section>
+<section id="a-simple-example" class="level2">
+<h2 data-anchor-id="a-simple-example">A Simple Example</h2>
+<p>Suppose you interviewed five people about challenges facing their community. Each interview produced about three pages of written information.</p>
+<p>You create a new project and upload the five interviews. You tell the system whether each document is a KII, FGD, interview, open-ended response, or another document.</p>
+<p>You open the first interview and start reading. A respondent might say: <em>“One of our biggest problems is pollution because industries are discharging waste into the river.”</em></p>
+<p>You decide that this statement is talking about <strong>Environmental Pollution</strong>. You highlight the statement and select or create the theme <em>Environmental Pollution</em>. You may choose yellow as its colour. TakwimuBridge automatically records that Environmental Pollution has been mentioned once.</p>
+<p>If another respondent discusses pollution, you highlight that statement using the same theme. The frequency becomes two. You continue doing this across all interviews.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This exact example — five KIIs plus one FGD discussing environmental pollution, water scarcity, poor planning and unemployment — is bundled into TakwimuBridge as the <strong>demo project</strong> on the <a href="{% url 'qda:projects' %}">Projects</a> page, already fully coded for its <em>Challenges</em>, <em>Causes</em> and <em>Impacts</em>, so you can see the finished result before coding your own data.</p>
+</div>
+</div>
+</section>
+<section id="giving-importance-to-a-statement" class="level2">
+<h2 data-anchor-id="giving-importance-to-a-statement">Giving Importance to a Statement</h2>
+<p>Sometimes two people may discuss the same issue, but the statements may not carry the same weight in your analysis. TakwimuBridge lets you give each highlighted statement an optional score from <strong>1 to 10</strong>.</p>
+<p>For example, one Environmental Pollution statement may receive a weight of 8/10, another 6/10, another 9/10. TakwimuBridge can then tell you both how frequently the issue appeared <em>and</em> the importance you assigned to the coded statements.</p>
+<p>The score represents <strong>your assessment</strong>, as the researcher, of the importance or salience of the statement — it is not automatically the respondent’s own numerical rating.</p>
+</section>
+<section id="creating-different-themes" class="level2">
+<h2 data-anchor-id="creating-different-themes">Creating Different Themes</h2>
+<p>As you continue reading, different issues will emerge — Environmental Pollution, Water Shortage, Poor Planning, Unemployment, Weak Law Enforcement, and so on.</p>
+<p>Every time you find a statement relating to one of these issues, you highlight it and assign the appropriate theme.</p>
+<p>You can also organize related issues under broader themes. For example, <em>Environmental Challenges</em> may contain <em>Environmental Pollution</em>, <em>Water Shortage</em> and <em>Deforestation</em>. <em>Governance Challenges</em> may contain <em>Poor Planning</em>, <em>Weak Enforcement</em> and <em>Limited Community Participation</em>.</p>
+</section>
+<section id="reading-once-coding-several-themes" class="level2">
+<h2 data-anchor-id="reading-once-coding-several-themes">Reading Once, Coding Several Themes</h2>
+<p>Most studies ask more than one question of the same interviews — for example, <em>what are the challenges</em>, <em>what causes them</em>, and <em>what are their impacts</em>. You should not have to read every transcript three times.</p>
+<p>Make one broad theme per question — say <strong>Challenges</strong>, <strong>Causes</strong> and <strong>Impacts</strong> — each with its own sub-themes. In the <a href="{% url 'qda:workspace' %}">Coding Workspace</a>, the coding panel beside the transcript shows all of them at once. Select a passage, then tick every sub-theme it speaks to, from any group:</p>
+<blockquote class="blockquote">
+<p><em>“The factory near the river keeps releasing waste into the water, and nobody stops them.”</em> → <strong>Challenges</strong> › Environmental Pollution, <strong>Causes</strong> › Industrial Waste Discharge, <strong>Causes</strong> › Weak Enforcement</p>
+</blockquote>
+<p>One click on <strong>Apply</strong> records all three. If a new idea comes up while you read, add it as a new sub-theme right there in the panel — no need to stop and open the codebook. The highlight in the transcript shows one coloured stripe per theme, and the <strong>Highlight</strong> buttons above the transcript let you show or hide each group.</p>
+</section>
+<section id="running-more-than-one-thematic-analysis" class="level2">
+<h2 data-anchor-id="running-more-than-one-thematic-analysis">Running More Than One Thematic Analysis</h2>
+<p>Sometimes the same interviews answer two quite different questions — for example <em>challenges facing youths in entrepreneurship</em> and <em>factors behind youth political uprisings</em>. You do not need to import the transcripts twice. Make each question its own <strong>thematic analysis</strong>, with its own themes and sub-themes:</p>
+<ul>
+<li>In the coding panel, click <strong>+ New thematic analysis</strong> at the bottom, type its name and press Enter, then add its themes with <strong>+ New theme</strong>. (You can also do this in <strong>Codebook</strong>, where you can add the research question too.)</li>
+<li>The coding panel shows every analysis as its own section, one after the other (click a section’s title to fold it away). While you read, tick themes from both analyses for the same passage, so that when you finish a transcript, both analyses are done.</li>
+<li>On the <a href="{% url 'qda:dashboard' %}">Dashboard</a>, <a href="{% url 'qda:analysis' %}">Theme Analysis</a> and <a href="{% url 'qda:clouds' %}">Theme &amp; Word Cloud</a> pages, choose which analysis to look at with the <strong>Thematic analysis</strong> selector — each has its own themes, sub-themes, charts and matrix — or pick <strong>All analyses</strong>.</li>
+</ul>
+<p>The demo project shows this: its passages are coded both for <em>Environmental Challenges</em> (challenges, causes, impacts) and for <em>Affected Groups</em> (women &amp; girls, youth, children, farmers).</p>
+</section>
+<section id="correcting-mistakes" class="level2">
+<h2 data-anchor-id="correcting-mistakes">Correcting Mistakes</h2>
+<p>Nothing you code is final:</p>
+<ul>
+<li><strong>Undo / Redo</strong> — the buttons above the workspace (or Ctrl+Z and Ctrl+Y) step back and forward through your changes: coding, deleting, editing themes or sources.</li>
+<li><strong>Remove coding</strong> — click a highlight to open it in the coding panel. Untick a theme to take just that theme off, or click <strong>Delete</strong> (or press the Delete key) to remove the whole coded passage. The <strong>Coded</strong> tab above the transcript lists every coded passage in the source with a bin button next to each.</li>
+<li><strong>Fix the codebook</strong> — in <strong>Codebook</strong>, rename a theme, change its colour or memo, or move it anywhere with the pencil button. The arrow buttons promote a sub-theme to a main theme, or demote a theme into a sub-theme of the one above it. Coded passages move with their themes.</li>
+<li><strong>Edit or delete a source</strong> — use <strong>Edit</strong> or the bin button above the transcript. If you edit the text, coded passages follow your changes; any whose words you remove are dropped after you confirm.</li>
+<li><strong>Edit the project</strong> — change the title and other details with <strong>Edit project</strong> on the Dashboard or <strong>Edit</strong> on the Projects page.</li>
+</ul>
+</section>
+<section id="recording-focus-group-details" class="level2">
+<h2 data-anchor-id="recording-focus-group-details">Recording Focus Group Details</h2>
+<p>When you add a source of type <strong>Focus Group Discussion</strong>, you can record how many <strong>women</strong>, <strong>men</strong> and participants who <strong>did not disclose</strong> their sex took part; TakwimuBridge adds up the total for you. For any source you can type one or more <strong>stakeholder types</strong> in your own words (press Enter after each) — useful when a group mixes, say, farmers, traders and local leaders. Group comparisons by stakeholder type count a mixed group under each of its types.</p>
+</section>
+<section id="what-takwimubridge-does-automatically" class="level2">
+<h2 data-anchor-id="what-takwimubridge-does-automatically">What TakwimuBridge Does Automatically</h2>
+<p>While you concentrate on reading and coding, the software does the counting and organization. For every theme, it calculates:</p>
+<ol type="1">
+<li><strong>Frequency</strong> — the number of times it was coded.</li>
+<li><strong>Respondent Coverage</strong> — the number and percentage of respondents who mentioned it.</li>
+<li><strong>Total Weighted Score</strong> — the sum of the importance scores you assigned.</li>
+<li><strong>Average Weight</strong> — the average importance across all references coded under it.</li>
+</ol>
+<p>This avoids a common mistake: one person mentioning an issue ten times is different from ten different people each mentioning it once. TakwimuBridge shows both.</p>
+<p>You can read these results at the <strong>theme</strong> level (for example, everything coded under <em>Impacts</em>) or at the <strong>sub-theme</strong> level (for example, <em>Health Effects</em> compared with <em>Youth Migration</em>) — switch with the <em>Themes / Sub-themes</em> buttons on the <a href="{% url 'qda:dashboard' %}">Dashboard</a> and <a href="{% url 'qda:analysis' %}">Theme Analysis</a> pages. A theme counts each coded statement once, even when the statement was coded to two of its sub-themes.</p>
+</section>
+<section id="seeing-what-people-actually-said" class="level2">
+<h2 data-anchor-id="seeing-what-people-actually-said">Seeing What People Actually Said</h2>
+<p>TakwimuBridge does not only give you numbers. Click a theme, such as <em>Environmental Pollution</em>, on the <a href="{% url 'qda:analysis' %}">Theme Analysis</a> page and it shows every statement you highlighted under that theme, and where it came from — so when writing a report, you can move from a number straight back to the evidence behind it.</p>
+</section>
+<section id="comparing-different-groups" class="level2">
+<h2 data-anchor-id="comparing-different-groups">Comparing Different Groups</h2>
+<p>If you entered basic respondent attributes, TakwimuBridge can compare groups such as Men vs.&nbsp;Women, Youth vs.&nbsp;Adults, Community Members vs.&nbsp;Government Officials, District A vs.&nbsp;District B, or KIIs vs.&nbsp;FGDs — helping you see whether different groups view the same problem differently.</p>
+</section>
+<section id="creating-graphs-and-word-clouds" class="level2">
+<h2 data-anchor-id="creating-graphs-and-word-clouds">Creating Graphs and Word Clouds</h2>
+<p>Bar charts show the most frequently discussed themes. Weighted bar charts show themes with the highest combined importance scores. The <strong>theme cloud</strong> shows your themes sized by how often each was coded, while the <strong>word cloud</strong> shows commonly occurring words, sized by frequency. Heat maps show which themes are more common among different respondents. Comparison charts compare themes between groups.</p>
+</section>
+<section id="working-on-more-than-one-computer" class="level2">
+<h2 data-anchor-id="working-on-more-than-one-computer">Working on More Than One Computer</h2>
+<p>TakwimuBridge QDA opens on a sign-in page. Sign in with your SST account — the same one used for the TakwimuBridge data catalogue — or choose <strong>Create a free account</strong> to make one (a username, your email and a password). Your projects are then kept in your account as well as in the browser, so you can sign in on another computer and carry on. If you were already working without an account, use <strong>Create account</strong> near the top of the sidebar (or <strong>My Account</strong>) instead; once you're signed in, the tool offers to add those projects to your account. On a shared computer, sign out when you finish — that removes your projects from that browser and returns to the sign-in page.</p>
+<p>To try the tool first, choose <strong>Continue without an account</strong> on the sign-in page. Without an account, projects stay in the browser you used, and the sign-in page appears again the next time you open the browser. To move one, use <strong>Export → Full Project Backup (JSON)</strong> and restore it on the other computer.</p>
+</section>
+<section id="the-process-in-ten-simple-steps" class="level2">
+<h2 data-anchor-id="the-process-in-ten-simple-steps">The Process in Ten Simple Steps</h2>
+<ol type="1">
+<li>Upload what people said.</li>
+<li>Read the interviews or discussions.</li>
+<li>Highlight important statements.</li>
+<li>Give each statement every theme it speaks to.</li>
+<li>Give the theme or code a colour.</li>
+<li>Optionally give the coded statement an importance score from 1–10.</li>
+<li>TakwimuBridge counts and organizes the coded information.</li>
+<li>Compare themes and respondents.</li>
+<li>Create graphs, tables, heat maps and theme or word clouds.</li>
+<li>Export the findings for your report.</li>
+</ol>
+</section>
+<section id="in-simple-terms" class="level2">
+<h2 data-anchor-id="in-simple-terms">In Simple Terms</h2>
+<p>A beginner does not need to understand complicated programming or statistical commands. <strong>You</strong> do the interpretation; TakwimuBridge helps organize, quantify, compare and visualize the qualitative evidence.</p>
+<div class="my-5">
+<p><a href="{% url 'qda:workspace' %}" class="btn btn-accent btn-lg"><i class="bi bi-highlighter me-1"></i> Try the Coding Workspace</a></p>
+</div>
+</section>
+</div>
+{% endblock %}

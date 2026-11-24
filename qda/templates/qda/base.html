@@ -1,0 +1,61 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>{% block title %}{{ page_title }}{% endblock %} – TakwimuBridge QDA</title>
+<meta name="description" content="{% block description %}TakwimuBridge QDA by Sustainable Solutions Tanzania: code, weigh, compare and visualize KIIs, FGDs, interviews and open-ended responses.{% endblock %}">
+<link rel="icon" href="{% static 'qda/img/logo.svg' %}" type="image/svg+xml">
+
+{# Inter (body) + Space Grotesk (headings). #}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+{# Bootstrap 5.3 + the tool's own styles, compiled from the original Quarto theme. #}
+<link rel="stylesheet" href="{% static 'qda/css/bootstrap-icons.css' %}">
+<link rel="stylesheet" href="{% static 'qda/css/takwimubridge.min.css' %}">
+
+{# Settings for the scripts: who is signed in, page addresses, the sync API. #}
+{{ qda_config|json_script:"tb-config" }}
+<script>window.TB_CONFIG = JSON.parse(document.getElementById("tb-config").textContent);</script>
+
+{# Everything below is deferred: it runs, in this order, before DOMContentLoaded. #}
+<script src="{% static 'qda/js/vendor/bootstrap.bundle.min.js' %}" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/wordcloud@1.2.2/src/wordcloud2.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js" defer></script>
+<script src="{% static 'qda/js/app.js' %}" defer></script>
+<script src="{% static 'qda/js/demo-data.js' %}" defer></script>
+<script src="{% static 'qda/js/cloud.js' %}" defer></script>
+<script src="{% static 'qda/js/ui.js' %}" defer></script>
+<script src="{% static 'qda/js/coding-ui.js' %}" defer></script>
+<script src="{% static 'qda/js/charts.js' %}" defer></script>
+<script src="{% static 'qda/js/export.js' %}" defer></script>
+{% block extra_head %}{% endblock %}
+</head>
+<body class="fullcontent quarto-light{% block body_class %}{% endblock %}">
+{# The ids and classes below match the original Quarto pages, which the stylesheet targets. #}
+<div id="quarto-content" class="quarto-container page-layout-custom">
+{% block shell %}{% include "qda/_shell.html" %}{% endblock %}
+{% block title_block %}
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">{{ page_title }}</h1>
+{% if page_subtitle %}<p class="subtitle lead">{{ page_subtitle }}</p>{% endif %}
+</div>
+</header>
+{% endblock %}
+{% block content %}{% endblock %}
+</div>
+{% block footer %}
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left"><p>© {% now "Y" %} Sustainable Solutions Tanzania (SST) · <a href="{% url 'core:home' %}">SST website</a></p></div>
+    <div class="nav-footer-center">&nbsp;</div>
+    <div class="nav-footer-right"><p>{% if user.is_authenticated %}Your projects are kept in your account and in this browser.{% else %}Working without an account — your projects stay in this browser.{% endif %}</p></div>
+  </div>
+</footer>
+{% endblock %}
+</body>
+</html>

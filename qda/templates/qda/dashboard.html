@@ -1,0 +1,297 @@
+{% extends "qda/base.html" %}
+{# Ported from TAKWIMUBRIDGE-QDA/index.qmd. #}
+{% block content %}
+<div id="tb-dash-empty" class="d-none">
+<div class="card">
+<div class="card-body tb-empty-state">
+<i class="bi bi-folder-plus"></i>
+<h2 class="h5 text-ink">No project is open</h2>
+<p class="mb-3">Create a project for your study, or open the bundled demo project to explore every feature first.</p>
+<a href="{% url 'qda:projects' %}" class="btn btn-primary"><i class="bi bi-folder2-open me-1"></i> Go to Projects</a>
+</div>
+</div>
+</div>
+
+<div id="tb-signup-banner"></div>
+
+<div id="tb-dash" class="d-none">
+
+<div class="card tb-project-banner mb-4">
+<div class="card-body">
+<div class="d-flex align-items-center gap-3 min-w-0">
+<div class="tb-project-icon d-none d-sm-flex"><i class="bi bi-journal-richtext"></i></div>
+<div class="min-w-0">
+<span class="tb-eyebrow">Active project</span>
+<h2 id="tb-dash-title">—</h2>
+<div id="tb-dash-meta"></div>
+</div>
+</div>
+<div class="d-flex flex-wrap gap-2">
+<button type="button" class="btn btn-outline-secondary" id="tb-dash-edit"><i class="bi bi-pencil me-1"></i> Edit project</button>
+<a href="{% url 'qda:workspace' %}" class="btn btn-primary"><i class="bi bi-highlighter me-1"></i> Continue coding</a>
+<a href="{% url 'qda:analysis' %}" class="btn btn-outline-primary"><i class="bi bi-bar-chart-line me-1"></i> Theme analysis</a>
+</div>
+</div>
+</div>
+
+<div class="card tb-toolbar mb-4" id="tb-dash-analysis-bar">
+<div class="card-body">
+<div class="tb-toolbar-group"><span class="tb-toolbar-label">Thematic analysis</span><div id="tb-dash-analysis"></div></div>
+<div class="small text-muted ms-xl-auto" id="tb-dash-analysis-q"></div>
+</div>
+</div>
+
+<div class="tb-kpi-grid mb-4">
+<div class="card tb-kpi"><div class="card-body"><div class="tb-kpi-icon" style="--kpi:#1B4F9C"><i class="bi bi-file-earmark-text"></i></div><div><div class="tb-kpi-value" id="tb-kpi-sources">0</div><div class="tb-kpi-label">Sources</div></div></div></div>
+<div class="card tb-kpi"><div class="card-body"><div class="tb-kpi-icon" style="--kpi:#2F6FED"><i class="bi bi-people"></i></div><div><div class="tb-kpi-value" id="tb-kpi-respondents">0</div><div class="tb-kpi-label">Respondents</div><div class="tb-kpi-sub" id="tb-kpi-people"></div></div></div></div>
+<div class="card tb-kpi"><div class="card-body"><div class="tb-kpi-icon" style="--kpi:#17B8A6"><i class="bi bi-diagram-3"></i></div><div><div class="tb-kpi-value" id="tb-kpi-themes">0</div><div class="tb-kpi-label">Themes</div><div class="tb-kpi-sub" id="tb-kpi-themes-sub"></div></div></div></div>
+<div class="card tb-kpi"><div class="card-body"><div class="tb-kpi-icon" style="--kpi:#E08E45"><i class="bi bi-bookmark-check"></i></div><div><div class="tb-kpi-value" id="tb-kpi-codings">0</div><div class="tb-kpi-label">Coded references</div><div class="tb-kpi-sub" id="tb-kpi-codings-sub"></div></div></div></div>
+<div class="card tb-kpi"><div class="card-body"><div class="tb-kpi-icon" style="--kpi:#1E8A5F"><i class="bi bi-check2-circle"></i></div><div><div class="tb-kpi-value" id="tb-kpi-coded-pct">0%</div><div class="tb-kpi-label" title="Share of transcript text inside at least one coded reference">Text coded</div></div></div></div>
+<div class="card tb-kpi"><div class="card-body"><div class="tb-kpi-icon" style="--kpi:#8E44AD"><i class="bi bi-speedometer2"></i></div><div><div class="tb-kpi-value" id="tb-kpi-weight">—</div><div class="tb-kpi-label">Average weight</div></div></div></div>
+</div>
+
+<div class="grid gap-4 mb-4">
+<div class="g-col-12 g-col-xl-7">
+<div class="card h-100">
+<div class="card-header tb-panel-header"><span>Theme frequency <span class="tb-panel-sub">coded references · click a bar for quotes</span></span><div id="tb-dash-freq-level"></div></div>
+<div class="card-body tb-panel-body tb-fill"><div class="tb-chart-box" id="tb-dash-freq-box"><canvas id="tb-dash-freq"></canvas></div></div>
+</div>
+</div>
+<div class="g-col-12 g-col-xl-5">
+<div class="card h-100">
+<div class="card-header tb-panel-header"><span>Theme cloud <span class="tb-panel-sub">sized by frequency · click a theme</span></span><div id="tb-dash-cloud-level"></div></div>
+<div class="card-body tb-panel-body tb-fill"><div class="tb-cloud-box tall"><canvas id="tb-dash-cloud"></canvas></div></div>
+</div>
+</div>
+</div>
+
+<div class="grid gap-4 mb-4">
+<div class="g-col-12 g-col-xl-7">
+<div class="card h-100">
+<div class="card-header tb-panel-header"><span>Coding progress by source</span><a href="{% url 'qda:workspace' %}" class="small fw-semibold text-decoration-none">Open workspace <i class="bi bi-arrow-right"></i></a></div>
+<div class="card-body p-0">
+<div class="table-responsive">
+<table class="table table-sm align-middle mb-0">
+<thead><tr><th class="ps-3">Source</th><th>Respondent</th><th class="text-end" title="Coded references">Refs</th><th style="width:28%;">Text coded</th><th class="pe-3"></th></tr></thead>
+<tbody id="tb-dash-sources"></tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-xl-5">
+<div class="card h-100">
+<div class="card-header tb-panel-header"><span>Respondent coverage <span class="tb-panel-sub">% of respondents raising each theme</span></span><div id="tb-dash-cov-level"></div></div>
+<div class="card-body tb-panel-body tb-fill"><div class="tb-chart-box" id="tb-dash-cov-box"><canvas id="tb-dash-coverage"></canvas></div></div>
+</div>
+</div>
+</div>
+
+<div class="grid gap-4">
+<div class="g-col-12 g-col-xl-7">
+<div class="card">
+<div class="card-header tb-panel-header"><span>Latest coded references</span></div>
+<div class="card-body tb-panel-body"><ul class="tb-list" id="tb-dash-recent"></ul></div>
+</div>
+</div>
+<div class="g-col-12 g-col-xl-5">
+<div class="card">
+<div class="card-header tb-panel-header"><span>Projects</span><span class="d-flex gap-3"><a href="{% url 'qda:projects' %}#new" class="small fw-semibold text-decoration-none"><i class="bi bi-plus-lg"></i> New</a><a href="{% url 'qda:projects' %}" class="small fw-semibold text-decoration-none">Manage <i class="bi bi-arrow-right"></i></a></span></div>
+<div class="card-body tb-panel-body"><ul class="tb-list" id="tb-dash-projects"></ul></div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () { window.TB.whenReady(function () {
+  var TB = window.TB;
+  if (TB.seedDemoIfNeeded) TB.seedDemoIfNeeded();
+  var project = TB.getActiveProject();
+  function esc(s) { return TB.escapeHtml(s); }
+  function $(id) { return document.getElementById(id); }
+
+  TB.ui.mountSignupBanner($("tb-signup-banner"));
+  if (!project) { $("tb-dash-empty").classList.remove("d-none"); return; }
+  $("tb-dash").classList.remove("d-none");
+
+  var state = { analysis: null, freq: 0, cloud: 0, cov: 0 };
+  $("tb-dash-edit").addEventListener("click", function () {
+    TB.ui.openProjectModal(project, { onSaved: function () { renderBanner(); renderProjects(); } });
+  });
+
+  function renderBanner() {
+    $("tb-dash-title").textContent = project.title;
+    var pills = [];
+    if (project.topic) pills.push(["bi-tag", project.topic]);
+    if (project.researcher) pills.push(["bi-person", project.researcher]);
+    if (project.org) pills.push(["bi-building", project.org]);
+    if (project.date) pills.push(["bi-calendar3", project.date]);
+    pills.push(["bi-sliders", project.weightingEnabled ? "Weighting on" : "Weighting off"]);
+    $("tb-dash-meta").innerHTML = pills.map(function (p) {
+      return '<span class="tb-meta-pill"><i class="bi ' + p[0] + '"></i>' + esc(p[1]) + "</span>";
+    }).join("");
+  }
+
+  function renderKpis() {
+    var themes = state.analysis ? TB.themesInAnalysis(project, state.analysis) : project.themes;
+    var top = TB.themeTree(project, state.analysis).length;
+    var sub = themes.length - top;
+    var weighted = project.codings.filter(function (c) { return c.weight !== null && c.weight !== undefined; });
+    var avg = weighted.length ? weighted.reduce(function (s, c) { return s + c.weight; }, 0) / weighted.length : null;
+    var respondents = TB.respondentsOf(project).length;
+    var people = TB.peopleCount(project);
+    $("tb-kpi-sources").textContent = project.sources.length;
+    $("tb-kpi-respondents").textContent = respondents;
+    $("tb-kpi-people").textContent = people !== respondents ? people + " people in total" : "";
+    $("tb-kpi-people").title = "Every interviewee plus every FGD participant (women, men and not disclosed)";
+    $("tb-kpi-themes").textContent = top;
+    $("tb-kpi-themes-sub").textContent = sub + " sub-theme" + (sub === 1 ? "" : "s");
+    $("tb-kpi-codings").textContent = project.codings.length;
+    $("tb-kpi-codings-sub").textContent = state.analysis && project.analyses.length > 1
+      ? TB.codingsInAnalysis(project, state.analysis).length + " in this analysis" : "";
+    $("tb-kpi-coded-pct").textContent = TB.projectCodedPct(project) + "%";
+    $("tb-kpi-weight").textContent = avg === null ? "—" : (Math.round(avg * 10) / 10) + "/10";
+  }
+
+  function items(level, key) {
+    return TB.sortThemeItems(TB.themeLevelItems(project, level, null, state.analysis), key, level > 0);
+  }
+  function sizeBox(boxId, count) {
+    $(boxId).style.minHeight = Math.max(240, count * 26 + 50) + "px";
+  }
+
+  function renderFrequency() {
+    var list = items(state.freq, "frequency");
+    sizeBox("tb-dash-freq-box", list.length);
+    TB.charts.barChart("tb-dash-freq", list.map(function (i) { return i.label; }), list.map(function (i) { return i.stats.frequency; }), {
+      label: "Coded references", horizontal: true,
+      colors: list.map(function (i) { return i.color; }),
+      tooltipTitles: list.map(function (i) { return i.path; }),
+      onClick: function (idx) { TB.ui.showThemeEvidence(project, list[idx].id); }
+    });
+  }
+
+  function renderCoverage() {
+    var list = items(state.cov, "coveragePct");
+    sizeBox("tb-dash-cov-box", list.length);
+    TB.charts.barChart("tb-dash-coverage", list.map(function (i) { return i.label; }), list.map(function (i) { return i.stats.coveragePct; }), {
+      label: "Respondent coverage", horizontal: true, suffix: "%", max: 100,
+      colors: list.map(function (i) { return i.color; }),
+      tooltipTitles: list.map(function (i) { return i.path + " (" + i.stats.coverageCount + "/" + i.stats.coverageTotal + " respondents)"; }),
+      onClick: function (idx) { TB.ui.showThemeEvidence(project, list[idx].id); }
+    });
+  }
+
+  function renderCloud() {
+    var list = TB.themeLevelItems(project, state.cloud, null, state.analysis);
+    TB.charts.renderThemeCloud("tb-dash-cloud", list.map(function (i) {
+      return { id: i.id, label: i.label, value: i.stats.frequency, color: i.color };
+    }), { onClick: function (item) { TB.ui.showThemeEvidence(project, item.id); } });
+  }
+
+  function renderSources() {
+    var body = $("tb-dash-sources");
+    if (!project.sources.length) {
+      body.innerHTML = '<tr><td colspan="5" class="text-muted ps-3 py-3">No sources yet — add a transcript in the <a href="{% url 'qda:workspace' %}">Coding Workspace</a>.</td></tr>';
+      return;
+    }
+    var respondentCount = {};
+    TB.respondentsOf(project).forEach(function (r) { respondentCount[r.sourceId] = (respondentCount[r.sourceId] || 0) + 1; });
+    body.innerHTML = project.sources.map(function (s) {
+      var a = s.attributes || {};
+      var pct = TB.sourceCodedPct(project, s);
+      var pc = TB.participantsOf(s);
+      var who = s.type === "FGD"
+        ? [pc.total ? pc.total + " participants (" + pc.women + " F, " + pc.men + " M" + (pc.undisclosed ? ", " + pc.undisclosed + " n/d" : "") + ")" : "",
+          respondentCount[s.id] + " speakers"].filter(Boolean).join(" · ")
+        : [a.sex].concat(TB.attrValues(a, "stakeholder")).filter(Boolean).join(" · ");
+      return "<tr>" +
+        '<td class="ps-3"><div class="fw-semibold text-nowrap">' + esc(s.name) + '</div><span class="badge text-bg-light border">' + esc(s.type) + "</span></td>" +
+        '<td class="small text-muted">' + esc(who || "—") + (a.location ? '<div>' + esc(a.location) + "</div>" : "") + "</td>" +
+        '<td class="text-end fw-semibold">' + TB.codingsForSource(project, s.id).length + "</td>" +
+        '<td><div class="d-flex align-items-center gap-2"><div class="tb-progress flex-grow-1"><span style="width:' + pct + '%"></span></div><span class="small text-muted" style="min-width:2.8rem;">' + pct + "%</span></div></td>" +
+        '<td class="pe-3 text-end"><a class="btn btn-sm btn-outline-primary text-nowrap" href="{% url 'qda:workspace' %}?source=' + encodeURIComponent(s.id) + '">Code</a></td>' +
+        "</tr>";
+    }).join("");
+  }
+
+  function renderRecent() {
+    var list = TB.recentCodings(project, 6);
+    var el = $("tb-dash-recent");
+    if (!list.length) {
+      el.innerHTML = '<li class="text-muted">Nothing coded yet. Select a passage in the <a href="{% url 'qda:workspace' %}">Coding Workspace</a> to create your first coded reference.</li>';
+      return;
+    }
+    var resp = {};
+    TB.respondentsOf(project).forEach(function (r) { resp[r.id] = r; });
+    el.innerHTML = list.map(function (c) {
+      var src = project.sources.find(function (s) { return s.id === c.sourceId; });
+      var r = resp[TB.respondentIdForCoding(c)];
+      var quote = c.quote.length > 190 ? c.quote.slice(0, 189) + "…" : c.quote;
+      var meta = [src ? src.name : "", r && src && r.label !== src.name ? r.label : "",
+        c.weight !== null && c.weight !== undefined ? "weight " + c.weight + "/10" : "", TB.ui.relativeTime(c.createdAt)].filter(Boolean);
+      return '<li><div class="tb-quote-snippet">&ldquo;' + esc(quote) + "&rdquo;</div>" +
+        '<div class="mt-1">' + TB.ui.themeChips(project, c.themeIds) + "</div>" +
+        '<div class="small text-muted mt-1">' + esc(meta.join(" · ")) +
+        ' · <a href="{% url 'qda:workspace' %}?source=' + encodeURIComponent(c.sourceId) + "&amp;coding=" + encodeURIComponent(c.id) + '">Open</a></div></li>';
+    }).join("");
+  }
+
+  function renderProjects() {
+    var el = $("tb-dash-projects");
+    el.innerHTML = TB.listProjects().map(function (p) {
+      var full = TB.loadProject(p.id);
+      var active = p.id === project.id;
+      return '<li class="d-flex align-items-center justify-content-between gap-2">' +
+        '<div class="min-w-0"><div class="fw-semibold text-truncate">' + esc(p.title) + "</div>" +
+        '<div class="small text-muted">' + (full ? full.sources.length + " sources · " + full.codings.length + " coded refs · " : "") + "updated " + esc(TB.ui.relativeTime(p.updatedAt)) + "</div></div>" +
+        (active ? '<span class="badge bg-accent">Active</span>'
+          : '<button class="btn btn-sm btn-outline-primary tb-dash-open" data-id="' + esc(p.id) + '">Open</button>') +
+        "</li>";
+    }).join("") || '<li class="text-muted">No projects yet.</li>';
+    Array.prototype.forEach.call(el.querySelectorAll(".tb-dash-open"), function (btn) {
+      btn.addEventListener("click", function () {
+        TB.setActiveProjectId(btn.getAttribute("data-id"));
+        window.location.reload();
+      });
+    });
+  }
+
+  // Level switches depend on the analysis (its codebook may be deeper or
+  // shallower), so they are rebuilt whenever the analysis changes.
+  function setupLevels() {
+    var deepest = Math.max(0, TB.maxThemeDepth(project, state.analysis));
+    state.freq = TB.ui.levelControl($("tb-dash-freq-level"), project, { name: "tbDashFreq", value: 0, analysisId: state.analysis, onChange: function (v) { state.freq = v; renderFrequency(); } });
+    state.cloud = TB.ui.levelControl($("tb-dash-cloud-level"), project, { name: "tbDashCloud", value: Math.min(1, deepest), analysisId: state.analysis, onChange: function (v) { state.cloud = v; renderCloud(); } });
+    state.cov = TB.ui.levelControl($("tb-dash-cov-level"), project, { name: "tbDashCov", value: 0, analysisId: state.analysis, onChange: function (v) { state.cov = v; renderCoverage(); } });
+  }
+  function renderAnalysisViews() {
+    var a = state.analysis && TB.analysisById(project, state.analysis);
+    $("tb-dash-analysis-q").textContent = a && a.question ? a.question : "";
+    setupLevels();
+    renderKpis();
+    renderFrequency();
+    renderCloud();
+    renderCoverage();
+  }
+  state.analysis = TB.ui.analysisControl($("tb-dash-analysis"), project, {
+    onChange: function (id) { state.analysis = id; renderAnalysisViews(); }
+  });
+  $("tb-dash-analysis-bar").classList.toggle("d-none", project.analyses.length < 2);
+
+  renderBanner();
+  renderAnalysisViews();
+  renderSources();
+  renderRecent();
+  renderProjects();
+
+  var resizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(renderCloud, 250);
+  });
+}); });
+</script>
+{% endblock %}

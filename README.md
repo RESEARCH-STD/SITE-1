@@ -154,7 +154,7 @@ below with your PythonAnywhere username.
    DATABASE_URL=postgres://databridge:choose-a-long-password@<host>:<port>/databridge
    ```
    plus the `DJANGO_EMAIL_*` lines once an email service is set up (password-reset
-   links need it). Leave `CLOUDINARY_URL` empty: PythonAnywhere keeps uploaded files.
+   links need it).
 4. **Prepare** (same console, inside `databridge/`):
    ```bash
    python manage.py migrate
@@ -174,8 +174,9 @@ below with your PythonAnywhere username.
    from django.core.wsgi import get_wsgi_application
    application = get_wsgi_application()
    ```
-   Under *Static files* add `/static/` → `/home/<you>/databridge/staticfiles` and
-   `/media/` → `/home/<you>/databridge/media`. Turn on *Force HTTPS*, then *Reload*.
+   Under *Static files* add `/static/` → `/home/<you>/databridge/staticfiles`. Don't
+   add one for `/media/`: uploaded dataset files must only be reachable through the
+   download page, which requires signing in. Turn on *Force HTTPS*, then *Reload*.
    If pages keep redirecting to themselves, add `DJANGO_SECURE_SSL_REDIRECT=False` to
    `.env` and reload.
 6. **Updating later:** `git pull`, `pip install -r requirements.txt`,
@@ -185,41 +186,6 @@ below with your PythonAnywhere username.
    cd ~/databridge && mkdir -p ~/backups && pg_dump "$(~/.virtualenvs/databridge-venv/bin/python -c 'from dotenv import dotenv_values; print(dotenv_values(".env")["DATABASE_URL"])')" | gzip > ~/backups/databridge-$(date +%F).sql.gz
    ```
    Run it once in a console first to check it works, and download a copy now and then.
-
-## Deployment (Render)
-
-This repo is set up to deploy on [Render](https://render.com) via the included
-`render.yaml` blueprint: production settings switch on env vars (`databridge/settings.py`),
-static files are served by WhiteNoise, the database is Postgres via `DATABASE_URL`,
-and uploaded dataset files go to Cloudinary (so they survive redeploys, unlike
-Render's local disk).
-
-1. **Push this repo to GitHub** (or GitLab/Bitbucket) — Render deploys from a
-   connected git repo.
-2. **Create a free [Cloudinary](https://cloudinary.com) account.** Its dashboard
-   shows an "API Environment variable" value shaped like
-   `cloudinary://<api_key>:<api_secret>@<cloud_name>` — copy it.
-3. **In the Render dashboard:** New → Blueprint → connect this repo. Render reads
-   `render.yaml` and provisions a free Postgres database plus a free web service.
-4. When Render asks for the `CLOUDINARY_URL` env var (it's marked `sync: false`
-   in the blueprint so it's never committed to the repo), paste the value from
-   step 2.
-5. The first deploy runs `build.sh`: installs dependencies, runs `collectstatic`,
-   and runs `migrate`.
-6. Once it's live, open the service's **Shell** tab in the Render dashboard and run:
-   ```bash
-   python manage.py createsuperuser
-   python manage.py seed_demo_data          # optional: seeds the 9 demo datasets
-   python manage.py seed_sst_placeholders   # optional: seeds placeholder stats/project/insights
-   ```
-7. **Using a custom domain?** Add it to the `DJANGO_ALLOWED_HOSTS` env var
-   (comma-separated). Render's own `*.onrender.com` domain is picked up
-   automatically and doesn't need this.
-
-Notes on the free tier: Render's free Postgres database expires after 90 days
-(you'll need to create a new one and re-migrate/re-seed, or upgrade to a paid
-plan), and free web services spin down when idle, so the first request after a
-quiet period takes a few extra seconds to wake up.
 
 ## Not yet built (follow-up work)
 

@@ -64,9 +64,8 @@ class Dataset(models.Model):
             # Only a freshly-uploaded, not-yet-stored file is cheap/safe to
             # inspect here (.size/.name read the local upload directly). A
             # file that's already committed to storage (e.g. editing a
-            # dataset's metadata without changing the file, or a remote
-            # storage backend like Cloudinary) would require a network
-            # round-trip instead, so leave the previously-stored values as-is.
+            # dataset's metadata without changing the file) may not be
+            # cheap to inspect, so leave the previously-stored values as-is.
             self.original_filename = self.file.name
             self.file_size = self.file.size
         super().save(*args, **kwargs)

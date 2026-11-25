@@ -27,7 +27,7 @@ except ImportError:
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# In production (Render), DJANGO_SECRET_KEY is set as an env var — see render.yaml.
+# In production, set DJANGO_SECRET_KEY (in `.env` on PythonAnywhere, see README).
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or (
     "django-insecure-rthz^a19_8b&w3mt2t1h=dd054*$f3e8$y2x+=4)4e)=8x&gmy"
 )
@@ -37,15 +37,10 @@ DEBUG = os.environ.get("DJANGO_DEBUG", "True") == "True"
 
 ALLOWED_HOSTS = [h.strip() for h in os.environ.get("DJANGO_ALLOWED_HOSTS", "").split(",") if h.strip()]
 
-# Render sets this automatically for the web service's own domain.
-RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-
 CSRF_TRUSTED_ORIGINS = [f"https://{host}" for host in ALLOWED_HOSTS]
 
-# Render terminates TLS at its proxy and forwards plain HTTP, so tell Django
-# to trust the X-Forwarded-Proto header when deciding if a request is secure.
+# The host's front-end proxy (PythonAnywhere) handles HTTPS and forwards plain
+# HTTP, so trust its X-Forwarded-Proto header when deciding if a request is secure.
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 if not DEBUG:
@@ -116,8 +111,8 @@ WSGI_APPLICATION = 'databridge.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-# Render provides DATABASE_URL automatically when a Postgres database is
-# attached to the web service; falls back to local SQLite when unset.
+# Postgres in production via DATABASE_URL (see README); falls back to local
+# SQLite when unset.
 
 # (An empty DATABASE_URL, e.g. from a half-filled .env, counts as unset.)
 DATABASES = {
@@ -169,19 +164,13 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-# Uploaded dataset files (MEDIA) go to Cloudinary in production when
-# CLOUDINARY_URL is set (see render.yaml); locally they stay on disk.
-# Static assets (CSS/JS/images shipped with the code) are always served by
-# WhiteNoise — Cloudinary is only used for user-uploaded files.
-CLOUDINARY_CONFIGURED = bool(os.environ.get("CLOUDINARY_URL"))
-
+# Uploaded dataset files (MEDIA) are kept on the server's disk in MEDIA_ROOT
+# and only handed out by the sign-in-protected download view, so MEDIA_URL is
+# deliberately not served in production. Static assets (CSS/JS/images shipped
+# with the code) are served by WhiteNoise.
 STORAGES = {
     "default": {
-        "BACKEND": (
-            "cloudinary_storage.storage.RawMediaCloudinaryStorage"
-            if CLOUDINARY_CONFIGURED
-            else "django.core.files.storage.FileSystemStorage"
-        ),
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
     },
     "staticfiles": {
         "BACKEND": (
@@ -195,7 +184,7 @@ STORAGES = {
 # Logging
 # By default Django only logs unhandled exceptions via "mail_admins", which
 # does nothing without a configured mail backend/ADMINS. Send them to
-# stderr/console unconditionally so they show up in Render's log stream too.
+# stderr/console unconditionally so they show up in the host's error log.
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,

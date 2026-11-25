@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Sign Up | TakwimuBridge{% endblock %}
+{% block title %}Sign Up | Sustainable Solutions Tanzania{% endblock %}
 
 {% block content %}
 <div class="container py-5">
@@ -7,20 +7,23 @@
 <div class="col-lg-6">
 <h1 class="h3 mb-4 text-center">Create Your Account</h1>
 <div class="form-card">
+<p class="text-muted small">One free account for SST's tools: the TakwimuBridge data catalogue and TakwimuBridge QDA.</p>
 <form method="post" novalidate>
 {% csrf_token %}
+{% if next %}<input type="hidden" name="next" value="{{ next }}">{% endif %}
 {% for field in form %}
 <div class="mb-3">
 <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
 {{ field }}
-{% if field.help_text %}<div class="form-text">{{ field.help_text }}</div>{% endif %}
+{% if field.help_text %}<div class="form-text">{{ field.help_text|safe }}</div>{% endif %}
 {% for error in field.errors %}<div class="text-danger small mt-1">{{ error }}</div>{% endfor %}
 </div>
 {% endfor %}
+{% if form.non_field_errors %}<div class="text-danger small mb-3">{{ form.non_field_errors }}</div>{% endif %}
 <button type="submit" class="btn btn-accent btn-lg w-100">Sign Up</button>
 </form>
 <p class="text-muted small text-center mt-3 mb-0">
-Already have an account? <a href="{% url 'accounts:login' %}">Log in</a>
+Already have an account? <a href="{% url 'accounts:login' %}{% if next %}?next={{ next|urlencode }}{% endif %}">Log in</a>
 </p>
 </div>
 </div>

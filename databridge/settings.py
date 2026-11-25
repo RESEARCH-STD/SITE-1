@@ -16,12 +16,20 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Optional: settings from a `.env` file next to manage.py (handy on
+# PythonAnywhere, see README). Real environment variables win.
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv(BASE_DIR / ".env", override=False)
+except ImportError:
+    pass
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # In production (Render), DJANGO_SECRET_KEY is set as an env var — see render.yaml.
-SECRET_KEY = os.environ.get(
-    "DJANGO_SECRET_KEY",
-    "django-insecure-rthz^a19_8b&w3mt2t1h=dd054*$f3e8$y2x+=4)4e)=8x&gmy",
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY") or (
+    "django-insecure-rthz^a19_8b&w3mt2t1h=dd054*$f3e8$y2x+=4)4e)=8x&gmy"
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -41,7 +49,9 @@ CSRF_TRUSTED_ORIGINS = [f"https://{host}" for host in ALLOWED_HOSTS]
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 if not DEBUG:
-    SECURE_SSL_REDIRECT = True
+    # PythonAnywhere: tick "Force HTTPS" on the Web tab instead and set
+    # DJANGO_SECURE_SSL_REDIRECT=False if pages keep redirecting to themselves.
+    SECURE_SSL_REDIRECT = os.environ.get("DJANGO_SECURE_SSL_REDIRECT", "True") == "True"
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_SECONDS = 60 * 60 * 24 * 7
@@ -60,9 +70,13 @@ INSTALLED_APPS = [
     'accounts',
     'datasets',
     'core',
+    'qda',
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
+
+# Sign in with a username or an email address.
+AUTHENTICATION_BACKENDS = ['accounts.backends.EmailOrUsernameBackend']
 
 LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = 'datasets:catalog'
@@ -91,6 +105,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'accounts.context_processors.account_features',
             ],
         },
     },
@@ -104,9 +119,10 @@ WSGI_APPLICATION = 'databridge.wsgi.application'
 # Render provides DATABASE_URL automatically when a Postgres database is
 # attached to the web service; falls back to local SQLite when unset.
 
+# (An empty DATABASE_URL, e.g. from a half-filled .env, counts as unset.)
 DATABASES = {
-    "default": dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+    "default": dj_database_url.parse(
+        os.environ.get("DATABASE_URL") or f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
         conn_max_age=600,
     )
 }
@@ -191,6 +207,29 @@ LOGGING = {
         "django.request": {"handlers": ["console"], "level": "ERROR", "propagate": False},
     },
 }
+
+# Email (password-reset links). Without DJANGO_EMAIL_HOST, emails are only
+# printed to the console/log, and the "Forgot password?" links stay hidden
+# in production. Any SMTP service works, e.g. Brevo or Resend.
+EMAIL_HOST = os.environ.get("DJANGO_EMAIL_HOST", "")
+if EMAIL_HOST:
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+    EMAIL_PORT = int(os.environ.get("DJANGO_EMAIL_PORT") or "587")
+    EMAIL_HOST_USER = os.environ.get("DJANGO_EMAIL_HOST_USER", "")
+    EMAIL_HOST_PASSWORD = os.environ.get("DJANGO_EMAIL_HOST_PASSWORD", "")
+    EMAIL_USE_TLS = os.environ.get("DJANGO_EMAIL_USE_TLS", "True") == "True"
+    EMAIL_TIMEOUT = 20
+else:
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = os.environ.get("DJANGO_DEFAULT_FROM_EMAIL") or "Sustainable Solutions Tanzania <no-reply@localhost>"
+EMAIL_CONFIGURED = bool(EMAIL_HOST) or DEBUG
+
+# TakwimuBridge QDA (qda app)
+# Let people use the tool without an account ("Continue without an account"
+# on its sign-in page); their projects then stay in their browser only.
+QDA_ALLOW_GUESTS = os.environ.get("DJANGO_QDA_ALLOW_GUESTS", "True") == "True"
+# Largest single project upload (transcripts included), after unzipping.
+QDA_MAX_UPLOAD_BYTES = int(os.environ.get("DJANGO_QDA_MAX_UPLOAD_MB") or "30") * 1024 * 1024
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

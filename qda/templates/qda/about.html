@@ -1,0 +1,92 @@
+{% extends "qda/base.html" %}
+{# Ported from TAKWIMUBRIDGE-QDA/about.qmd (rendered). #}
+{% block content %}
+<div class="tb-prose">
+<section id="what-this-is" class="level2">
+<h2 data-anchor-id="what-this-is">What this is</h2>
+<p>TakwimuBridge is a qualitative data analysis (QDA) tool designed by <strong>Sustainable Solutions Tanzania (SST)</strong> for researchers, students, consultants, institutions and organizations working with Key Informant Interviews (KIIs), Focus Group Discussions (FGDs), individual interviews, open-ended survey responses, and other textual qualitative data.</p>
+<p>This build implements SST’s own <strong>Version 1.0 (MVP) workflow</strong>: upload a transcript → identify the respondent/source → read → highlight → code → assign a colour → optionally score importance 1–10 → automatically count → compare respondents/themes → retrieve quotations → generate charts/word cloud → export results.</p>
+</section>
+<section id="where-your-data-is-kept" class="level2">
+<h2 data-anchor-id="where-your-data-is-kept">Where your data is kept</h2>
+<p>Every project, source, code and coded reference you create is stored in your web browser’s local storage, on your own device — that copy is the one you work on, so the tool stays fast and keeps working when the connection drops. All analysis runs in your browser.</p>
+<p><strong>With an account.</strong> Signed in with your SST account, each change is also saved to SST’s database on the TakwimuBridge server within a second or two, so you can sign in on another computer and carry on where you left off. Other researchers can’t see your projects: the server only ever returns a researcher’s own projects. SST’s administrators can see them, to help researchers and to restore work deleted by mistake — deleted projects go to a trash they can restore from. If the same project is changed on two computers before they sync, nothing is overwritten — the other version is kept as a separate “conflicted copy”. Signing out removes your projects from that browser, which matters on shared computers.</p>
+<p><strong>Without an account</strong>, everything stays in this browser only: clearing your browser’s site data, using a different browser, or switching computers means your projects won’t be there. Use <strong>Export → Full Project Backup (JSON)</strong> to move a project by hand.</p>
+<p>Interview transcripts can contain personal information. Before storing real data in an account, check that this fits your consent forms and data-protection obligations (for example Tanzania’s Personal Data Protection Act).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Capability</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Highlighting, coding, theming, weighting</td>
+<td>✅ Real — genuinely computed, not mocked</td>
+</tr>
+<tr class="even">
+<td>Coding one passage to several theme groups (e.g.&nbsp;a cause, a challenge and an impact) in one reading</td>
+<td>✅ Real</td>
+</tr>
+<tr class="odd">
+<td>Several thematic analyses (research questions) in one project, all coded in the same reading</td>
+<td>✅ Real</td>
+</tr>
+<tr class="even">
+<td>Undo / redo, deleting coding, promoting / demoting / renaming themes, editing and deleting sources and projects</td>
+<td>✅ Real</td>
+</tr>
+<tr class="odd">
+<td>FGD composition (women, men, not disclosed, total) and several stakeholder types per source</td>
+<td>✅ Real</td>
+</tr>
+<tr class="even">
+<td>Frequency, coverage, weighted-score, average-weight analysis, at theme, sub-theme or code level</td>
+<td>✅ Real — recalculated live from your actual coded data</td>
+</tr>
+<tr class="odd">
+<td>Charts, heat map, theme cloud, word frequency, word cloud</td>
+<td>✅ Real — rendered client-side from your data</td>
+</tr>
+<tr class="even">
+<td>CSV / Excel / Word-report / image / JSON export</td>
+<td>✅ Real — generated client-side, downloads directly</td>
+</tr>
+<tr class="odd">
+<td>DOCX / TXT / CSV import</td>
+<td>✅ Real — parsed client-side (mammoth.js / SheetJS); nothing is uploaded anywhere</td>
+</tr>
+<tr class="even">
+<td>Cross-device access</td>
+<td>✅ With an account — sign in on any computer. Without one, move projects with <strong>Export → Full Project Backup (JSON)</strong></td>
+</tr>
+<tr class="odd">
+<td>Multi-user projects / team coding</td>
+<td>❌ Not implemented — each account holds one researcher’s own projects</td>
+</tr>
+<tr class="even">
+<td>Inter-coder reliability, advanced compound queries, codebooks-as-templates</td>
+<td>❌ Not implemented in v1 — the data model anticipates them (see below) but no UI yet</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-later-versions-could-add" class="level2">
+<h2 data-anchor-id="what-later-versions-could-add">What later versions could add</h2>
+<p>Per SST’s own functional description, later versions could add: codebooks as reusable templates, inter-coder reliability checks, team/multi-user projects with shared codebooks, more advanced compound queries (“Pollution AND Weak Enforcement”, or “Pollution among District A respondents”), relationship/network maps between codes, and more sophisticated FGD speaker-level analysis. AI-suggested codes, which the researcher accepts or rejects like proofreading, are planned next. The data model here (themes with a parent/child hierarchy, and codings that can carry multiple theme IDs) is deliberately structured so those features can be added without a redesign.</p>
+</section>
+<section id="part-of-sst-takwimubridge" class="level2">
+<h2 data-anchor-id="part-of-sst-takwimubridge">Part of SST’s TakwimuBridge tools</h2>
+<p>TakwimuBridge QDA sits alongside the <a href="{% url 'datasets:catalog' %}">TakwimuBridge data catalogue</a> on the <a href="{% url 'core:home' %}">Sustainable Solutions Tanzania website</a>, where students share and download research datasets. One SST account signs you in to both.</p>
+</section>
+<section id="credits" class="level2">
+<h2 data-anchor-id="credits">Credits</h2>
+<p>Functional description and user guide: <strong>Sustainable Solutions Tanzania (SST)</strong>. Built with <a href="https://www.djangoproject.com/">Django</a> and Bootstrap 5. Charts by <a href="https://www.chartjs.org/">Chart.js</a>, word clouds by <a href="https://wordcloud2-js.timdream.org/">wordcloud2.js</a>, spreadsheet export by <a href="https://sheetjs.com/">SheetJS</a>, DOCX import by <a href="https://github.com/mwilliamson/mammoth.js">mammoth.js</a>.</p>
+</section>
+</div>
+{% endblock %}

@@ -1,0 +1,121 @@
+{% extends "qda/base.html" %}
+{# Ported from TAKWIMUBRIDGE-QDA/projects.qmd. #}
+{% block content %}
+<div id="tb-projects-page">
+<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+<div class="tb-demo-banner">
+<i class="bi bi-info-circle text-accent"></i>
+The bundled demo project — five KIIs and one FGD, coded under two thematic analyses (Environmental Challenges and Affected Groups) in a single reading — lets you explore every feature first.
+</div>
+<div class="d-flex gap-2">
+<button type="button" class="btn btn-outline-secondary" id="tb-import-project-btn"><i class="bi bi-upload"></i> Import Backup</button>
+<input type="file" id="tb-import-project-file" accept=".json" class="d-none">
+<button type="button" class="btn btn-accent" id="tb-new-project-btn"><i class="bi bi-plus-lg"></i> New Project</button>
+</div>
+</div>
+
+<div id="tb-projects-list" class="grid gap-4"></div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () { window.TB.whenReady(function () {
+  var TB = window.TB;
+  if (TB.seedDemoIfNeeded) TB.seedDemoIfNeeded();
+
+  function esc(s) { return TB.escapeHtml(s); }
+
+  function render() {
+    var activeId = TB.getActiveProjectId();
+    var list = TB.listProjects();
+    var el = document.getElementById("tb-projects-list");
+    if (!list.length) {
+      el.innerHTML = '<div class="g-col-12"><div class="card"><div class="card-body tb-empty-state"><i class="bi bi-folder-plus"></i>No projects yet — create one to get started.</div></div></div>';
+      return;
+    }
+    el.innerHTML = list.map(function (p) {
+      var project = TB.loadProject(p.id) || { sources: [], themes: [], codings: [] };
+      var isDemo = p.id === TB.DEMO_PROJECT_ID;
+      var top = TB.themeTree(project).length;
+      var nAnalyses = (project.analyses || []).length;
+      var sync = TB.cloud ? TB.cloud.syncState(p.id) : null;
+      var syncPill = sync === "cloud" ? '<span class="tb-meta-pill tb-sync-cloud"><i class="bi bi-cloud-check"></i>In your account</span>'
+        : sync === "pending" ? '<span class="tb-meta-pill"><i class="bi bi-cloud-upload"></i>Saving to your account…</span>'
+        : sync === "local" ? '<span class="tb-meta-pill"><i class="bi bi-hdd"></i>This browser only</span>' : "";
+      return '<div class="g-col-12 g-col-md-6 g-col-xxl-4">' +
+        '<div class="card step-card h-100"><div class="card-body d-flex flex-column">' +
+        '<div class="d-flex justify-content-between align-items-start gap-2 mb-1">' +
+        '<h3 class="h5 mb-0 tb-project-title">' + esc(p.title) + "</h3>" +
+        (p.id === activeId ? '<span class="badge bg-accent">Active</span>' : "") +
+        "</div>" +
+        (isDemo ? '<div class="mb-1"><span class="badge text-bg-light border">Demo content</span></div>' : "") +
+        '<p class="text-muted small flex-grow-1 mt-2">' + esc(project.description || "") + "</p>" +
+        '<div class="mb-2">' +
+        '<span class="tb-meta-pill"><i class="bi bi-file-earmark-text"></i>' + project.sources.length + " sources</span>" +
+        (nAnalyses > 1 ? '<span class="tb-meta-pill"><i class="bi bi-journal-text"></i>' + nAnalyses + " thematic analyses</span>" : "") +
+        '<span class="tb-meta-pill"><i class="bi bi-diagram-3"></i>' + top + " themes · " + (project.themes.length - top) + " sub-themes</span>" +
+        '<span class="tb-meta-pill"><i class="bi bi-bookmark-check"></i>' + project.codings.length + " coded refs</span>" +
+        syncPill +
+        "</div>" +
+        '<p class="small text-muted mb-3"><i class="bi bi-person"></i> ' + esc(p.researcher || "—") + " · updated " + esc(TB.ui.relativeTime(p.updatedAt)) + "</p>" +
+        '<div class="d-flex flex-wrap gap-2 mt-auto">' +
+        '<button type="button" class="btn btn-sm btn-primary tb-open-btn" data-id="' + esc(p.id) + '">Open <i class="bi bi-arrow-right"></i></button>' +
+        '<button type="button" class="btn btn-sm btn-outline-secondary tb-edit-btn" data-id="' + esc(p.id) + '" title="Edit title and details"><i class="bi bi-pencil"></i> Edit</button>' +
+        '<button type="button" class="btn btn-sm btn-outline-secondary tb-export-btn" data-id="' + esc(p.id) + '" title="Export backup (.json)"><i class="bi bi-download"></i></button>' +
+        (isDemo ? '<button type="button" class="btn btn-sm btn-outline-secondary tb-reset-demo-btn" title="Restore the demo to its original state"><i class="bi bi-arrow-counterclockwise"></i> Reset demo</button>' : "") +
+        '<button type="button" class="btn btn-sm btn-outline-danger tb-delete-btn" data-id="' + esc(p.id) + '" title="Delete"><i class="bi bi-trash"></i></button>' +
+        "</div></div></div></div>";
+    }).join("");
+
+    Array.prototype.forEach.call(el.querySelectorAll(".tb-open-btn"), function (btn) {
+      btn.addEventListener("click", function () {
+        TB.setActiveProjectId(btn.getAttribute("data-id"));
+        window.location.href = "{% url 'qda:dashboard' %}";
+      });
+    });
+    Array.prototype.forEach.call(el.querySelectorAll(".tb-edit-btn"), function (btn) {
+      btn.addEventListener("click", function () {
+        TB.ui.openProjectModal(TB.loadProject(btn.getAttribute("data-id")), { onSaved: render });
+      });
+    });
+    Array.prototype.forEach.call(el.querySelectorAll(".tb-export-btn"), function (btn) {
+      btn.addEventListener("click", function () { TB.exportUtil.exportProjectJSON(TB.loadProject(btn.getAttribute("data-id"))); });
+    });
+    Array.prototype.forEach.call(el.querySelectorAll(".tb-reset-demo-btn"), function (btn) {
+      btn.addEventListener("click", function () {
+        if (!confirm("Reset the demo project? Any changes you made to it will be lost.")) return;
+        TB.rebuildDemoProject();
+        render();
+        TB.ui.refreshShell();
+      });
+    });
+    Array.prototype.forEach.call(el.querySelectorAll(".tb-delete-btn"), function (btn) {
+      btn.addEventListener("click", function () {
+        if (!confirm("Delete this project? This cannot be undone.")) return;
+        TB.deleteProject(btn.getAttribute("data-id"));
+        render();
+        TB.ui.refreshShell();
+      });
+    });
+  }
+
+  document.getElementById("tb-new-project-btn").addEventListener("click", function () { TB.ui.openProjectModal(null); });
+
+  document.getElementById("tb-import-project-btn").addEventListener("click", function () {
+    document.getElementById("tb-import-project-file").click();
+  });
+  document.getElementById("tb-import-project-file").addEventListener("change", function (e) {
+    var file = e.target.files[0];
+    if (!file) return;
+    TB.exportUtil.importProjectJSON(file, function (err, project) {
+      if (err) { alert("Could not import that file: " + err.message); return; }
+      TB.setActiveProjectId(project.id);
+      render();
+      TB.ui.refreshShell();
+    });
+  });
+
+  render();
+  if (window.location.hash === "#new") TB.ui.openProjectModal(null);
+}); });
+</script>
+{% endblock %}
